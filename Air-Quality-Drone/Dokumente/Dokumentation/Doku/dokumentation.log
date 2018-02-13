@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.13)  13 FEB 2018 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.13)  13 FEB 2018 16:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2465,9 +2465,9 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 17.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 17.
 )
 (./content/Grundlagen.tex
 Package babel Info: Redefining ngerman shorthand "|
@@ -2493,6 +2493,30 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 7.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 9.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 11.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 13.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
 ) (./content/Planung.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
@@ -2581,7 +2605,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 37.
 
-[5] <images/hadoop_version.png, id=183, 514.17094pt x 111.41624pt>
+[5] <images/hadoop_version.png, id=195, 514.17094pt x 111.41624pt>
 File: images/hadoop_version.png Graphic file (type png)
 
 <use images/hadoop_version.png>
@@ -2763,7 +2787,7 @@ Package babel Info: Redefining ngerman shorthand "~
 [2
 
 
-] <images/NameNodeWebInterface.png, id=250, 1445.4pt x 1640.1275pt>
+] <images/NameNodeWebInterface.png, id=263, 1445.4pt x 1640.1275pt>
 File: images/NameNodeWebInterface.png Graphic file (type png)
 
 <use images/NameNodeWebInterface.png>
@@ -2816,11 +2840,11 @@ Package logreq Info: Writing requests to 'dokumentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48664 strings out of 492995
- 901847 string characters out of 6132703
+ 48692 strings out of 492995
+ 902309 string characters out of 6132703
  1559604 words of memory out of 5000000
- 51143 multiletter control sequences out of 15000+600000
- 100724 words of font info for 119 fonts, out of 8000000 for 9000
+ 51165 multiletter control sequences out of 15000+600000
+ 103492 words of font info for 120 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  63i,14n,93p,10400b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -2846,10 +2870,10 @@ lic/lm/lmri8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmro
 /texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dokumentation.pdf (24 pages, 549406 bytes).
+Output written on dokumentation.pdf (24 pages, 550593 bytes).
 PDF statistics:
- 413 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
- 125 named destinations out of 1000 (max. 500000)
- 31393 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 387 compressed objects within 4 object streams
+ 131 named destinations out of 1000 (max. 500000)
+ 31953 words of extra memory for PDF output out of 35830 (max. 10000000)
 

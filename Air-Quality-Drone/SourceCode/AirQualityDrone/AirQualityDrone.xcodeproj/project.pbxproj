@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE518F203338E4006DE0A8 /* AppDelegate.swift */; };
+		B9BE5192203338E4006DE0A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5191203338E4006DE0A8 /* ViewController.swift */; };
+		B9BE5195203338E4006DE0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5193203338E4006DE0A8 /* Main.storyboard */; };
+		B9BE5197203338E5006DE0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5196203338E5006DE0A8 /* Assets.xcassets */; };
+		B9BE519A203338E5006DE0A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5198203338E5006DE0A8 /* LaunchScreen.storyboard */; };
+		B9BE51A5203338E5006DE0A8 /* AirQualityDroneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE51A4203338E5006DE0A8 /* AirQualityDroneTests.swift */; };
+		B9BE51B0203338E5006DE0A8 /* AirQualityDroneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE51AF203338E5006DE0A8 /* AirQualityDroneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9BE51A1203338E5006DE0A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9BE5184203338E4006DE0A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9BE518B203338E4006DE0A8;
+			remoteInfo = AirQualityDrone;
+		};
+		B9BE51AC203338E5006DE0A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9BE5184203338E4006DE0A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9BE518B203338E4006DE0A8;
+			remoteInfo = AirQualityDrone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B9BE518C203338E4006DE0A8 /* AirQualityDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BE518F203338E4006DE0A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B9BE5191203338E4006DE0A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9BE5194203338E4006DE0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9BE5196203338E5006DE0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9BE5199203338E5006DE0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9BE519B203338E5006DE0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9BE51A0203338E5006DE0A8 /* AirQualityDroneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityDroneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BE51A4203338E5006DE0A8 /* AirQualityDroneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDroneTests.swift; sourceTree = "<group>"; };
+		B9BE51A6203338E5006DE0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9BE51AB203338E5006DE0A8 /* AirQualityDroneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityDroneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9BE51AF203338E5006DE0A8 /* AirQualityDroneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDroneUITests.swift; sourceTree = "<group>"; };
+		B9BE51B1203338E5006DE0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9BE5189203338E4006DE0A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BE519D203338E5006DE0A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BE51A8203338E5006DE0A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9BE5183203338E4006DE0A8 = {
+			isa = PBXGroup;
+			children = (
+				B9BE518E203338E4006DE0A8 /* AirQualityDrone */,
+				B9BE51A3203338E5006DE0A8 /* AirQualityDroneTests */,
+				B9BE51AE203338E5006DE0A8 /* AirQualityDroneUITests */,
+				B9BE518D203338E4006DE0A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9BE518D203338E4006DE0A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE518C203338E4006DE0A8 /* AirQualityDrone.app */,
+				B9BE51A0203338E5006DE0A8 /* AirQualityDroneTests.xctest */,
+				B9BE51AB203338E5006DE0A8 /* AirQualityDroneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9BE518E203338E4006DE0A8 /* AirQualityDrone */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE518F203338E4006DE0A8 /* AppDelegate.swift */,
+				B9BE5191203338E4006DE0A8 /* ViewController.swift */,
+				B9BE5193203338E4006DE0A8 /* Main.storyboard */,
+				B9BE5196203338E5006DE0A8 /* Assets.xcassets */,
+				B9BE5198203338E5006DE0A8 /* LaunchScreen.storyboard */,
+				B9BE519B203338E5006DE0A8 /* Info.plist */,
+			);
+			path = AirQualityDrone;
+			sourceTree = "<group>";
+		};
+		B9BE51A3203338E5006DE0A8 /* AirQualityDroneTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE51A4203338E5006DE0A8 /* AirQualityDroneTests.swift */,
+				B9BE51A6203338E5006DE0A8 /* Info.plist */,
+			);
+			path = AirQualityDroneTests;
+			sourceTree = "<group>";
+		};
+		B9BE51AE203338E5006DE0A8 /* AirQualityDroneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE51AF203338E5006DE0A8 /* AirQualityDroneUITests.swift */,
+				B9BE51B1203338E5006DE0A8 /* Info.plist */,
+			);
+			path = AirQualityDroneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9BE518B203338E4006DE0A8 /* AirQualityDrone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BE51B4203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDrone" */;
+			buildPhases = (
+				B9BE5188203338E4006DE0A8 /* Sources */,
+				B9BE5189203338E4006DE0A8 /* Frameworks */,
+				B9BE518A203338E4006DE0A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirQualityDrone;
+			productName = AirQualityDrone;
+			productReference = B9BE518C203338E4006DE0A8 /* AirQualityDrone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9BE519F203338E5006DE0A8 /* AirQualityDroneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BE51B7203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDroneTests" */;
+			buildPhases = (
+				B9BE519C203338E5006DE0A8 /* Sources */,
+				B9BE519D203338E5006DE0A8 /* Frameworks */,
+				B9BE519E203338E5006DE0A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9BE51A2203338E5006DE0A8 /* PBXTargetDependency */,
+			);
+			name = AirQualityDroneTests;
+			productName = AirQualityDroneTests;
+			productReference = B9BE51A0203338E5006DE0A8 /* AirQualityDroneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9BE51AA203338E5006DE0A8 /* AirQualityDroneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9BE51BA203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDroneUITests" */;
+			buildPhases = (
+				B9BE51A7203338E5006DE0A8 /* Sources */,
+				B9BE51A8203338E5006DE0A8 /* Frameworks */,
+				B9BE51A9203338E5006DE0A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9BE51AD203338E5006DE0A8 /* PBXTargetDependency */,
+			);
+			name = AirQualityDroneUITests;
+			productName = AirQualityDroneUITests;
+			productReference = B9BE51AB203338E5006DE0A8 /* AirQualityDroneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9BE5184203338E4006DE0A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = DHBW_Stuttgart;
+				TargetAttributes = {
+					B9BE518B203338E4006DE0A8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B9BE519F203338E5006DE0A8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B9BE518B203338E4006DE0A8;
+					};
+					B9BE51AA203338E5006DE0A8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B9BE518B203338E4006DE0A8;
+					};
+				};
+			};
+			buildConfigurationList = B9BE5187203338E4006DE0A8 /* Build configuration list for PBXProject "AirQualityDrone" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9BE5183203338E4006DE0A8;
+			productRefGroup = B9BE518D203338E4006DE0A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9BE518B203338E4006DE0A8 /* AirQualityDrone */,
+				B9BE519F203338E5006DE0A8 /* AirQualityDroneTests */,
+				B9BE51AA203338E5006DE0A8 /* AirQualityDroneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9BE518A203338E4006DE0A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BE519A203338E5006DE0A8 /* LaunchScreen.storyboard in Resources */,
+				B9BE5197203338E5006DE0A8 /* Assets.xcassets in Resources */,
+				B9BE5195203338E4006DE0A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BE519E203338E5006DE0A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BE51A9203338E5006DE0A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9BE5188203338E4006DE0A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BE5192203338E4006DE0A8 /* ViewController.swift in Sources */,
+				B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BE519C203338E5006DE0A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BE51A5203338E5006DE0A8 /* AirQualityDroneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9BE51A7203338E5006DE0A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9BE51B0203338E5006DE0A8 /* AirQualityDroneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9BE51A2203338E5006DE0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9BE518B203338E4006DE0A8 /* AirQualityDrone */;
+			targetProxy = B9BE51A1203338E5006DE0A8 /* PBXContainerItemProxy */;
+		};
+		B9BE51AD203338E5006DE0A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9BE518B203338E4006DE0A8 /* AirQualityDrone */;
+			targetProxy = B9BE51AC203338E5006DE0A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9BE5193203338E4006DE0A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9BE5194203338E4006DE0A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9BE5198203338E5006DE0A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9BE5199203338E5006DE0A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9BE51B2203338E5006DE0A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B9BE51B3203338E5006DE0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9BE51B5203338E5006DE0A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityDrone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDrone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9BE51B6203338E5006DE0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityDrone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDrone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B9BE51B8203338E5006DE0A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityDroneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDroneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQualityDrone.app/AirQualityDrone";
+			};
+			name = Debug;
+		};
+		B9BE51B9203338E5006DE0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityDroneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDroneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirQualityDrone.app/AirQualityDrone";
+			};
+			name = Release;
+		};
+		B9BE51BB203338E5006DE0A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityDroneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDroneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AirQualityDrone;
+			};
+			name = Debug;
+		};
+		B9BE51BC203338E5006DE0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AirQualityDroneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDroneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AirQualityDrone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9BE5187203338E4006DE0A8 /* Build configuration list for PBXProject "AirQualityDrone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BE51B2203338E5006DE0A8 /* Debug */,
+				B9BE51B3203338E5006DE0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BE51B4203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDrone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BE51B5203338E5006DE0A8 /* Debug */,
+				B9BE51B6203338E5006DE0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BE51B7203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDroneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BE51B8203338E5006DE0A8 /* Debug */,
+				B9BE51B9203338E5006DE0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9BE51BA203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDroneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9BE51BB203338E5006DE0A8 /* Debug */,
+				B9BE51BC203338E5006DE0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9BE5184203338E4006DE0A8 /* Project object */;
+}
