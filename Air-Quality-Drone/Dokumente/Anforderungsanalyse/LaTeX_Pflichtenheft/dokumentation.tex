@@ -1,0 +1,99 @@
+%%**************************************************************
+%% Vorlage fuer Bachelorarbeiten (o.ä.) der DHBW
+%%
+%% Autor: Tobias Dreher, Yves Fischer
+%% Datum: 06.07.2011
+%%
+%% Autor: Michael Gruben
+%% Datum: 15.05.2013
+%%
+%% Autor: Markus Barthel
+%% Datum: 22.08.2014
+%%**************************************************************
+
+\input{ads/header}
+
+\makeglossaries
+\input{ads/glossary}
+
+\begin{document}
+
+	% Deckblatt
+	\begin{spacing}{1}
+		\input{ads/deckblatt}
+	\end{spacing}
+	\newpage
+
+
+	\pagestyle{plain}		% nur Seitenzahlen im Fuß
+	
+	%\RedeclareSectionCommand[beforeskip=\kapitelabstand]{chapter} % stellt Abstand vor Kapitelüberschriften ein
+
+	% Inhaltsverzeichnis
+	\begin{spacing}{1.1}
+		\begingroup
+		
+			% auskommentieren für Seitenzahlen unter Inhaltsverzeichnis
+			\renewcommand*{\chapterpagestyle}{empty}
+			\pagestyle{empty}
+			
+			%\setcounter{tocdepth}{1}
+			%für die Anzeige von Unterkapiteln im Inhaltsverzeichnis
+			\setcounter{tocdepth}{2}
+			
+			\tableofcontents
+			\clearpage
+		\endgroup
+	\end{spacing}
+	\newpage
+	
+	\pagenumbering{Roman}
+
+	
+
+	\pagenumbering{arabic}
+	
+	\pagestyle{headings}		% Kolumnentitel im Kopf, Seitenzahlen im Fuß
+
+	% Zielbestimmung
+	\input{content/Zielbestimmung.tex}
+	
+	% Produkteinsatz
+	\input{content/Produkteinsatz.tex}
+	
+	% Produktumgebung
+	\input{content/Produktumgebung.tex}
+	
+	% Produktfunktionen
+	\input{content/Produktfunktionen.tex}
+	
+	% Produktdaten
+	\input{content/Produktdaten.tex}
+		
+	% Produktleistungen
+	\input{content/Produktleistungen.tex}	
+	
+	% Qualitätsanforderungen
+	\input{content/Qualitatsanforderungen.tex}
+	
+	% Testszenarien_und_Testfaelle
+	\input{content/Testszenarien_und_Testfaelle.tex}
+	
+	% Benutzeroberfläche
+	\input{content/Benutzeroberflache.tex}
+	
+	% Entwicklungsumgebung
+	\input{content/Entwicklungsumgebung.tex}
+		
+	% Abschlussbewertung
+	\input{content/Abschlussbewertung.tex}	
+	
+	% Glossar
+	\printglossaries %[style=altlist,title=\langglossar]
+	
+	% sonstiger Anhang
+	\clearpage
+	\appendix
+	\input{ads/appendix}
+	
+\end{document}

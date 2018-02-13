@@ -1,0 +1,79 @@
+%!TEX root = ../dokumentation.tex
+
+
+
+\chapter{Produktdaten}\label{cha:Produktdaten}
+ 
+
+
+
+
+
+\section{Non-persistente Daten}\label{sec:Non-persistente Daten}
+
+\begin{tabular}{|>{\columncolor{lightgray}}p{3 cm}|p{13 cm}|}
+	\hline
+	\textbf{ID} & \textbf{<<D-001>>} \\
+	\hline
+	\textbf{Inhalt} & Video-Stream \\
+	\hline
+	\textbf{Bestandteile} & 
+	\begin{itemize}
+		\item Video-Stream der Kamera an der Drohne		
+	\end{itemize} \\
+	\hline
+\end{tabular}
+
+\section{Persistente Daten}\label{sec:Persistente Daten}
+
+\begin{tabular}{|>{\columncolor{lightgray}}p{3 cm}|p{13 cm}|}
+	\hline
+	\textbf{ID} & \textbf{<<D-010>>} \\
+	\hline
+	\textbf{Inhalt} & Flugrouten-Koordinaten \\
+	\hline
+	\textbf{Bestandteile} & 
+	\begin{itemize}
+		\item Beschreibung der Flugroute
+		\item GPS-Koordinaten der abzufliegenden Punkte			
+	\end{itemize} \\
+	\hline
+\end{tabular}
+
+\begin{tabular}{|>{\columncolor{lightgray}}p{3 cm}|p{13 cm}|}
+	\hline
+	\textbf{ID} & \textbf{<<D-020>>} \\
+	\hline
+	\textbf{Inhalt} & Messprofil \\
+	\hline
+	\textbf{Bestandteile} & 
+	\begin{itemize}
+		\item Beschreibung des Messprofils
+		\item Genauigkeit der Messung (in Messungen/Zeiteinheit)
+		\item Zu messende Werte (Feinstaub, NO\textsubscript{x}, CO\textsubscript{2}, ...)
+	\end{itemize} \\
+	\hline
+\end{tabular}
+
+\begin{tabular}{|>{\columncolor{lightgray}}p{3 cm}|p{13 cm}|}
+	\hline
+	\textbf{ID} & \textbf{<<D-030>>} \\
+	\hline
+	\textbf{Inhalt} & Messdaten \\
+	\hline
+	\textbf{Bestandteile} & 
+	\begin{itemize}
+		\item Flugkoordinaten
+		\item Zeitstempel
+		\item Temperatur
+		\item Feuchtigkeit
+		\item Druck
+		\item Feinstaub-Partikel-Konzentration
+		\item Stickoxid-Konzentration
+		\item Kohlenstoffdioxid-Konzentration
+		\item Ozon-Konzentration
+		\item Methan-Konzentration			
+	\end{itemize} 
+	Jeweils ein Datensatz pro vorgegebener Zeiteinheit\\
+	\hline
+\end{tabular}
