@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.13)  4 JAN 2018 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.13)  13 FEB 2018 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2456,60 +2456,38 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 11.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 8.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 16.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 16.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 16.
-
-
-LaTeX Warning: Citation 'Bitkom.2014' on page 1 undefined on input line 16.
-
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 15.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 15.
+)
+(./content/Grundlagen.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.18 U
-      t wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper su...
-[1
+l.3 \chapter
+            {Theoretische Grundlagen}\label{cha:Grundlagen} [1
 
 
 
 ]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 20.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 20.
-) (./content/Grundlagen.tex
-Overfull \vbox (7.89444pt too high) has occurred while \output is active []
-
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 3.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 3.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 3.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 3.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.3 \chapter
-            {Theoretische Grundlagen}\label{cha:Grundlagen} [2]
 chapter 2.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
@@ -2524,12 +2502,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.4 \chapter
-            {Planung}\label{cha:Planung} [3
+            {Planung}\label{cha:Planung} [2
 
 ]
 chapter 3.
@@ -2546,12 +2524,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.4 \chapter
-            {Setup}\label{cha:Setup} [4
+            {Setup}\label{cha:Setup} [3
 
 ]
 chapter 4.
@@ -2569,9 +2547,15 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 11.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 11.
-[5
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.11 \newpage
+              [4
 
-] (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+]
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 12.
@@ -2597,7 +2581,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 37.
 
-[6] <images/hadoop_version.png, id=190, 514.17094pt x 111.41624pt>
+[5] <images/hadoop_version.png, id=183, 514.17094pt x 111.41624pt>
 File: images/hadoop_version.png Graphic file (type png)
 
 <use images/hadoop_version.png>
@@ -2615,7 +2599,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 59.
 
-[7 <./images/hadoop_version.png>]) (./content/Umsetzung.tex
+[6 <./images/hadoop_version.png>]) (./content/Umsetzung.tex
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -2627,12 +2611,18 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 
-[8]
+[7]
 chapter 5.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 23.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 23.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 23.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2641,11 +2631,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 28.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 28.
-[9
+[8
 
 ]
 
-LaTeX Warning: Citation 'Teschl.2014' on page 10 undefined on input line 37.
+LaTeX Warning: Citation 'Teschl.2014' on page 9 undefined on input line 37.
 
 ) (./content/Schlussbetrachtung.tex
 Overfull \vbox (7.89444pt too high) has occurred while \output is active []
@@ -2659,7 +2649,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
 
-[10]
+[9]
 chapter 6.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
@@ -2673,7 +2663,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 12.
-[11
+[10
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -2692,7 +2682,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 22.
 
-[12]
+[11]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 23.
 Package babel Info: Redefining ngerman shorthand "~
@@ -2709,7 +2699,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 117.
 
-[13]
+[12]
 chapter without number
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 123.
@@ -2773,7 +2763,7 @@ Package babel Info: Redefining ngerman shorthand "~
 [2
 
 
-] <images/NameNodeWebInterface.png, id=254, 1445.4pt x 1640.1275pt>
+] <images/NameNodeWebInterface.png, id=250, 1445.4pt x 1640.1275pt>
 File: images/NameNodeWebInterface.png Graphic file (type png)
 
 <use images/NameNodeWebInterface.png>
@@ -2826,11 +2816,11 @@ Package logreq Info: Writing requests to 'dokumentation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48657 strings out of 492995
- 901752 string characters out of 6132703
+ 48664 strings out of 492995
+ 901847 string characters out of 6132703
  1559604 words of memory out of 5000000
- 51141 multiletter control sequences out of 15000+600000
- 100451 words of font info for 116 fonts, out of 8000000 for 9000
+ 51143 multiletter control sequences out of 15000+600000
+ 100724 words of font info for 119 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  63i,14n,93p,10400b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -2856,10 +2846,10 @@ lic/lm/lmri8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmro
 /texlive/2017/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on dokumentation.pdf (25 pages, 553957 bytes).
+Output written on dokumentation.pdf (24 pages, 549406 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 126 named destinations out of 1000 (max. 500000)
- 31385 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 31393 words of extra memory for PDF output out of 35830 (max. 10000000)
 
