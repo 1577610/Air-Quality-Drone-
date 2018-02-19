@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801BA0D1C1D54920256026DC /* libPods-AirQualityDrone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */; };
 		B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE518F203338E4006DE0A8 /* AppDelegate.swift */; };
 		B9BE5192203338E4006DE0A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5191203338E4006DE0A8 /* ViewController.swift */; };
 		B9BE5195203338E4006DE0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5193203338E4006DE0A8 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FEAD793EB2B33325529769E /* Pods-AirQualityDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityDrone.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone.release.xcconfig"; sourceTree = "<group>"; };
+		7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirQualityDrone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE518C203338E4006DE0A8 /* AirQualityDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE518F203338E4006DE0A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9BE5191203338E4006DE0A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		B9BE51AB203338E5006DE0A8 /* AirQualityDroneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirQualityDroneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE51AF203338E5006DE0A8 /* AirQualityDroneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDroneUITests.swift; sourceTree = "<group>"; };
 		B9BE51B1203338E5006DE0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE0BBE81CAB95EE572A58DE1 /* Pods-AirQualityDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityDrone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801BA0D1C1D54920256026DC /* libPods-AirQualityDrone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0793705E038BC95B90233781 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE0BBE81CAB95EE572A58DE1 /* Pods-AirQualityDrone.debug.xcconfig */,
+				3FEAD793EB2B33325529769E /* Pods-AirQualityDrone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B9BE5183203338E4006DE0A8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				B9BE51A3203338E5006DE0A8 /* AirQualityDroneTests */,
 				B9BE51AE203338E5006DE0A8 /* AirQualityDroneUITests */,
 				B9BE518D203338E4006DE0A8 /* Products */,
+				0793705E038BC95B90233781 /* Pods */,
+				D49AD7EAD137A3FF1431146B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = AirQualityDroneUITests;
 			sourceTree = "<group>";
 		};
+		D49AD7EAD137A3FF1431146B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9BE51B4203338E5006DE0A8 /* Build configuration list for PBXNativeTarget "AirQualityDrone" */;
 			buildPhases = (
+				4EC61682E622D5483F6967D5 /* [CP] Check Pods Manifest.lock */,
 				B9BE5188203338E4006DE0A8 /* Sources */,
 				B9BE5189203338E4006DE0A8 /* Frameworks */,
 				B9BE518A203338E4006DE0A8 /* Resources */,
+				71F780E248139D037648E401 /* [CP] Embed Pods Frameworks */,
+				6B3B90309B3AD3D9CB504C4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EC61682E622D5483F6967D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirQualityDrone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B3B90309B3AD3D9CB504C4E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71F780E248139D037648E401 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone-frameworks.sh",
+				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9BE5188203338E4006DE0A8 /* Sources */ = {
@@ -424,6 +505,7 @@
 		};
 		B9BE51B5203338E5006DE0A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE0BBE81CAB95EE572A58DE1 /* Pods-AirQualityDrone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +520,7 @@
 		};
 		B9BE51B6203338E5006DE0A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FEAD793EB2B33325529769E /* Pods-AirQualityDrone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
