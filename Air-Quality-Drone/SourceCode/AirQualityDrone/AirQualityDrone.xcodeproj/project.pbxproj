@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		801BA0D1C1D54920256026DC /* libPods-AirQualityDrone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */; };
+		B9B1B7462044654B00AD008B /* Images.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = B9B1B7452044654B00AD008B /* Images.xcstickers */; };
 		B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE518F203338E4006DE0A8 /* AppDelegate.swift */; };
 		B9BE5192203338E4006DE0A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5191203338E4006DE0A8 /* ViewController.swift */; };
 		B9BE5195203338E4006DE0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5193203338E4006DE0A8 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		3FEAD793EB2B33325529769E /* Pods-AirQualityDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirQualityDrone.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone.release.xcconfig"; sourceTree = "<group>"; };
 		7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirQualityDrone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9B1B7452044654B00AD008B /* Images.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Images.xcstickers; sourceTree = "<group>"; };
 		B9BE518C203338E4006DE0A8 /* AirQualityDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE518F203338E4006DE0A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9BE5191203338E4006DE0A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		B9BE5183203338E4006DE0A8 = {
 			isa = PBXGroup;
 			children = (
+				B9B1B7452044654B00AD008B /* Images.xcstickers */,
 				B9BE518E203338E4006DE0A8 /* AirQualityDrone */,
 				B9BE51A3203338E5006DE0A8 /* AirQualityDroneTests */,
 				B9BE51AE203338E5006DE0A8 /* AirQualityDroneUITests */,
@@ -259,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B1B7462044654B00AD008B /* Images.xcstickers in Resources */,
 				B9BE519A203338E5006DE0A8 /* LaunchScreen.storyboard in Resources */,
 				B9BE5197203338E5006DE0A8 /* Assets.xcassets in Resources */,
 				B9BE5195203338E4006DE0A8 /* Main.storyboard in Resources */,
@@ -323,10 +327,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AirQualityDrone/Pods-AirQualityDrone-frameworks.sh",
 				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
+				"${PODS_ROOT}/DJI-UILibrary-iOS/iOS_UILibrary/DJIUILibrary.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJIUILibrary.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -509,6 +515,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COMPILER_INDEX_STORE_ENABLE = Default;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AirQualityDrone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDrone;
@@ -524,6 +532,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				COMPILER_INDEX_STORE_ENABLE = Default;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = AirQualityDrone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Studienarbeit.AirQualityDrone;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pQc-tN-aUm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7vd-9Y-fPj">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,15 +13,16 @@
         <!--Page View Controller-->
         <scene sceneID="bKM-4J-WIP">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="pQc-tN-aUm" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pQc-tN-aUm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bIG-1C-a9g"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmU-UA-jUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="34"/>
+            <point key="canvasLocation" x="16" y="11"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
@@ -30,7 +31,126 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="16" y="724"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H0y-Ag-ogB">
+            <objects>
+                <viewController id="7vd-9Y-fPj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QEI-Wn-5zY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jqo-Fk-ykt">
+                                <rect key="frame" x="0.0" y="100" width="768" height="922"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Messprofil" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-wa-cLw">
+                                <rect key="frame" x="30" y="100" width="200" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="iJW-sJ-Hyg"/>
+                                    <constraint firstAttribute="width" constant="200" id="t3B-xP-2Vu" userLabel="width = 175"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Flugroute" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29Z-Ae-CNs">
+                                <rect key="frame" x="260" y="100" width="175" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SHn-iN-uEZ"/>
+                                    <constraint firstAttribute="width" constant="175" id="u8a-kl-yiQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="hNq-bv-Nfr" userLabel="arrow0.png">
+                                <rect key="frame" x="195" y="110" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="VcI-yV-hqe"/>
+                                    <constraint firstAttribute="height" constant="25" id="e6P-zO-rzH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-u7-1Vp" userLabel="arrow1.png">
+                                <rect key="frame" x="400" y="110" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="MAJ-b4-fnX"/>
+                                    <constraint firstAttribute="height" constant="25" id="S7f-JZ-pmg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zto-Ub-izA">
+                                <rect key="frame" x="465" y="100" width="175" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JCs-yF-V0l"/>
+                                    <constraint firstAttribute="width" constant="175" id="ZtU-T6-aUq"/>
+                                </constraints>
+                                <state key="normal" title="neue Flugroute"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6l-Pf-J80">
+                                <rect key="frame" x="341.5" y="899" width="85" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="J5o-Vz-dnk"/>
+                                    <constraint firstAttribute="height" constant="35" id="pmM-wi-kw9"/>
+                                </constraints>
+                                <state key="normal" title="Flug starten"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Df1-Cd-IO4">
+                                <rect key="frame" x="364.5" y="967" width="39" height="37"/>
+                            </pageControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-3o-e8r">
+                                <rect key="frame" x="0.0" y="809" width="768" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="oYS-PI-y0e"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUV-TN-Nji" userLabel="Picker1 View">
+                                <rect key="frame" x="0.0" y="809" width="768" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="nj1-o2-b8i"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="1iq-1L-wk1"/>
+                            <constraint firstItem="BUV-TN-Nji" firstAttribute="trailing" secondItem="QEI-Wn-5zY" secondAttribute="trailing" id="2Ap-tT-y7O"/>
+                            <constraint firstItem="29Z-Ae-CNs" firstAttribute="leading" secondItem="AcP-wa-cLw" secondAttribute="trailing" constant="30" id="5TH-IB-Odg"/>
+                            <constraint firstItem="Df1-Cd-IO4" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="5WB-LC-zrf"/>
+                            <constraint firstItem="AcP-wa-cLw" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" constant="30" id="6nK-bd-hyf"/>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="Go0-y0-dKY" secondAttribute="top" constant="80" id="8wM-ii-rgJ" userLabel="Map View.top = top + 80"/>
+                            <constraint firstItem="Ohn-3o-e8r" firstAttribute="trailing" secondItem="QEI-Wn-5zY" secondAttribute="trailing" id="91W-C0-bTC"/>
+                            <constraint firstItem="Pam-u7-1Vp" firstAttribute="bottom" secondItem="29Z-Ae-CNs" secondAttribute="bottom" constant="-10" id="Edw-E7-PiX" userLabel="arrow1.png.bottom = Flugroute.bottom -10"/>
+                            <constraint firstItem="hNq-bv-Nfr" firstAttribute="top" secondItem="AcP-wa-cLw" secondAttribute="top" constant="10" id="GAJ-m9-21a" userLabel="arrow0.png.top = Messprofil.top + 10"/>
+                            <constraint firstItem="Ohn-3o-e8r" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="KGx-JX-dgA"/>
+                            <constraint firstItem="Pam-u7-1Vp" firstAttribute="top" secondItem="29Z-Ae-CNs" secondAttribute="top" constant="10" id="KSm-wf-aqU" userLabel="arrow1.png.top = Flugroute.top + 10"/>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="29Z-Ae-CNs" secondAttribute="top" id="LDs-1A-h6t" userLabel="Flugroute.top = Map View.top"/>
+                            <constraint firstItem="Y6l-Pf-J80" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="LVv-48-xZF"/>
+                            <constraint firstItem="zto-Ub-izA" firstAttribute="leading" secondItem="29Z-Ae-CNs" secondAttribute="trailing" constant="30" id="LWt-F6-8qx"/>
+                            <constraint firstItem="Y6l-Pf-J80" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" constant="-90" id="MUs-ep-cOh"/>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="Opn-Me-Vr1"/>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="AcP-wa-cLw" secondAttribute="top" id="Tfa-aa-RJe" userLabel="Messprofil.top = Map View.top"/>
+                            <constraint firstItem="BUV-TN-Nji" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="Uax-Ue-AoI"/>
+                            <constraint firstItem="Ohn-3o-e8r" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" id="Zrs-yj-Ysr"/>
+                            <constraint firstItem="BUV-TN-Nji" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" id="b9g-HP-w0y"/>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="zto-Ub-izA" secondAttribute="top" id="bkd-iT-kG4" userLabel="neue Flugroute.top = Map View.top"/>
+                            <constraint firstItem="hNq-bv-Nfr" firstAttribute="trailing" secondItem="AcP-wa-cLw" secondAttribute="trailing" constant="-10" id="hR2-tP-oZn"/>
+                            <constraint firstItem="hNq-bv-Nfr" firstAttribute="bottom" secondItem="AcP-wa-cLw" secondAttribute="bottom" constant="-10" id="jUj-Uu-asa" userLabel="arrow0.png.bottom = Messprofil.bottom -10"/>
+                            <constraint firstItem="Ohn-3o-e8r" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="kQK-1R-F5f"/>
+                            <constraint firstItem="Df1-Cd-IO4" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" constant="-20" id="oyq-zI-lwS"/>
+                            <constraint firstItem="Pam-u7-1Vp" firstAttribute="trailing" secondItem="29Z-Ae-CNs" secondAttribute="trailing" constant="-10" id="pfB-cR-gt0"/>
+                            <constraint firstItem="BUV-TN-Nji" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="xu3-2c-uuj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Go0-y0-dKY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lu8-3P-VHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-714.0625" y="723.046875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.png" width="16" height="16"/>
+    </resources>
 </document>

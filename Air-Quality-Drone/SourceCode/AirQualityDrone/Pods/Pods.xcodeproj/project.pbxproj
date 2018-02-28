@@ -16,13 +16,14 @@
 		1066A5C8C514FE15D6B88DE9D308B73C /* libPods-AirQualityDrone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AirQualityDrone.a"; path = "libPods-AirQualityDrone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D6354A486D49B60649FBB02DF324E4 /* Pods-AirQualityDrone-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AirQualityDrone-acknowledgements.plist"; sourceTree = "<group>"; };
 		418A28151C5E225452C4FC34B7CA728C /* Pods-AirQualityDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirQualityDrone.debug.xcconfig"; sourceTree = "<group>"; };
-		60D35208A41F813C11CF2EABF1729F56 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = iOS_Mobile_SDK/DJISDK.framework; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6CF2FA89BB55F27CADD741995E5000B /* Pods-AirQualityDrone-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AirQualityDrone-dummy.m"; sourceTree = "<group>"; };
 		C705EE456303B5F7900B34ED8D65F948 /* Pods-AirQualityDrone-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AirQualityDrone-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CF5EB6691C94B10FEA54F297C92D4561 /* Pods-AirQualityDrone-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AirQualityDrone-resources.sh"; sourceTree = "<group>"; };
+		D81B7A62E12BE1C740133F9C5EFD87A1 /* DJISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJISDK.framework; path = iOS_Mobile_SDK/DJISDK.framework; sourceTree = "<group>"; };
 		DE357C2CAB4BB7CEAD5E5E24DFEA5AED /* Pods-AirQualityDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AirQualityDrone.release.xcconfig"; sourceTree = "<group>"; };
+		EEDEE1790B814985D1A476DFE8AE99C6 /* DJIUILibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DJIUILibrary.framework; path = iOS_UILibrary/DJIUILibrary.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +38,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		267773F54F16E656F519BDA6F4A4C3E8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D80F32236359801533552B33A6DD10A /* DJI-SDK-iOS */,
+				3054D45E401B62F5AD64266D7A0B4EBA /* DJI-UILibrary-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D80F32236359801533552B33A6DD10A /* DJI-SDK-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				745DCB59AA73997B8AB740B3E6E6DEDE /* Frameworks */,
+			);
+			name = "DJI-SDK-iOS";
+			path = "DJI-SDK-iOS";
+			sourceTree = "<group>";
+		};
+		3054D45E401B62F5AD64266D7A0B4EBA /* DJI-UILibrary-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6FC5889324DC6F0B187244AA942B6B07 /* Frameworks */,
+			);
+			name = "DJI-UILibrary-iOS";
+			path = "DJI-UILibrary-iOS";
+			sourceTree = "<group>";
+		};
 		4CFDC9B5139C497DEBFCFB9389DCB469 /* Pods-AirQualityDrone */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,18 +80,18 @@
 			path = "Target Support Files/Pods-AirQualityDrone";
 			sourceTree = "<group>";
 		};
-		56F41CF807F2E3D702FCC66A3C9E3ED3 /* Pods */ = {
+		6FC5889324DC6F0B187244AA942B6B07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B807EC8B5210DCC405066E964D6E24F1 /* DJI-SDK-iOS */,
+				EEDEE1790B814985D1A476DFE8AE99C6 /* DJIUILibrary.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		67CB930674CE5A381B0C1916D23A3035 /* Frameworks */ = {
+		745DCB59AA73997B8AB740B3E6E6DEDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				60D35208A41F813C11CF2EABF1729F56 /* DJISDK.framework */,
+				D81B7A62E12BE1C740133F9C5EFD87A1 /* DJISDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,7 +101,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				56F41CF807F2E3D702FCC66A3C9E3ED3 /* Pods */,
+				267773F54F16E656F519BDA6F4A4C3E8 /* Pods */,
 				B5CBDA235C929733028DD68574044414 /* Products */,
 				867BF80D43C5EC395D1E307EE5E71ECB /* Targets Support Files */,
 			);
@@ -93,15 +121,6 @@
 				1066A5C8C514FE15D6B88DE9D308B73C /* libPods-AirQualityDrone.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B807EC8B5210DCC405066E964D6E24F1 /* DJI-SDK-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				67CB930674CE5A381B0C1916D23A3035 /* Frameworks */,
-			);
-			name = "DJI-SDK-iOS";
-			path = "DJI-SDK-iOS";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
