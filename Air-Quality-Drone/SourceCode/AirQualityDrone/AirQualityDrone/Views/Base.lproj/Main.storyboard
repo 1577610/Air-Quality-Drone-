@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7vd-9Y-fPj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pQc-tN-aUm">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,17 +13,17 @@
         <!--Page View Controller-->
         <scene sceneID="bKM-4J-WIP">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pQc-tN-aUm" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pQc-tN-aUm" customClass="PageViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bIG-1C-a9g"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmU-UA-jUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="11"/>
+            <point key="canvasLocation" x="-64" y="-402"/>
         </scene>
-        <!--View Controller-->
+        <!--Messurement View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessurementView" id="BYZ-38-t0r" customClass="MessurementViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,60 +33,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="724"/>
+            <point key="canvasLocation" x="301" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--Flight View Controller-->
         <scene sceneID="H0y-Ag-ogB">
             <objects>
-                <viewController id="7vd-9Y-fPj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7vd-9Y-fPj" customClass="FlightViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QEI-Wn-5zY">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jqo-Fk-ykt">
-                                <rect key="frame" x="0.0" y="100" width="768" height="922"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jqo-Fk-ykt">
+                                <rect key="frame" x="0.0" y="100" width="768" height="924"/>
                             </mapView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Messprofil" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-wa-cLw">
-                                <rect key="frame" x="30" y="100" width="200" height="45"/>
+                                <rect key="frame" x="30" y="100" width="89" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="iJW-sJ-Hyg"/>
-                                    <constraint firstAttribute="width" constant="200" id="t3B-xP-2Vu" userLabel="width = 175"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messurementProfileTv:" destination="7vd-9Y-fPj" eventType="touchUpInside" id="28t-rH-PtN"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Flugroute" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29Z-Ae-CNs">
-                                <rect key="frame" x="260" y="100" width="175" height="45"/>
+                                <rect key="frame" x="149" y="100" width="83" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="SHn-iN-uEZ"/>
-                                    <constraint firstAttribute="width" constant="175" id="u8a-kl-yiQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="flightRouteTv:" destination="7vd-9Y-fPj" eventType="touchUpInside" id="4Nk-3f-aDj"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="hNq-bv-Nfr" userLabel="arrow0.png">
-                                <rect key="frame" x="195" y="110" width="25" height="25"/>
+                                <rect key="frame" x="84" y="110" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="VcI-yV-hqe"/>
                                     <constraint firstAttribute="height" constant="25" id="e6P-zO-rzH"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-u7-1Vp" userLabel="arrow1.png">
-                                <rect key="frame" x="400" y="110" width="25" height="25"/>
+                                <rect key="frame" x="197" y="110" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="MAJ-b4-fnX"/>
                                     <constraint firstAttribute="height" constant="25" id="S7f-JZ-pmg"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zto-Ub-izA">
-                                <rect key="frame" x="465" y="100" width="175" height="45"/>
+                                <rect key="frame" x="262" y="100" width="103" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="JCs-yF-V0l"/>
-                                    <constraint firstAttribute="width" constant="175" id="ZtU-T6-aUq"/>
                                 </constraints>
                                 <state key="normal" title="neue Flugroute"/>
+                                <connections>
+                                    <action selector="newFlightRouteBtn:" destination="7vd-9Y-fPj" eventType="touchUpInside" id="XXH-os-sry"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6l-Pf-J80">
                                 <rect key="frame" x="341.5" y="899" width="85" height="35"/>
@@ -95,6 +101,9 @@
                                     <constraint firstAttribute="height" constant="35" id="pmM-wi-kw9"/>
                                 </constraints>
                                 <state key="normal" title="Flug starten"/>
+                                <connections>
+                                    <action selector="startFlightBtn:" destination="7vd-9Y-fPj" eventType="touchUpInside" id="G8S-oE-R75"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Df1-Cd-IO4">
                                 <rect key="frame" x="364.5" y="967" width="39" height="37"/>
@@ -105,7 +114,7 @@
                                     <constraint firstAttribute="height" constant="215" id="oYS-PI-y0e"/>
                                 </constraints>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUV-TN-Nji" userLabel="Picker1 View">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUV-TN-Nji" userLabel="Flight Pckv">
                                 <rect key="frame" x="0.0" y="809" width="768" height="215"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="215" id="nj1-o2-b8i"/>
@@ -123,6 +132,7 @@
                             <constraint firstItem="Ohn-3o-e8r" firstAttribute="trailing" secondItem="QEI-Wn-5zY" secondAttribute="trailing" id="91W-C0-bTC"/>
                             <constraint firstItem="Pam-u7-1Vp" firstAttribute="bottom" secondItem="29Z-Ae-CNs" secondAttribute="bottom" constant="-10" id="Edw-E7-PiX" userLabel="arrow1.png.bottom = Flugroute.bottom -10"/>
                             <constraint firstItem="hNq-bv-Nfr" firstAttribute="top" secondItem="AcP-wa-cLw" secondAttribute="top" constant="10" id="GAJ-m9-21a" userLabel="arrow0.png.top = Messprofil.top + 10"/>
+                            <constraint firstItem="jqo-Fk-ykt" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" id="ID6-RH-VHM"/>
                             <constraint firstItem="Ohn-3o-e8r" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="KGx-JX-dgA"/>
                             <constraint firstItem="Pam-u7-1Vp" firstAttribute="top" secondItem="29Z-Ae-CNs" secondAttribute="top" constant="10" id="KSm-wf-aqU" userLabel="arrow1.png.top = Flugroute.top + 10"/>
                             <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="29Z-Ae-CNs" secondAttribute="top" id="LDs-1A-h6t" userLabel="Flugroute.top = Map View.top"/>
@@ -144,10 +154,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Go0-y0-dKY"/>
                     </view>
+                    <connections>
+                        <outlet property="flightPckv" destination="BUV-TN-Nji" id="b1P-eE-Tpa"/>
+                        <outlet property="mapView" destination="jqo-Fk-ykt" id="wB7-VG-rEq"/>
+                        <outlet property="messurementPckv" destination="Ohn-3o-e8r" id="6tu-HO-i8B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lu8-3P-VHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-714.0625" y="723.046875"/>
+            <point key="canvasLocation" x="-548.4375" y="723.046875"/>
         </scene>
     </scenes>
     <resources>
