@@ -15,46 +15,7 @@ class PageViewController: UIPageViewController {
     }()
     
     private func newViewController(view: String) -> UIViewController{
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "/(view)View")
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
-            return nil
-        }
-        
-        let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0 else {
-            return nil
-        }
-        
-        guard orderedViewControllers.count > previousIndex else {
-            return nil
-        }
-        
-        return orderedViewControllers[previousIndex]
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = viewControllerIndex + 1
-        let orderedViewControllersCount = orderedViewControllers.count
-        
-        guard orderedViewControllersCount != nextIndex else {
-            return nil
-        }
-        
-        guard orderedViewControllersCount > nextIndex else {
-            return nil
-        }
-        
-        return orderedViewControllers[nextIndex]
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "/(view)ViewController")
     }
     
     override func viewDidLoad() {
@@ -81,15 +42,49 @@ class PageViewController: UIPageViewController {
 
 extension PageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
+            return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        // User is on the first view controller and swiped left to loop to
+        // the last view controller.
+        guard previousIndex >= 0 else {
+            return orderedViewControllers.last
+        }
+        
+        guard orderedViewControllers.count > previousIndex else {
+            return nil
+        }
+        
+        return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(pageViewController: UIPageViewController,
-                            viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
+            return nil
+        }
+        
+        let nextIndex = viewControllerIndex + 1
+        let orderedViewControllersCount = orderedViewControllers.count
+        
+        // User is on the last view controller and swiped right to loop to
+        // the first view controller.
+        guard orderedViewControllersCount != nextIndex else {
+            return orderedViewControllers.first
+        }
+        
+        guard orderedViewControllersCount > nextIndex else {
+            return nil
+        }
+        
+        return orderedViewControllers[nextIndex]
     }
+    
 }
 
     

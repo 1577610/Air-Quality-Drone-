@@ -14,7 +14,10 @@
         <scene sceneID="bKM-4J-WIP">
             <objects>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pQc-tN-aUm" customClass="PageViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="bIG-1C-a9g"/>
+                    <connections>
+                        <segue destination="7vd-9Y-fPj" kind="show" identifier="flightViewControllerSegue" id="sBP-Za-aYg"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="messurementViewControllerSegue" id="hPf-5b-pwV"/>
+                    </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmU-UA-jUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,13 +30,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbC-k8-yYW">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="hj6-lf-prd"/>
+                                    <constraint firstAttribute="height" constant="80" id="xx0-o7-aDb"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="nzQ-gx-mYh" kind="embed" id="egF-Gx-QnD"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EbC-k8-yYW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OC9-qV-bf6"/>
+                            <constraint firstItem="EbC-k8-yYW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="fAy-bY-gRW"/>
+                            <constraint firstItem="EbC-k8-yYW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ndB-gG-NJt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301" y="723"/>
+            <point key="canvasLocation" x="916" y="722"/>
+        </scene>
+        <!--Status Bar View Controller-->
+        <scene sceneID="adl-Ac-JPa">
+            <objects>
+                <viewController id="nzQ-gx-mYh" customClass="StatusBarViewController" customModule="AirQualityDrone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bIa-9B-iko">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vD9-kb-QW0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ql-lq-hSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="723"/>
         </scene>
         <!--Flight View Controller-->
         <scene sceneID="H0y-Ag-ogB">
@@ -105,9 +140,6 @@
                                     <action selector="startFlightBtn:" destination="7vd-9Y-fPj" eventType="touchUpInside" id="G8S-oE-R75"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Df1-Cd-IO4">
-                                <rect key="frame" x="364.5" y="967" width="39" height="37"/>
-                            </pageControl>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohn-3o-e8r">
                                 <rect key="frame" x="0.0" y="809" width="768" height="215"/>
                                 <constraints>
@@ -120,13 +152,22 @@
                                     <constraint firstAttribute="height" constant="215" id="nj1-o2-b8i"/>
                                 </constraints>
                             </pickerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUm-H5-cDQ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="jgo-Oy-y11"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="nzQ-gx-mYh" kind="embed" id="TsS-V3-hLA"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nUm-H5-cDQ" firstAttribute="trailing" secondItem="QEI-Wn-5zY" secondAttribute="trailing" id="0xi-Bx-aZL"/>
                             <constraint firstItem="jqo-Fk-ykt" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="1iq-1L-wk1"/>
                             <constraint firstItem="BUV-TN-Nji" firstAttribute="trailing" secondItem="QEI-Wn-5zY" secondAttribute="trailing" id="2Ap-tT-y7O"/>
                             <constraint firstItem="29Z-Ae-CNs" firstAttribute="leading" secondItem="AcP-wa-cLw" secondAttribute="trailing" constant="30" id="5TH-IB-Odg"/>
-                            <constraint firstItem="Df1-Cd-IO4" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="5WB-LC-zrf"/>
                             <constraint firstItem="AcP-wa-cLw" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" constant="30" id="6nK-bd-hyf"/>
                             <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="Go0-y0-dKY" secondAttribute="top" constant="80" id="8wM-ii-rgJ" userLabel="Map View.top = top + 80"/>
                             <constraint firstItem="Ohn-3o-e8r" firstAttribute="trailing" secondItem="QEI-Wn-5zY" secondAttribute="trailing" id="91W-C0-bTC"/>
@@ -139,6 +180,7 @@
                             <constraint firstItem="Y6l-Pf-J80" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="LVv-48-xZF"/>
                             <constraint firstItem="zto-Ub-izA" firstAttribute="leading" secondItem="29Z-Ae-CNs" secondAttribute="trailing" constant="30" id="LWt-F6-8qx"/>
                             <constraint firstItem="Y6l-Pf-J80" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" constant="-90" id="MUs-ep-cOh"/>
+                            <constraint firstItem="nUm-H5-cDQ" firstAttribute="top" secondItem="QEI-Wn-5zY" secondAttribute="top" id="OLG-zF-hZO"/>
                             <constraint firstItem="jqo-Fk-ykt" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="Opn-Me-Vr1"/>
                             <constraint firstItem="jqo-Fk-ykt" firstAttribute="top" secondItem="AcP-wa-cLw" secondAttribute="top" id="Tfa-aa-RJe" userLabel="Messprofil.top = Map View.top"/>
                             <constraint firstItem="BUV-TN-Nji" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="Uax-Ue-AoI"/>
@@ -148,9 +190,9 @@
                             <constraint firstItem="hNq-bv-Nfr" firstAttribute="trailing" secondItem="AcP-wa-cLw" secondAttribute="trailing" constant="-10" id="hR2-tP-oZn"/>
                             <constraint firstItem="hNq-bv-Nfr" firstAttribute="bottom" secondItem="AcP-wa-cLw" secondAttribute="bottom" constant="-10" id="jUj-Uu-asa" userLabel="arrow0.png.bottom = Messprofil.bottom -10"/>
                             <constraint firstItem="Ohn-3o-e8r" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="kQK-1R-F5f"/>
-                            <constraint firstItem="Df1-Cd-IO4" firstAttribute="bottom" secondItem="QEI-Wn-5zY" secondAttribute="bottom" constant="-20" id="oyq-zI-lwS"/>
                             <constraint firstItem="Pam-u7-1Vp" firstAttribute="trailing" secondItem="29Z-Ae-CNs" secondAttribute="trailing" constant="-10" id="pfB-cR-gt0"/>
                             <constraint firstItem="BUV-TN-Nji" firstAttribute="centerX" secondItem="QEI-Wn-5zY" secondAttribute="centerX" id="xu3-2c-uuj"/>
+                            <constraint firstItem="nUm-H5-cDQ" firstAttribute="leading" secondItem="QEI-Wn-5zY" secondAttribute="leading" id="zbj-fI-khG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Go0-y0-dKY"/>
                     </view>
@@ -168,4 +210,7 @@
     <resources>
         <image name="arrow.png" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="TsS-V3-hLA"/>
+    </inferredMetricsTieBreakers>
 </document>

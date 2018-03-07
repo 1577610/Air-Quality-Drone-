@@ -10,12 +10,13 @@
 		801BA0D1C1D54920256026DC /* libPods-AirQualityDrone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */; };
 		B9B1B7462044654B00AD008B /* Images.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = B9B1B7452044654B00AD008B /* Images.xcstickers */; };
 		B9B1B7492046DCF900AD008B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1B7482046DCF900AD008B /* PageViewController.swift */; };
-		B9B1B75E204EF4F500AD008B /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B75D204EF4CE00AD008B /* VideoPreviewer.framework */; };
-		B9B1B75F204EF4F500AD008B /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B75D204EF4CE00AD008B /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9B1B764204EF8F500AD008B /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1B763204EF8F500AD008B /* FlightViewController.swift */; };
 		B9B1B766204FCB2700AD008B /* MessurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1B765204FCB2700AD008B /* MessurementViewController.swift */; };
 		B9B1B768204FD32600AD008B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B767204FD32600AD008B /* MapKit.framework */; };
 		B9B1B76A204FD34200AD008B /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B769204FD34200AD008B /* ExternalAccessory.framework */; };
+		B9B1B773204FEC5500AD008B /* StatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1B772204FEC5400AD008B /* StatusBarViewController.swift */; };
+		B9B1B7742050578700AD008B /* VideoPreviewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B771204FD71B00AD008B /* VideoPreviewer.framework */; };
+		B9B1B7752050578700AD008B /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B771204FD71B00AD008B /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE518F203338E4006DE0A8 /* AppDelegate.swift */; };
 		B9BE5195203338E4006DE0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5193203338E4006DE0A8 /* Main.storyboard */; };
 		B9BE5197203338E5006DE0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BE5196203338E5006DE0A8 /* Assets.xcassets */; };
@@ -25,16 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B9B1B75C204EF4CE00AD008B /* PBXContainerItemProxy */ = {
+		B9B1B770204FD71B00AD008B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9B1B758204EF4CE00AD008B /* VideoPreviewer.xcodeproj */;
+			containerPortal = B9B1B76C204FD71A00AD008B /* VideoPreviewer.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 02A543FD1C3C51CB0083C11B;
 			remoteInfo = VideoPreviewer;
 		};
-		B9B1B760204EF4F500AD008B /* PBXContainerItemProxy */ = {
+		B9B1B7762050578700AD008B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9B1B758204EF4CE00AD008B /* VideoPreviewer.xcodeproj */;
+			containerPortal = B9B1B76C204FD71A00AD008B /* VideoPreviewer.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 02A543FC1C3C51CB0083C11B;
 			remoteInfo = VideoPreviewer;
@@ -62,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B9B1B75F204EF4F500AD008B /* VideoPreviewer.framework in Embed Frameworks */,
+				B9B1B7752050578700AD008B /* VideoPreviewer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,12 +75,13 @@
 		7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirQualityDrone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B1B7452044654B00AD008B /* Images.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; path = Images.xcstickers; sourceTree = "<group>"; };
 		B9B1B7482046DCF900AD008B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		B9B1B758204EF4CE00AD008B /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
 		B9B1B763204EF8F500AD008B /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
 		B9B1B765204FCB2700AD008B /* MessurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessurementViewController.swift; sourceTree = "<group>"; };
 		B9B1B767204FD32600AD008B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B9B1B769204FD34200AD008B /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		B9B1B76B204FD34200AD008B /* AirQualityDrone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AirQualityDrone.entitlements; sourceTree = "<group>"; };
+		B9B1B76C204FD71A00AD008B /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
+		B9B1B772204FEC5400AD008B /* StatusBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarViewController.swift; sourceTree = "<group>"; };
 		B9BE518C203338E4006DE0A8 /* AirQualityDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9BE518F203338E4006DE0A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9BE5194203338E4006DE0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9B1B75E204EF4F500AD008B /* VideoPreviewer.framework in Frameworks */,
+				B9B1B7742050578700AD008B /* VideoPreviewer.framework in Frameworks */,
 				B9B1B768204FD32600AD008B /* MapKit.framework in Frameworks */,
 				B9B1B76A204FD34200AD008B /* ExternalAccessory.framework in Frameworks */,
 				801BA0D1C1D54920256026DC /* libPods-AirQualityDrone.a in Frameworks */,
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B1B7482046DCF900AD008B /* PageViewController.swift */,
+				B9B1B772204FEC5400AD008B /* StatusBarViewController.swift */,
 				B9B1B765204FCB2700AD008B /* MessurementViewController.swift */,
 				B9B1B763204EF8F500AD008B /* FlightViewController.swift */,
 			);
@@ -158,10 +161,10 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B9B1B759204EF4CE00AD008B /* Products */ = {
+		B9B1B76D204FD71A00AD008B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9B1B75D204EF4CE00AD008B /* VideoPreviewer.framework */,
+				B9B1B771204FD71B00AD008B /* VideoPreviewer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,9 +228,9 @@
 		D49AD7EAD137A3FF1431146B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9B1B76C204FD71A00AD008B /* VideoPreviewer.xcodeproj */,
 				B9B1B769204FD34200AD008B /* ExternalAccessory.framework */,
 				B9B1B767204FD32600AD008B /* MapKit.framework */,
-				B9B1B758204EF4CE00AD008B /* VideoPreviewer.xcodeproj */,
 				7C5E745A84E5D15984C20C80 /* libPods-AirQualityDrone.a */,
 			);
 			name = Frameworks;
@@ -251,7 +254,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B9B1B761204EF4F500AD008B /* PBXTargetDependency */,
+				B9B1B7772050578700AD008B /* PBXTargetDependency */,
 			);
 			name = AirQualityDrone;
 			productName = AirQualityDrone;
@@ -341,8 +344,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B9B1B759204EF4CE00AD008B /* Products */;
-					ProjectRef = B9B1B758204EF4CE00AD008B /* VideoPreviewer.xcodeproj */;
+					ProductGroup = B9B1B76D204FD71A00AD008B /* Products */;
+					ProjectRef = B9B1B76C204FD71A00AD008B /* VideoPreviewer.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -355,11 +358,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B9B1B75D204EF4CE00AD008B /* VideoPreviewer.framework */ = {
+		B9B1B771204FD71B00AD008B /* VideoPreviewer.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VideoPreviewer.framework;
-			remoteRef = B9B1B75C204EF4CE00AD008B /* PBXContainerItemProxy */;
+			remoteRef = B9B1B770204FD71B00AD008B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -457,6 +460,7 @@
 				B9B1B766204FCB2700AD008B /* MessurementViewController.swift in Sources */,
 				B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */,
 				B9B1B764204EF8F500AD008B /* FlightViewController.swift in Sources */,
+				B9B1B773204FEC5500AD008B /* StatusBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,10 +483,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B9B1B761204EF4F500AD008B /* PBXTargetDependency */ = {
+		B9B1B7772050578700AD008B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = VideoPreviewer;
-			targetProxy = B9B1B760204EF4F500AD008B /* PBXContainerItemProxy */;
+			targetProxy = B9B1B7762050578700AD008B /* PBXContainerItemProxy */;
 		};
 		B9BE51A2203338E5006DE0A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -548,6 +552,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -605,6 +610,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
