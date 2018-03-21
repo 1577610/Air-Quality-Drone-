@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ShowMessurementMapItem: UITabBarItem {
+class ShowMessurementMapViewController: UIViewController{
 
 }

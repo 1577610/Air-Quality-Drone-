@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:ComboBox"
+      name = "ComboBox">
+      <FileRef
+         location = "group:ComboBox.xib">
+      </FileRef>
+      <FileRef
+         location = "group:ComboBox.h">
+      </FileRef>
+      <FileRef
+         location = "group:arrow.png">
+      </FileRef>
+      <FileRef
+         location = "group:ComboBox.m">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:VideoPreviewer">
    </FileRef>

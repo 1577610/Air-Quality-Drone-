@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import DJIUILibrary
 
-class InFlightViewController: UIViewController {
+class InFlightViewController: DULFPVViewController {
 
+    @IBOutlet var liveVideoArea: DULFPVView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

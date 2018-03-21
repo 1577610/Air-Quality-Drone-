@@ -38,18 +38,18 @@ extension ProductCommunicationManager : DJISDKManagerDelegate {
     }
     
     func productDisconnected() {
-        <#code#>
+        
     }
     
     func productConnected(_ product: DJIBaseProduct?) {
-        <#code#>
+        
     }
     
     func componentConnected(withKey key: String?, andIndex index: Int) {
-        <#code#>
+        
     }
     
     func componentDisconnected(withKey key: String?, andIndex index: Int) {
-        <#code#>
+        
     }
 }

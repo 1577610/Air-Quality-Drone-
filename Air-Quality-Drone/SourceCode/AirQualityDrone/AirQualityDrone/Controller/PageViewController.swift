@@ -15,13 +15,13 @@ class PageViewController: UIPageViewController {
     }()
     
     private func newViewController(view: String) -> UIViewController{
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "/(view)ViewController")
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(view)ViewController")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataSource = self
+        self.dataSource = self
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],

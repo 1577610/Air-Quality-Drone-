@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import DJIUILibrary
 
 class MainViewController: UIViewController {
 
+    @IBOutlet var batteryWidget: DULBatteryWidget!
+    @IBOutlet var wifiWidget: DULWifiSignalWidget!
+    @IBOutlet var GPSWidget: DULGPSSignalWidget!
+    @IBOutlet var altitudeWidget: DULAltitudeWidget!
+    @IBOutlet var flightStatusWidget: DULPreFlightStatusWidget!
+    
+    @IBOutlet var XDKConnected: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

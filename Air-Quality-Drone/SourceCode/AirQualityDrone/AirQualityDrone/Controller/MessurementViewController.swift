@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import DJIUILibrary
 
 class MessurementViewController: UIViewController {
 
+    @IBOutlet var map: DULMapWidget!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
