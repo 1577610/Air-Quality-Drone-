@@ -1,5 +1,5 @@
 //
-//  MessurementViewController.swift
+//  InFlightViewController.swift
 //  AirQualityDrone
 //
 //  Created by Julian Riegger on 08.03.18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MessurementViewController: UIViewController {
+class InFlightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

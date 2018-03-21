@@ -1,14 +1,14 @@
 //
-//  MessurementViewController.swift
+//  MainViewController.swift
 //  AirQualityDrone
 //
-//  Created by Julian Riegger on 08.03.18.
+//  Created by Julian Riegger on 21.03.18.
 //  Copyright © 2018 DHBW_Stuttgart. All rights reserved.
 //
 
 import UIKit
 
-class MessurementViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
