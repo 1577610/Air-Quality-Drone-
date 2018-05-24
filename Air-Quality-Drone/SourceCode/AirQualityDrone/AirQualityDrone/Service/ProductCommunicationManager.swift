@@ -9,9 +9,11 @@
 import DJISDK
 
 class ProductCommunicationManager: NSObject {
-    //Set this value to true to use the app with the Bridgeand false to connect directly to the product
-    let enableBridgeMode = false
-    let bridgeAppIP = ""
+    
+    static let sharedProductCommunicationManager = ProductCommunicationManager()
+    
+    override
+    private init() {}
     
     func registerWithSDK() {
         let appKey = Bundle.main.object(forInfoDictionaryKey: SDK_APP_KEY_INFO_PLIST_KEY) as? String
@@ -23,26 +25,30 @@ class ProductCommunicationManager: NSObject {
         
         DJISDKManager.registerApp(with: self)
     }
+    
+    func connectToDrone() {
+        DJISDKManager.startConnectionToProduct()
+    }
+    
+    func disconnectToDrone() {
+        DJISDKManager.stopConnectionToProduct()
+    }
 }
 
 
 extension ProductCommunicationManager : DJISDKManagerDelegate {
     func appRegisteredWithError(_ error: Error?) {
         NSLog("SDK Registered with Error \(error?.localizedDescription)")
-        
-        if enableBridgeMode {
-            DJISDKManager.enableBridgeMode(withBridgeAppIP: bridgeAppIP)
-        } else {
-            DJISDKManager.startConnectionToProduct()
-        }
+
+        DJISDKManager.startConnectionToProduct()
     }
     
     func productDisconnected() {
-        
+
     }
     
     func productConnected(_ product: DJIBaseProduct?) {
-        
+
     }
     
     func componentConnected(withKey key: String?, andIndex index: Int) {

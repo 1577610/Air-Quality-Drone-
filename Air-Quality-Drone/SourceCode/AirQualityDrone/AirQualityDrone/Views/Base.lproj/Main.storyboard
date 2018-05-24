@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TzG-oG-tiq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TzG-oG-tiq">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -21,47 +21,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Siz-ug-Ezy" userLabel="battery" customClass="DULBatteryWidget">
-                                <rect key="frame" x="723" y="20" width="45" height="30"/>
+                                <rect key="frame" x="718" y="20" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="EJo-1H-5ei"/>
-                                    <constraint firstAttribute="width" constant="45" id="TPp-yW-PlE"/>
+                                    <constraint firstAttribute="width" constant="50" id="TPp-yW-PlE"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhz-q2-PG9" userLabel="wifi" customClass="DULWifiSignalWidget">
-                                <rect key="frame" x="678" y="20" width="45" height="30"/>
+                                <rect key="frame" x="668" y="20" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="ONH-Zz-mco"/>
+                                    <constraint firstAttribute="width" constant="50" id="ONH-Zz-mco"/>
                                     <constraint firstAttribute="height" constant="30" id="gjz-7h-2UQ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJD-Pw-Mk5" userLabel="GPS" customClass="DULGPSSignalWidget">
-                                <rect key="frame" x="633" y="20" width="45" height="30"/>
+                                <rect key="frame" x="618" y="20" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="OL2-aA-7wf"/>
+                                    <constraint firstAttribute="width" constant="50" id="OL2-aA-7wf"/>
                                     <constraint firstAttribute="height" constant="30" id="kPG-XM-yT2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-Xr-4jP" userLabel="Alt" customClass="DULAltitudeWidget">
-                                <rect key="frame" x="588" y="20" width="45" height="30"/>
+                                <rect key="frame" x="568" y="20" width="50" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="D4H-R2-qMY"/>
-                                    <constraint firstAttribute="width" constant="45" id="tZh-2a-zzR"/>
+                                    <constraint firstAttribute="width" constant="50" id="tZh-2a-zzR"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Hs-Mw-NYb" userLabel="flightStatus" customClass="DULPreFlightStatusWidget">
-                                <rect key="frame" x="543" y="20" width="45" height="30"/>
+                                <rect key="frame" x="508" y="20" width="60" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="I1j-ZH-Ptn"/>
-                                    <constraint firstAttribute="width" constant="45" id="LdM-Gt-NMg"/>
+                                    <constraint firstAttribute="width" constant="60" id="LdM-Gt-NMg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgF-II-ZEw" userLabel="XDK">
-                                <rect key="frame" x="498" y="20" width="45" height="30"/>
+                                <rect key="frame" x="463" y="20" width="45" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="PsG-Fc-ya5"/>
@@ -107,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOc-Ds-NK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.96875" y="-1815.2343749999998"/>
+            <point key="canvasLocation" x="-17098" y="-2324"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="eH9-3K-p1f">
@@ -120,7 +120,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dn0-bw-Lzv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="-1815"/>
+            <point key="canvasLocation" x="-16375" y="-2324"/>
         </scene>
         <!--Messurement View Controller-->
         <scene sceneID="dAI-9F-POU">
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAz-ed-Rjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="-1136"/>
+            <point key="canvasLocation" x="-16375" y="-1645"/>
         </scene>
         <!--Flight View Controller-->
         <scene sceneID="evU-z2-xP3">
@@ -217,22 +217,6 @@
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fS1-Wb-tbQ">
                                 <rect key="frame" x="0.0" y="758" width="768" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-io-bcv">
-                                <rect key="frame" x="319" y="894" width="131" height="56"/>
-                                <accessibility key="accessibilityConfiguration" label="Flug starten">
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Flug starten"/>
-                                <connections>
-                                    <segue destination="Bza-Xn-UuV" kind="custom" id="mwr-kD-os9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-vN-4gU">
-                                <rect key="frame" x="659" y="918" width="89" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Speichern"/>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0a-A5-o3S">
                                 <rect key="frame" x="20" y="30" width="320" height="31"/>
                                 <subviews>
@@ -241,6 +225,9 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="flitghRouteTFTouched:" destination="9nF-wo-MLc" eventType="touchUpInside" id="pgr-G6-gHO"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z1r-HS-rbJ">
                                         <rect key="frame" x="292" y="5" width="24" height="24"/>
@@ -263,15 +250,29 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="flightName:" destination="9nF-wo-MLc" eventType="editingDidEnd" id="IWV-0R-62p"/>
+                                    <action selector="nameChanged:" destination="9nF-wo-MLc" eventType="editingDidEnd" id="Gr1-97-gL5"/>
+                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RDf-C5-lp4" userLabel="Horizontal Slider height">
                                 <rect key="frame" x="18" y="69" width="398" height="32"/>
+                                <connections>
+                                    <action selector="heightSliderValueChanged:" destination="9nF-wo-MLc" eventType="valueChanged" id="Nl7-8N-5tt"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qUM-Q3-ELk" userLabel="Horizontal Slider width">
                                 <rect key="frame" x="18" y="110" width="398" height="30"/>
+                                <connections>
+                                    <action selector="heightSliderValueChanged:" destination="9nF-wo-MLc" eventType="valueChanged" id="F9y-hb-9Ur"/>
+                                    <action selector="widthSliderValueChanged:" destination="9nF-wo-MLc" eventType="valueChanged" id="r47-i1-xdy"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-li-FHP" userLabel="Horizontal Slider depth">
                                 <rect key="frame" x="18" y="149" width="398" height="26"/>
+                                <connections>
+                                    <action selector="depthSliderValueChanged:" destination="9nF-wo-MLc" eventType="valueChanged" id="Wls-Bg-TiQ"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFv-et-vP8">
                                 <rect key="frame" x="464" y="114" width="45" height="21"/>
@@ -291,19 +292,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="height" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfP-Wr-i18" userLabel="heightTF">
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="height" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfP-Wr-i18" userLabel="heightTF">
                                 <rect key="frame" x="429" y="70" width="25" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="width" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-qm-qXP" userLabel="widthTF">
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="width" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RrE-qm-qXP" userLabel="widthTF">
                                 <rect key="frame" x="429" y="110" width="25" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="depth" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-4g-VWi" userLabel="depthTF">
+                            <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="depth" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BS5-4g-VWi" userLabel="depthTF">
                                 <rect key="frame" x="429" y="146" width="25" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -321,6 +322,26 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hjk-0e-4Mx">
                                 <rect key="frame" x="0.0" y="194" width="768" height="780"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-vN-4gU">
+                                <rect key="frame" x="659" y="918" width="89" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Speichern"/>
+                                <connections>
+                                    <action selector="safeBtnCommand:" destination="9nF-wo-MLc" eventType="touchUpInside" id="9gs-WN-b8B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toM-io-bcv">
+                                <rect key="frame" x="319" y="894" width="131" height="56"/>
+                                <accessibility key="accessibilityConfiguration" label="Flug starten">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Flug starten"/>
+                                <connections>
+                                    <action selector="startFlightBtn:" destination="9nF-wo-MLc" eventType="touchUpInside" id="JOz-LC-FYd"/>
+                                    <segue destination="Bza-Xn-UuV" kind="custom" id="mwr-kD-os9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -372,12 +393,22 @@
                         <viewLayoutGuide key="safeArea" id="ERx-bB-43l"/>
                     </view>
                     <connections>
+                        <outlet property="comboTF" destination="tLc-Zm-aUZ" id="WHr-mL-xFj"/>
+                        <outlet property="depthSlider" destination="jHZ-li-FHP" id="fW7-cO-GVm"/>
+                        <outlet property="depthTF" destination="BS5-4g-VWi" id="tgF-UV-Ejr"/>
+                        <outlet property="flightName" destination="Jee-p5-WKx" id="vna-Lj-bZI"/>
+                        <outlet property="flightRouteTF" destination="tLc-Zm-aUZ" id="6Vg-mM-c8q"/>
+                        <outlet property="heightSlider" destination="RDf-C5-lp4" id="XlN-SU-pkQ"/>
+                        <outlet property="heightTF" destination="RfP-Wr-i18" id="Hhy-g2-gpM"/>
                         <outlet property="map" destination="hjk-0e-4Mx" id="Z7B-AY-MYd"/>
+                        <outlet property="pickerView" destination="fS1-Wb-tbQ" id="SVL-FZ-8bA"/>
+                        <outlet property="widthSlider" destination="qUM-Q3-ELk" id="h9K-WZ-Cn3"/>
+                        <outlet property="widthTF" destination="RrE-qm-qXP" id="P8e-oV-FsA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSz-Xq-7iE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="-1137"/>
+            <point key="canvasLocation" x="-17160" y="-1645"/>
         </scene>
         <!--In Flight View Controller-->
         <scene sceneID="JXq-ex-AL0">
@@ -427,21 +458,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igi-SM-Qmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1931" y="-367"/>
+            <point key="canvasLocation" x="-17160" y="-877"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ynL-IO-m4z">
             <objects>
-                <viewController id="wa6-oD-0gR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IvO-OK-L3Q">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="429"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
+                <viewController id="wa6-oD-0gR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V67-Mh-6tH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3602" y="-1136"/>
+            <point key="canvasLocation" x="-15489.0625" y="-1646.19140625"/>
         </scene>
     </scenes>
     <resources>

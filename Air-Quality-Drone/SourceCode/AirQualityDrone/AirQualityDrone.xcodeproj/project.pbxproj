@@ -13,11 +13,13 @@
 		B91F0BF12059175E00072529 /* VideoPreviewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B91F0BEF2059175100072529 /* VideoPreviewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B91F0BF9205ADD1300072529 /* tableIcon .png in Resources */ = {isa = PBXBuildFile; fileRef = B91F0BF8205ADD1300072529 /* tableIcon .png */; };
 		B91F0BFB205ADD1B00072529 /* mapIcon .png in Resources */ = {isa = PBXBuildFile; fileRef = B91F0BFA205ADD1B00072529 /* mapIcon .png */; };
-		B91F0C0120615CD800072529 /* ProductCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0C0020615CD800072529 /* ProductCommunicationManager.swift */; };
 		B91F0C042061718A00072529 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B91F0C032061718A00072529 /* settings.png */; };
 		B91F0C0620628C5400072529 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0C0520628C5400072529 /* MainViewController.swift */; };
 		B91F0C082062920100072529 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B91F0C07206291FF00072529 /* arrow.png */; };
 		B91F0C0A20629ED300072529 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0C0920629ED300072529 /* FlightViewController.swift */; };
+		B91F0C0E2063F06E00072529 /* FlightRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0C0D2063F06E00072529 /* FlightRoute.swift */; };
+		B91F0C1020667D4000072529 /* MyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0C0F20667D4000072529 /* MyPickerView.swift */; };
+		B91F0C12206941B300072529 /* ProductCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91F0C11206941B200072529 /* ProductCommunicationManager.swift */; };
 		B9B1B7492046DCF900AD008B /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B1B7482046DCF900AD008B /* PageViewController.swift */; };
 		B9B1B768204FD32600AD008B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B767204FD32600AD008B /* MapKit.framework */; };
 		B9B1B76A204FD34200AD008B /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B1B769204FD34200AD008B /* ExternalAccessory.framework */; };
@@ -83,11 +85,13 @@
 		B91F0BEA2059175100072529 /* VideoPreviewer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VideoPreviewer.xcodeproj; sourceTree = "<group>"; };
 		B91F0BF8205ADD1300072529 /* tableIcon .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableIcon .png"; sourceTree = "<group>"; };
 		B91F0BFA205ADD1B00072529 /* mapIcon .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapIcon .png"; sourceTree = "<group>"; };
-		B91F0C0020615CD800072529 /* ProductCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCommunicationManager.swift; sourceTree = "<group>"; };
 		B91F0C032061718A00072529 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		B91F0C0520628C5400072529 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B91F0C07206291FF00072529 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B91F0C0920629ED300072529 /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
+		B91F0C0D2063F06E00072529 /* FlightRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRoute.swift; sourceTree = "<group>"; };
+		B91F0C0F20667D4000072529 /* MyPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPickerView.swift; sourceTree = "<group>"; };
+		B91F0C11206941B200072529 /* ProductCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCommunicationManager.swift; path = Service/ProductCommunicationManager.swift; sourceTree = "<group>"; };
 		B9B1B7482046DCF900AD008B /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		B9B1B767204FD32600AD008B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B9B1B769204FD34200AD008B /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
@@ -168,7 +172,6 @@
 		B91F0C0220615F5000072529 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B91F0C0020615CD800072529 /* ProductCommunicationManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -196,6 +199,8 @@
 		B9B1B750204EEEA600AD008B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B91F0C0D2063F06E00072529 /* FlightRoute.swift */,
+				B91F0C0F20667D4000072529 /* MyPickerView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,9 +230,10 @@
 		B9BE518E203338E4006DE0A8 /* AirQualityDrone */ = {
 			isa = PBXGroup;
 			children = (
-				B91F0C0220615F5000072529 /* Service */,
 				B9B1B76B204FD34200AD008B /* AirQualityDrone.entitlements */,
 				B9BE518F203338E4006DE0A8 /* AppDelegate.swift */,
+				B91F0C0220615F5000072529 /* Service */,
+				B91F0C11206941B200072529 /* ProductCommunicationManager.swift */,
 				B9B1B750204EEEA600AD008B /* Models */,
 				B9B1B74E204EEE8C00AD008B /* Controller */,
 				B9B1B74C204EEE6400AD008B /* Views */,
@@ -496,9 +502,11 @@
 				B91F0C0A20629ED300072529 /* FlightViewController.swift in Sources */,
 				B9BE5190203338E4006DE0A8 /* AppDelegate.swift in Sources */,
 				B9B1B77A2051723900AD008B /* InFlightViewController.swift in Sources */,
+				B91F0C1020667D4000072529 /* MyPickerView.swift in Sources */,
 				B91F0C0620628C5400072529 /* MainViewController.swift in Sources */,
-				B91F0C0120615CD800072529 /* ProductCommunicationManager.swift in Sources */,
+				B91F0C12206941B300072529 /* ProductCommunicationManager.swift in Sources */,
 				B9B1B7862051883100AD008B /* MessurementViewController.swift in Sources */,
+				B91F0C0E2063F06E00072529 /* FlightRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
