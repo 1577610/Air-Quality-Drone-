@@ -1,6 +1,7 @@
 %!TEX root = ../dokumentation.tex
 
 \chapter{Theoretische Grundlagen}\label{cha:Grundlagen}
+Für die Erstellung der App, sowie für die Auswahl der Sensoren und Erstellung des Messaufbaus ist verschiedenes Wissen notwendig. Diese theoretischen Grundlagen werden im folgenden erläutert. 
 
 \section{Luftqualität}\label{sec:Luftqualität}
 
@@ -9,7 +10,19 @@
 \subsection{Stickoxide (NOx)}\label{subsec:NOx}
 
 \section{iOS-Appentwicklung}\label{sec:ioS-Appentwicklung}
+Bei der Appentwicklung für iOS Geräte bietet sich die Apple eigene Programmiersprache Swift an, welche für die in dieser Arbeit erstellten App auch verwendet wurde. 
+\newline
+Die Entscheidung für ein für das Projekt sinnvolles Design-Pattern fiel auf das \acf{MVC} Pattern.
+\newline
+Für die Ansteuerung der DJI-Drone ist das DJI-SDK notwendig, sowie für die Einbindung externer Bibliotheken ist Wissen über Cocoa Pods notwendig.
+\newline
+Im folgendem werden die genannten Grundlagen in einzelnen Unterkapiteln kurz beschrieben.
 
-\subsection{Allgemeines Appentwicklung}\label{subsec:Allgemeines Appentwicklung}
-
+\subsection{\acf{MVC}}\label{subsec:MVC}
+Das \acs{MVC}-Pattern besteht, wie der Name sagt, aus drei verschiedenen Teilen. Dem Model, dem Controller und der View.
+Das Model dient ausschließlich zur Speicherung von Daten. Zum Beispiel werden aktuelle Daten der Anwendung, wie zum Beispiel eine Flugroute in einem Model abgespeichert.
+Die View ist für die Darstellung der Inhalte und Daten zuständig. Ebenso ist die View dafür zuständig die Eingaben eines Nutzers an den entsprechenden Controller weiterzuleiten. Die View ist auch die gesamte \acf{GUI}. 
+Der Controller beinhaltet die Anwendungslogik und ist für die Steuerung der Anwendung verantwortlich.
 \subsection{SWIFT}\label{subsec:SWIFT}
+
+\subsection{DJI-\acf{SDK}}\label{subsec:DJI-SDK}
