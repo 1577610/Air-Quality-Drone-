@@ -1,37 +1,317 @@
 %!TEX root = ../dokumentation.tex
 
 \chapter{Umsetzung}\label{cha:Umsetzung}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+\section{XDK Code}\label{sec:XDK Code}
+Zur Steuerung und zum Erfassen der Messwerte der Sensoren wird C Code verwendet der auf das Bosch \acs{XDK} aufgespielt wird. Wie in Kapitel ~\ref{sec:Bosch XDK} erwähnt, läuft auf dem \acs{XDK} das Echtzeitbetriebssystem FreeRTOS, das Programme in verschiedene Tasks unterteilt. Auch der Code zum Verwalten der Sensoren ist in diverse Tasks unterteilt, welche alle quasi-parallel ablaufen.
+\newline
+In den folgenden Abschnitten wird näher auf den Aufbau des Programmes eingegangen, sowie ein kurzer Überblick über die wichtigsten Funktionalitäten geboten.
+\subsection{Programm Aufbau}\label{subsec:ProgrammAufbau}
+Ein Programm für das Bosch \acs{XDK} ist Grundsätzlich immer gleich aufgebaut. Es besteht aus einer Funktion zur Initialisierung des Prozessors, sowie einem oder mehreren Tasks, welche zur Prozessor-Initialisierung angelegt und gestartet werden. Zusätzlich gibt es wie in gewöhnlichem C Code auch normale Funktionen, Subroutinen und Variablen, welche von den unterschiedlichen Tasks aufgerufen und verändert werden können. Im entwickelten Programm gibt es genau 2 Variablen, auf die alle Tasks zugreifen können und somit diese lesen und schreiben können. 
+\newline
+\begin{lstlisting}[language=C, caption={Geteilte Variablen}, label=lis:GlobalIdentifiers]
+int sensorNo=0;
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+struct messagePayload
+{
+	float temperature;		//degrees
+	float pressure;			//Pa
+	float humidity;			//% relativeHum
+	float pm25; 			//in ug/m3
+	float pm10; 			//in ug/m3
+	float co;				//relativ (0-1)
+	float co2; 				//relativ (0-1)
+	float o3sensitive; 		//relativ (0-1)
+	float o3lessSensitive;	//relativ (0-1)
+	float hazardousGas;		//relativ (0-1)
+} payload;
+\end{lstlisting}
+Beide Variablen sind in Listing ~\ref{lis:GlobalIdentifiers} zu erkennen. 
+\newline
+Zum einen ist dies die Variable 'SensorNo', in welcher immer der aktuelle Sensor angegeben ist, dessen Ausgang am \acs{ADC} anliegt. 
+\newline
+Zum anderen ist die Struktur 'messagePayload' von allen Tasks aus zugreifbar, da hierin die letzten gemessenen Daten zwischengespeichert werden, bevor sie an die App versendet werden oder von neuen Daten überschrieben werden.
+\newline
+\newline
+Code-Listing ~\ref{lis:CmdProcessor} zeigt die Initialisierung des Prozessors für die entwickelte Applikation.
+\begin{lstlisting}[language=C, caption={Prozessor Initialisierung}, label=lis:CmdProcessor]
+void appInitSystem(void * CmdProcessorHandle, uint32_t param2)
+{
+if (CmdProcessorHandle == NULL)
+{
+printf("Command processor handle is null \r\n");
+assert(false);
+}
+AppCmdProcessorHandle = (CmdProcessor_T *) CmdProcessorHandle;
+Board_EnablePowerSupply3V3(EXTENSION_BOARD);
+BCDS_UNUSED(param2);
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
+initUART();
 
-\begin{table}[h]
-	\centering
-	\begin{tabular}{| l | l | l | l |}
-		\hline
-		\rowcolor[HTML]{3531FF} 
-		\multicolumn{1}{|l|}{\cellcolor[HTML]{4F88BB}{\color[HTML]{FFFFFF} {\textbf{Runmode}}}} & \multicolumn{1}{l|}{\cellcolor[HTML]{4F88BB}{\color[HTML]{FFFFFF} {\textbf{Handlers}}}} & \multicolumn{1}{l|}{\cellcolor[HTML]{4F88BB}{\color[HTML]{FFFFFF} {\textbf{Loglevel}}}} & \multicolumn{1}{l|}{\cellcolor[HTML]{4F88BB}{\color[HTML]{FFFFFF} {\textbf{Formatter}}}} \\ \hline
-		\textbf{DEBUG} & \footnotemark[2].ConsoleHandler & ALL & \footnotemark[2].SimpleFormatter \\  \hline
-		\textbf{TEST} & \footnotemark[2].FileHandler & WARNING & \footnotemark[2].SimpleFormatter \\ \hline
-		\textbf{LIVE} & \footnotemark[2].FileHandler & SEVERE & \footnotemark[2].SimpleFormatter \\  \hline
-	\end{tabular}
-	\caption{Logger Einstellungen für die einzelnen Runmodes}
-	\label{tbl:LoggerSettingsRunmode}
-\end{table}
-\footnotetext[2]{java.util.logging}
+//-------- Init Tasks -------------
+initEnvironmental();
+gpioInit();
+scanAdcInit();
+initUDP();
+createNewUARTTask();
+}
+\end{lstlisting}
+Nach der Prüfung auf einen erfolgreichen Zugriff auf den Prozessor und nach der Zuweisung eines Prozessor-Handles, welcher für die Ausführung des Programms erforderlich ist, wird zunächst die 3,3V Spannungsversorgung des Extension-Boards aktiviert. Anschließend wird eine gewöhnliche Funktion aufgerufen, welche Pins des Extension-Boards für eine \acs{UART} Kommunikation konfiguriert. 
+\newline
+Die nächsten 5 Funktionsaufrufe sind nun verschieden vom Vorhergehenden. In jeder dieser Funktionen wird ein neuer Task angelegt und gestartet. Anhand deren Namen lässt sich leicht die weitere Gliederung des Programmes erkennen. 
+\newline
+Es gibt jeweils einen Task für jede der folgenden Teilfunktionen des Programmes:
+\begin{itemize}
+	\item Auslesen der internen Sensoren zur Bestimmung von Temperatur, Luftfeuchtigkeit und Luftdruck
+	\item Ansteuerung des Multiplexers durch \acs{GPIO}-Pins 
+	\item Auslesen der Spannung am Analog-Digital-Wandler
+	\item Senden der Messdaten an die iOS-App über \acs{UDP}
+	\item Auslesen der Sensordaten des Feinstaub-Sensors über \acs{UART}
+\end{itemize}
+Die folgenden Abschnitte gehen nun jeweils näher auf jeden dieser Tasks ein.
 
-\flqq Gegeben seien die Wertepaare $(x_1,y_1), \dots,(x_n,y_n)$, wobei nicht alle $x_i$ gleich sind bzw. nicht alle $y_i$ gleich sind. Die Zahl
-\begin{equation*}
-r_{xy} = \frac{s_{xy}}{s_x \cdot s_y}
-\end{equation*} 
-heißt \textbf{(empirischer) Korrelationskoeffizient} oder \textbf{Pearson'scher Korrelationskoeffizient}. Dabei ist
-\begin{equation*}
-s_{xy} = \frac{1}{n-1} \displaystyle\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
-\end{equation*}
-die \textbf{(empirische) Kovarianz}, $\bar{x}$, $\bar{y}$ sind die arithmetischen Mittelwerte und
-\begin{equation*}
-s_x = \sqrt{\frac{1}{n-1} \displaystyle\sum_{i=1}^{n} (x_i - \bar{x})^2}, \quad s_y = \sqrt{\frac{1}{n-1} \displaystyle\sum_{i=1}^{n} (y_i - \bar{y})^2}
-\end{equation*}
-sind die (empirischen) Standardabweichungen der $x_i$ bzw. der $y_i$-Werte.\frqq\footcite[S. 213]{Teschl.2014}
+\subsection{Auslesen interner Sensoren}\label{subsec:Auslesen interner Sensoren}
+\begin{lstlisting}[language=C, caption={Read Environmental Data}, label=lis:EnvironmentalRead]
+static void readEnvironmental(xTimerHandle xTimer)
+{
+	(void) xTimer;
+	
+	Retcode_T returnValue = RETCODE_FAILURE;
+	
+	/* read and print BME280 environmental sensor data */
+	
+	Environmental_Data_T bme280 = { INT32_C(0), UINT32_C(0), UINT32_C(0) };
+	
+	returnValue = Environmental_readData(xdkEnvironmental_BME280_Handle, &bme280);
+	
+	if ( RETCODE_OK == returnValue) {
+		printf("BME280 Environmental Data : p =%ld Pa T =%ld mDeg h =%ld %%rh\n\r",
+		(long int) bme280.pressure, (long int) bme280.temperature, (long int) bme280.humidity);
+		payload.temperature=(float)bme280.temperature / 1000;
+		payload.pressure=(float)bme280.pressure;
+		payload.humidity=(float)bme280.humidity / 100;
+	}
+}
+\end{lstlisting}
+Code-Listing ~\ref{lis:EnvironmentalRead} zeigt den Task, der die Daten der internen Sensoren erfasst. Dazu wird zunächst initialisiert, welche Sensoren ausgelesen werden sollen, um anschließend deren Daten abzufragen. Die erhaltenen Messdaten werden danach noch formatiert, sodass die Temperatur in Grad Celsius, der Luftdruck in \acf{Pa} und die Luftfeuchtigkeit als relativer Wert zwischen 0 und 1 angegeben wird. Abschließend werden die gemessenen Daten in einem temporären Zwischenspeicher abgelegt, auf den die anderen Tasks ebenfalls zugreifen können.
+
+\begin{lstlisting}[language=C, caption={Task-Initialisierung: Interne Sensoren}, label=lis:EnvironmentalInit]
+static void initEnvironmental(void)
+{
+	Retcode_T returnValue = RETCODE_FAILURE;
+	Retcode_T returnOverSamplingValue = RETCODE_FAILURE;
+	Retcode_T returnFilterValue = RETCODE_FAILURE;
+	
+	/* initialize environmental sensor */
+	
+	returnValue = Environmental_init(xdkEnvironmental_BME280_Handle);
+	if ( RETCODE_OK != returnValue) {
+		printf("BME280 Environmental Sensor initialization failed\n\r");
+	}
+	
+	returnOverSamplingValue = Environmental_setOverSamplingPressure(xdkEnvironmental_BME280_Handle,ENVIRONMENTAL_BME280_OVERSAMP_2X);
+	if (RETCODE_OK != returnOverSamplingValue) {
+		printf("Configuring pressure oversampling failed \n\r");
+	}
+	
+	returnFilterValue = Environmental_setFilterCoefficient(xdkEnvironmental_BME280_Handle,ENVIRONMENTAL_BME280_FILTER_COEFF_2);
+	if (RETCODE_OK != returnFilterValue) {
+		printf("Configuring pressure filter coefficient failed \n\r");
+	}
+	
+	environmentalHandle = xTimerCreate((const char *) "readEnvironmental", ONESECONDDELAY,TIMER_AUTORELOAD_ON, NULL, readEnvironmental);
+	
+	xTimerStart(environmentalHandle,TIMERBLOCKTIME);
+}
+\end{lstlisting}
+Listing ~\ref{lis:EnvironmentalInit} zeigt die Erstellung eines neuen Tasks und das starten des selben am Beispiel der internen Sensoren. Zunächst werden hier die internen Sensoren konfiguriert, um nach dem erfolgreichen Abschluss den zuvor beschriebenen Task zu starten, welcher die Messdaten liest. \newline 
+In diesem Fall geschieht dies mittels eines Timers, welcher die in Listing ~\ref{lis:EnvironmentalRead} beschriebene Callback-Funktion immer wieder aufruft, sobald der Timer abgelaufen ist. Genau genommen ist also nicht die aufgerufene Funktion der Task, sondern der Timer läuft in einem Task und ruft lediglich bei seinem Ablauf die Callback-Funktion auf. \newline
+Der Zeitpunkt an dem dies geschieht ist durch die Zeit 'ONESECONDDELAY' und den Parameter 'TIMER\_AUTORELOAD\_ON' fest definiert. In diesem falle würde es bedeuten, dass der Timer nach einer Sekunde abläuft, die Callback-Funktion aufruft und wieder von vorne beginnt, womit die Callback-Funktion periodisch im Sekundentakt aufgerufen wird.
+
+
+\subsection{Ansteuerung des Multiplexers}\label{subsec:Ansteuerung des Multiplexers}
+\begin{lstlisting}[language=C, caption={GPIO Task Initialisierung}, label=lis:GPIOInit]
+void gpioInit(){
+	/* initialize local variables */
+	GPIOA.Port = gpioPortA;
+	GPIOA.Pin = 1;
+	GPIOA.Mode = gpioModePushPull;
+	GPIOA.InitialState = MCU_GPIO_PIN_STATE_LOW;
+	
+	GPIOB.Port = gpioPortE;
+	/ ...
+	
+	/* Initialization activities for PTD driver */
+	MCU_GPIO_Initialize(&GPIOA);
+	MCU_GPIO_Initialize(&GPIOB);
+	MCU_GPIO_Initialize(&GPIOC);
+	
+	gpioTimerHandle = xTimerCreate(
+	(const char *) "ADC read", ONESECONDDELAY/10,
+	TIMER_AUTORELOAD_ON, NULL, gpioTask);
+	
+	xTimerStart(gpioTimerHandle, TIMERBLOCKTIME);
+}
+\end{lstlisting}
+Listing ~\ref{lis:GPIOInit} zeigt die Task Initialisierung für die Ansteuerung der \acs{GPIO}-Pins. Neben der Erstellung und dem Start eines Timers, der periodisch nach 100ms die Callback-Funktion aufruft, werden die entsprechenden Pins einmalig konfiguriert, damit sie als \acs{GPIO}-Pins genutzt werden können.
+\begin{lstlisting}[language=C, caption={GPIO Task}, label=lis:GPIOTask]
+static void gpioTask(xTimerHandle pxTimer2)
+{
+	int retcode;
+	
+	sensorNo+=1;
+	if(sensorNo>=10){
+		sensorNo=0;
+	}
+	
+	switch(sensorNo){
+		case 0: retcode = MCU_GPIO_WritePin(&GPIOA,MCU_GPIO_PIN_STATE_LOW);
+				retcode = MCU_GPIO_WritePin(&GPIOB,MCU_GPIO_PIN_STATE_LOW);
+				retcode = MCU_GPIO_WritePin(&GPIOC,MCU_GPIO_PIN_STATE_LOW);
+				printf("0 set.\n\r");
+				break;
+		case 1: retcode = MCU_GPIO_WritePin(&GPIOA,MCU_GPIO_PIN_STATE_HIGH);
+				retcode = MCU_GPIO_WritePin(&GPIOB,MCU_GPIO_PIN_STATE_LOW);
+				retcode = MCU_GPIO_WritePin(&GPIOC,MCU_GPIO_PIN_STATE_LOW);
+				printf("1 est.\n\r");
+				break;
+		// ...
+	}
+	if(retcode!= RETCODE_OK){
+		printf("Write low failed!\n\r\n\r");
+	}
+}
+\end{lstlisting}
+Listing ~\ref{lis:GPIOTask} zeigt nun die tatsächliche Ansteuerung des Multiplexers über die \acs{GPIO}-Pins des \acs{XDK} in der Callback-Funktion. Hierzu wird einfach mit den logischen Werten der Pins ein Zähler implementiert, der hochzählt und somit die entsprechenden Kanäle des Multiplexers anspricht. Die selbe Logik wurde bereits in Tabelle ~\ref{tab:MultiplexerLogic} gezeigt. Sobald die Sensornummer 10 überschreitet, wird diese wieder auf 0 gesetzt, womit genau zu beginn eines neuen Zyklus der erste Kanal des Multiplexers wieder angesprochen wird.
+
+\subsection{Auslesen der Spannung am \acs{ADC}}\label{subsec:Auslesen der Spannung am ADC}
+\begin{lstlisting}[language=C, caption={\acs{ADC} Scan Task}, label=lis:ADC Scan]
+static void scanAdc(xTimerHandle pxTimer)
+{
+	/* Initialize the Variables */
+	(void) (pxTimer);
+	uint32_t _adc0ChData = 0;
+	uint8_t _channelsScanned = 0;
+	
+	/* Start the ADC Scan */
+	ADC_Start(ADC0, adcStartScan);
+	
+	for (_channelsScanned = 0; _channelsScanned < NUMBER_OF_CHANNELS-1; _channelsScanned++) {
+		/* Wait for Valid Data */
+		while (!(ADC0->STATUS & ADC_STATUS_SCANDV));
+		
+		/* Read the Scanned data */
+		_adc0ChData = 0xFFF & ADC_DataScanGet(ADC0);
+		switch(sensorNo){
+			case 0: payload.co=(float)_adc0ChData  /4095;
+					printf("%f 0.\n\r", payload.co);
+					break;
+			case 1: payload.o3sensitive=(float)_adc0ChData  /4095;
+					printf("%f 1.\n\r", payload.o3sensitive);
+					break;
+			// ...
+		}
+	}
+}
+\end{lstlisting}
+Listing ~\ref{lis:ADC Scan} zeigt das Lesen der digitalisierten, quantisierten Spannungswerte am Analog-Digital-Wandler. Es wird immer die Spannung am Eingang des \acs{ADC} gemessen, jedoch wird abhängig von der globalen Variable 'sensorNo', welche den letzten aktiven Sensor angibt, das Ergebnis in der Struktur 'payload' der passenden Variable zugeordnet. Die Struktur dient lediglich als temporärer Zwischenspeicher der Daten vor dem Versenden an die App.
+\subsection{Senden der Messdaten}\label{subsec:Senden der Messdaten}
+
+\begin{lstlisting}[language=C, caption={Daten senden über \acs{UDP}}, label=lis:Daten senden ueber UDP]
+static void wifiUdpSend(void * param1, uint32_t port)
+{
+	// Socket Initialisierung	
+	SockID = sl_Socket(SL_AF_INET, SL_SOCK_DGRAM, (uint32_t) ZERO); /**<The return value is a positive number if 
+	// Prüfe Socket ...
+		
+	char outBuf[1024];		
+	sprintf(outBuf, "%f,%f,%f,%f,%f,%f,%f,%f,%f,%f",payload.temperature,payload.pressure,payload.humidity,
+	payload.pm25,payload.pm10,payload.co,payload.co2,payload.o3sensitive,payload.o3lessSensitive,payload.hazardousGas);
+	
+	Status = sl_SendTo(SockID, (const void *) outBuf, strlen(outBuf), (uint32_t) ZERO, (SlSockAddr_t *) &Addr, AddrSize);/**<The return value is a number of characters sent;negative if not successful*/
+	// Check Status ...
+	
+	Status = sl_Close(SockID);
+	// Check Status ...
+	printf("UDP sending successful\r\n");
+	return;
+}
+\end{lstlisting}
+Wie in Code-Listing ~\ref{lis:Daten senden ueber UDP} zu sehen ist, wird im Task jedes Mal ein neues Socket geöffnet und geprüft ob das Socket korrekt initialisiert wurde. Anschließend werden die aktuellsten Messdaten in einen Char-Array gepackt, in dem sie im Format einer \acf{CSV}-Datei zwischengespeichert werden. Erst danach wird das Array mit den so formatierten Daten über UDP an die App geschickt. 
+\newline
+\newline
+Aufgrund der Nutzung von UDP bekommt der Nutzer hier keinerlei direkte Rückmeldung, ob das Paket tatsächlich bei der App ankam oder nicht, jedoch lässt sich in der App recht schnell feststellen, dass Verbindungsprobleme auftreten, sollten keine Messwerte über mehrere Sekunden hinweg empfangen werden, da das Senden der Daten üblicherweise im Sekundentakt erfolgen sollte. \newline
+Damit das Paket überhaupt versendet werden kann muss zunächst allerdings eine stabile Verbindung zum Wifi der Drohne aufgebaut sein. Auf die Umsetzung einer Wifi-Verbindung wird in Abschnitt ~\ref{subsec:Wifi Verbindung} näher eingegangen.\newline
+\newline
+An dieser Stelle ist darauf hinzuweisen, dass bei der Implementierung bewusst die Entscheidung gegen das \acf{TCP}-Protokoll gefällt wurde, welches aufgrund der hierbei offenen Verbindung Rückmeldung über verlorene Pakete geben könnte. Diese Entscheidung basiert auf der Feststellung, dass das XDK keinerlei Verbindung über \acs{TCP} zur App aufbauen konnte, wenn es mit dem Wifi der Drohne verbunden war.
+\subsection{Auslesen des Feinstaub-Sensors}\label{subsec:Auslesen des Feinstaub-Sensors}
+\begin{lstlisting}[language=C, caption={\acs{UART} Task}, label=lis:UART Task]
+static void uartTask(){
+	int status;
+	uint8_t buffer [10] ;
+	uint32_t bufLen = sizeof(buffer);
+	for (;;)
+	{
+		for(int i=0;i<10;i++){
+			buffer[i]=null;
+		}
+		vTaskDelay (1000);
+		status = MCU_UART_Receive(uartHandle,  buffer, bufLen);
+		if(status!=RETCODE_OK){
+			printf("Error at MCU_UART_Receive: %d\r\n",status);
+			printf("Buffer:%s\r\n",buffer);
+		}
+		else{
+			printf("MCU_UART_Receive worked correctly\r\n");
+			for(int i=0;i<10;i++){
+				if(buffer[i]!=null){
+					printf("Bit %d aus Buffer: %d\r\n",i,buffer[i]);
+				}
+			}
+			payload.pm25=((float)buffer[3]*256+buffer[2])/10;
+			payload.pm10=((float)buffer[5]*256+buffer[4])/10;
+		}
+	}
+}
+\end{lstlisting}
+Die in Listing ~\ref{lis:UART Task} gezeigte Funktion ist der erste wirkliche Task der nicht nur eine Callback-Funktion eines Timers ist. Dieser Task wird zu Programmbeginn initialisiert und gestartet. Aufgrund der Endlosschleife bleibt dieser Task dann solange das Programm läuft und der Prozess nicht von außen beendet wird aktiv. In diesem konkreten Fall ruft der Task immer wieder die Daten am Empfangss-\acs{UART}-Pin des Extension-Boards ab, rechnet die erhaltenen Bytes um in Feinstaub-Werte und schreibt diese in den temporären Speicher als aktuellste Messwerte. \newline
+Die Verzögerung 'vTaskDelay (1000);' sorgt dafür, dass das Lesen der UART-Daten nicht permanent geschieht, sondern lediglich ein mal jede Sekunde. Eine höhere Abtast-Rate hätte zur Folge, dass der Task deutlich öfter aktiv sein muss. Dies ist allerdings nicht sinnvoll, da der Sensor ohnehin nur einmal jede Sekunde neue Daten übermittelt und durch die vermehrten Abfragen nur der Resourcenverbrauch des Tasks steigt, ohne zusätzliche Daten zu generieren.
+\subsection{Wifi Verbindung}\label{subsec:Wifi Verbindung}
+\begin{lstlisting}[language=C, caption={Wifi Verbindung}, label=lis:Wifi Verbindung]
+Retcode_T wifiConnect(void)
+{
+	WlanConnect_SSID_T connectSSID;
+	WlanConnect_PassPhrase_T connectPassPhrase;
+	Retcode_T ReturnValue = (Retcode_T) RETCODE_FAILURE;
+	
+	ReturnValue = WlanConnect_Init();
+	
+	if (RETCODE_OK != ReturnValue)
+	{
+		printf("Error occurred initializing WLAN \r\n ");
+		return ReturnValue;
+	}
+	printf("Connecting to %s \r\n ", WLAN_CONNECT_WPA_SSID);
+	
+	connectSSID = (WlanConnect_SSID_T) WLAN_CONNECT_WPA_SSID;
+	connectPassPhrase = (WlanConnect_PassPhrase_T) WLAN_CONNECT_WPA_PASS;
+	ReturnValue = NetworkConfig_SetIpDhcp(NULL);
+	if (RETCODE_OK != ReturnValue)
+	{
+		printf("Error in setting IP to DHCP\n\r");
+		return ReturnValue;
+	}
+	ReturnValue = WlanConnect_WPA(connectSSID, connectPassPhrase, WlanEventCallback);
+	if (RETCODE_OK != ReturnValue)
+	{
+		printf("Error occurred while connecting Wlan %s \r\n ", WLAN_CONNECT_WPA_SSID);
+	}
+	return ReturnValue;
+}
+\end{lstlisting}
+Listing ~\ref{lis:Wifi Verbindung} zeigt die Funktion, die zum Aufbau einer Wifi-Verbindung verwendet wird. Hierbei werden die \acf{SSID} des Netzwerks und das Passwort aus der Header-Datei benutzt, um die Verbindung aufzubauen. Diese Art der Implementierung hat gleich mehrere Nachteile. Zum einen muss jedes Mal der Quellcode geändert werden, das Projekt neu gebuildet werden und die dabei erzeugten Binärdateien auf das \acs{XDK} geflasht werden. Darüber hinaus ist es aus Sicht der Security nicht ideal, das Passwort im Klartext abspeichern zu müssen und dieses auch so über das Netzwerk zu versenden.\newline
+Trotz dieser beiden Aspekte wurde die Funktionalität auf diese Weise implementiert, da keine funktionierende Alternative dazu gefunden werden kann.
+\subsection{Scheduling}\label{subsec:Scheduling}
+Da es sich bei dem Betriebssystem des \acs{XDK} um ein Echtzeitbetriebssystem handelt und in dem entwickelten Programm mehrere Tasks parallel ablaufen sollen, muss zwangsläufig das Scheduling dieser Tasks betrachtet werden. Im entwickelten Programm werden spezifische Programmtechniken wie die Implementierung von Semaphoren zur Sicherstellung von bestimmten Reihenfolgen der Tasks komplett vernachlässigt. Dies geschieht begründet auf der Tatsache, dass die Tasks weitestgehend unabhängig voneinander laufen und nur an 2 Stellen eine Überschneidung bei der Nutzung gemeinsamer Variablen auftreten kann.\newline
+\newline
+Im ersten Fall könnte es passieren, dass die Daten des Zwischenspeichers gesendet werden, bevor von jedem Sensor die neuesten Messwerte darin abgespeichert sind. Dies ist allerdings nicht als kritisch einzustufen, da die Änderungen der Messwerte innerhalb eines Sende-Zyklus meist nur minimal ausfallen.\newline
+Der zweite Fall würde eintreten, wenn der \acs{ADC}-Task bereits ein weiteres Mal liest, bevor der \acs{GPIO}-Task den Sensor weitergeschaltet hat. In diesem Fall würde einfach der selbe Wert zwei Mal gelesen und die Messwerte eines anderen Sensors würden nicht erfasst werden. Auch dieses Szenario ist als unkritisch anzusehen, da in diesem Fall für den Sensor, dessen Daten nicht erfasst werden einfach die letzten gemessenen Daten übertragen werden, welche keine allzu großen Abweichungen aufweisen sollten.
