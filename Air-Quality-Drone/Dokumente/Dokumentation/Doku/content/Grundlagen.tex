@@ -16,6 +16,7 @@ Der sogenannte \acf{AQI} bildet für die Vereinigten Staaten eine Skala von 0 bi
 \newline
 \begin{table}[H]
 	\begin{center}
+		\resizebox{\columnwidth}{!}{%
 		\begin{tabular}{|c|c|c|}
 			\hline
 			Air Quality Index Levels of Health Concern & Numerical Value & Meaning\\ \hline \hline
@@ -26,6 +27,7 @@ Der sogenannte \acf{AQI} bildet für die Vereinigten Staaten eine Skala von 0 bi
 			Very Unhealthy & 201 to 300 & Health alert: everyone may experience more serious health effects. \\ \hline
 			Hazardous & 301 to 500 & Health warnings of emergency conditions. The entire population is more likely to be affected. \\ \hline	
 		\end{tabular}
+	}
 	\end{center}
 	\caption{\acs{AQI} Übersicht}
 \end{table}
@@ -41,21 +43,38 @@ Die aktuellen Luftqualitätswerte der Messstationen Europas werden von der EUA u
 Im Folgenden soll auf messbare und für die Luftqualität bzw. die menschliche Gesundheit entscheidende Schadstoffe eingegangen werden. Neben der Erläuterung der luftverunreinigenden Teilchen wird auch auf deren Konsequenzen für den Menschen eingegangen. 
 \subsubsection{Feinstaub}
 Ein für die Gesundheit des Menschen entscheidender Schadstoff ist der Feinstaub oder auch Schwebstaub genannt. Diese kleinen, für das menschliche Auge nicht sichtbaren Teilchen, die nur langsam zu Boden sinken, sind zum größten Teil menschlicher Herkunft. Dazu gehören die Emissionen, die durch Kraftfahrzeuge, Öfen und Heizungen in Innenräumen sowie durch die Metallerzeugung, auftreten. Dabei wird der durch Kraftfahrzeuge entstehende Feinstaub nicht nur aus dem Motor emittiert, sondern auch Bremsen- und Reifenabrieb sowie die Aufwirbeln des Straßenstaubes verunreinigen die Luft. Die eben genannten Faktoren tragen zum primären Feinstaub bei. Der sekundäre Feinstaub hat seine Herkunft in der Landwirtschaft. Hierbei entstehen in der Tierhaltung gasförmige Schadstoffe durch die Ammoniakemissionen. 
+\newline
 Dabei unterteilt man die Partikel nach ihrer Größe. Alle Teilchen mit einem aerodynamischen Durchmesser kleiner 10 Mikrometer werden als PM10, wobei man diejenigen mit einem Durchmesser von kleiner 2,5 Mikrometer als PM2,5 bezeichnet. Eine weitere Aufschlüsselung innerhalb der eben genannten Grenzen ergibt die Begrifflichkeiten Grobfraktion, für alle Partikel zwischen 2,5 und 10 Mikrometer, sowie die Feinfraktion, für Partikel mit einem Durchmesser kleiner 2,5 Mikrometer. Die allerkleinsten Partikel, aerodynamischer Durchmesser kleiner als 0,1 Mikrometer nennt man ultrafeine Partikel. PM10 wandern in die Nasenhöhlen, PM2,5 gelangen über die Atemwege in die Bronchien sowie Lungenbläschen und setzen sich dort ab. Die ultrafeinen Partikel können bis in die Blutgefäße eindringen können. Als Folgen können abhängig von der Partikelgröße Atembeschwerden entstehen sowie die Gefahr eines Herzinfarkts oder einer Lungenerkrankung steigen. 
 
 \subsubsection{\acs{NOx}}
 Stickstoffoxide sind die Verbindung aus unterschiedlich vielen Stickstoff- und Sauerstoffatomen. Die wichtigsten Vertreter dieser Gruppe sind das Stickstoffmonoxid und das Stickstoffdioxid. Diese Oxide entstehen bei unerwünschten Nebenreaktionen während der Verbrennung von Benzin, Öl, Gas oder Kohle. Sie stellt einen sehr reaktionsfreudigen Stoff dar, wodurch es nicht nur zur Ozonbildung, sondern auch zur Feinstaubbelastung beiträgt. 
+\newline
 Stickstoffdioxide können vor allem bei Asthmatikern zur Bronchienverengung führen. 
 
 \subsubsection{\acs{SO2}}
 Das farblose aber stark riechende Schwefeldioxid wird vor allem bei der Verbrennung von Kohle oder Öl erzeugt und liegt im Normalfall als Gas vor. 
+\newline
 Für den Menschen hat dieser Schadstoff Schleimhaut- und Augenreizungen sowie Atemwegsprobleme zur Folge. 
+\newline
 Heutzutage ist die Belastung durch SO2 jedoch nicht mehr kritisch und die Gesundheitsrisiken akut nicht vorhanden.
+\newline
 Zudem entstehen aus Schwefeldioxid Sulfatpartikel in der Atmosphäre, die die PM10 Belastung verstärken. 
 
 \subsubsection{\acs{O3}}
-Bodennahes Ozon gilt als sekundärer Schadstoff, da es erst durch photochemische Prozesse entsteht und nicht direkt emittiert wird. Es ergibt sich vor allem aus Stickstoffoxiden sowie flüchtigen organischen Verbindungen. Diese beiden sogenannten Vorläuferstoffe werden überwiegend vom Menschen erzeugt. Während Stickstoffoxide von Kraftfahrzeugen emittiert werden, entstehen flüchtige organische Stoffe bei der Verwendung von Lösemitteln, wie zum Beispiel in Farben, Klebstoffen, Reinigungsmitteln oder durch die Verbrennung von Kraftstoff. 
+Bodennahes \acs{O3} gilt als sekundärer Schadstoff, da es erst durch photochemische Prozesse entsteht und nicht direkt emittiert wird. Es ergibt sich vor allem aus \acs{NOx} sowie flüchtigen organischen Verbindungen. Diese beiden sogenannten Vorläuferstoffe werden überwiegend vom Menschen erzeugt. Während \acs{NOx} von Kraftfahrzeugen emittiert werden, entstehen flüchtige organische Stoffe bei der Verwendung von Lösemitteln, wie zum Beispiel in Farben, Klebstoffen, Reinigungsmitteln oder durch die Verbrennung von Kraftstoff. 
+\newline
 Zu den gesundheitlichen Folgen gehören eine geringere Lungenfunktion sowie Atemwegsbeschwerden. Diese Wirkungen treten vor allem bei körperlicher Belastung sowie bei besonderes anfälligen oder vorgeschädigten Personen auf. 
+
+\subsubsection{\acs{CO}}
+Das gasförmige, farb- und geruchslose \acs{CO} wird bei der unvollständigen Verbrennung von Kraftstoffen freigesetzt. Der Grund hierfür ist Sauerstoffmangel, der bei extrem niedriger Dosierung zu einer \acs{CO} Konzentration fährt und in einem solchen Fall als Atemgift wirkt. Das liegt an der Beeinträchtigung der Sauerstoffaufnahme und zieht negative Konsequenzen für das zentrale Nervensystem mit sich. 
+\newline
+Des Weiteren ist \acs{CO} ein Bestandteil bei der Bildung von bodennahem \acs{O3}. 
+
+\subsubsection{\acl{CO2}}
+\acs{CO2} ist ein farb- und geruchsloses Gas. Es ist als Treibhausgas für das auf der Erde entstehende Klima verantwortlich, indem es einen Teil der Wärme, die ins Weltall ausgestrahlt wird zurück auf die Erde emittiert. Neben den großen Vorkommnissen im Weltall wird es ebenfalls bei der Zellatmung von Menschen und vielen Tieren ausgeschieden. Ein weiterer Entstehungsort ist der Verbrennungsvorgang von Öl, Holz oder Kohle. Ein Problem von \acs{CO2}, ist dass sich dieser Schadstoff nicht selbstständig wieder abbauen kann. Die einzige Möglichkeit zur Reduzierung des \acs{CO2}-Gehaltes ist die Photosynthese oder die physikalische Speicherung in Gewässern. Dabei entsteht Glucose und Sauerstoff. 
+\newline
+Die folgende Tabelle zeigt die Auswirkungen von diversen \acs{CO2}-Konzentration auf den Menschen.
+
 
 \section{Hardware}\label{sec:Hardware}
 Um die Luftqualität in verschiedenen Luftschichten messen zu können ist diverse Hardware notwendig. 
@@ -162,6 +181,13 @@ Der Controller beinhaltet die Anwendungslogik und ist für die Steuerung der Anw
 	\end{center}
 \end{figure}
 Das \acs{MVC} Pattern kann verschieden streng implementiert werden. In dieser Arbeit wird das Pattern in einer leichten Form angewendet. Es wird sich nicht exakt an die Spezifikation aus der Literatur gehalten.
+\newline
+\newline
+Eine mit Xcode und Swift gschriebenen App hat als Kern eine UIApplication-Klasse. Diese Klasse verarbeitet die Interaktion zwischen System und Objekten der App. Sie verwaltet die geöffneten Views und leitet Ereignisse durch Nutzereingaben oder vom System kommend an die entsprechenden Controller weiter. 
+\newline
+Die \textit{ViewController} Objekte stellen in einer iOS-Anwendung die Controller des \acs{MVC} Patterns dar. Eine \textit{ViewController}-Klasse verarbeitet Nutzereingaben und aktualisiert die View. 
+\newline
+Die View ist in der iOS-Programmierung durch sogenannte Storyboards realisiert. 
 
 \subsection{Cocoa}
 \subsubsection{\acf{API}}

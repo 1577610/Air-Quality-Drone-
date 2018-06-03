@@ -1,0 +1,49 @@
+%!TEX root = ../dokumentation.tex
+
+\chapter{Die iOS App}\label{cha:iOS App}
+
+Dieses Kapitel beschreibt die Struktur und den Aufbau der für die Ansteuerung der Drohne benötigten iOS App. Es wird ein überblick über die verwendete Architektur und Benutzeroberfläche, sowie über die verwendeten Klassen gegeben.
+
+\section{Aufbau}
+Die iOS-App ist mit Hilfe des \acs{MVC} Pattern entwickelt. Dadurch gibt sich ein Aufbau aus verschiedenen Controllern und Views. In diesem Projekt gibt es für jede einzelne View einen eigenen Controller. Die Daten, wie die Flugroute sind als Models implementiert. 
+\newline
+Die Views sind alle in einem Storyboard zu finden. Die Views werden im Kapitel \acs{GUI} genauer beschrieben. 
+\newline
+\newline zum Anwender dar. Darunter sitzt das DJI Mobile SDK, welches Funktionen der Drohne implementiert. Das \acs{SDK} stellt die äußere Schnittstelle zur Drohne dar.
+\newline Die Kommunikation zwischen mobilem Endgerät und Drohne wird über die \acs{WLAN}-Verbindung der Fernbedienung ermöglicht. 
+
+\section{\acf{GUI}}
+Die \acs{GUI} besteht aus verschiedenen Views. Die folgende Abbildung zeigt den Aufbau der \acs{GUI} in einem Storyboard. 
+\newline
+\subsection{MainView}
+Es gibt eine MainView, welche an der oberen Kante des Displays eine Statusleiste abbildet, die Informationen über den Standort und Zustand der Drohne visualisiert. Neben der Statusleiste beinhaltet die MainView noch eine ContainerView. 
+\subsubsection{Statusleiste}
+Die Statusleiste bildet genauer folgende Informationen ab. 
+\begin{itemize}
+	\item Batteriestatus der Drohne
+	\item Stärke des WiFi-Signals
+	\item Qualität des GPS-Signals
+	\item Die aktuelle Flughöhe der Drohne 
+	\item Flugstatus
+\end{itemize}
+Realisiert ist die Statusleiste über Elemente der DJI UXLibrary. Die einzelnen View-Elemente erben von den UXLibrary-Klassen. Die UXLibrary Klassen sind an dem Präfix \textit{\textit{DUL}} zu erkennen. So sind die Obengenannten Widgets durch die UXLibrary Klassen,
+\begin{itemize}
+	\item DULBatteryWidget
+	\item DULWifiSignalWidget
+	\item DULGPSSignalWidget
+	\item DULAltitudeWidget
+	\item DULPreFlightStatusWidget
+\end{itemize}
+wie folgt realisiert:
+\newline
+\begin{lstlisting}[language=python, caption={Statusleiste}]
+@IBOutlet var batteryWidget: DULBatteryWidget!
+@IBOutlet var wifiWidget: DULWifiSignalWidget!
+@IBOutlet var GPSWidget: DULGPSSignalWidget!
+@IBOutlet var altitudeWidget: DULAltitudeWidget!
+@IBOutlet var flightStatusWidget: DULPreFlightStatusWidget!
+\end{lstlisting}
+Die folgende Abbildung zeigt die Darstellung der Statusleiste in der App.
+\subsubsection{ContainerView}
+Die ContainerView nimmt, außer der Statusleiste am oberen Rand, den restlichen Platz des Displays ein. In die ContainerView werden die anderen Views geladen. Somit bekommt der Anwender in jeder Ansicht, über die Statusleiste, eine Übersicht über den Zustand der Drohne.  
+\subsection{PageView}
