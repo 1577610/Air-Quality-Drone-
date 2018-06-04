@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: dokumentation.aux
+The style file: biblatex.bst
+Database file #1: dokumentation-blx.bib
+Database file #2: bibliographie.bib
+I was expecting a `,' or a `}'---line 234 of file bibliographie.bib
+ :  
+ :  url={https://www.raywenderlich.com/132662/mvc-in-ios-a-modern-approach},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Biblatex version: 3.3
+(There was 1 error message)

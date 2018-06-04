@@ -1,5 +1,6 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {ngerman}{}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -9,17 +10,17 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces DJI Phantom 3 Standard\relax }}{7}{figure.caption.28}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces DJI Phantom 3 Standard\relax }}{7}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces DJI Phantom 3 Standard - Fernbedienung\relax }}{8}{figure.caption.29}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces DJI Phantom 3 Standard - Fernbedienung\relax }}{8}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces iPad 3\relax }}{10}{figure.caption.32}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces iPad 3\relax }}{10}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces MVC Design-Pattern Diagramm \cite {mvc1}\relax }}{11}{figure.caption.33}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces MVC Design-Pattern Diagramm \cite {mvc1}\relax }}{11}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Externe Bibliotheken in Xcode\relax }}{13}{figure.caption.38}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Externe Bibliotheken in Xcode\relax }}{13}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Xcode-Oberfl\IeC {\"a}che\relax }}{14}{figure.caption.39}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Xcode-Oberfl\IeC {\"a}che\relax }}{14}{figure.caption.40}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Bosch \acs *{XDK}\relax }}{16}{figure.caption.40}
 \defcounter {refsection}{0}\relax 
@@ -50,6 +51,37 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Layout Feinstaub-Sensor\relax }}{34}{figure.caption.64}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Layout analoger Sensor\relax }}{34}{figure.caption.65}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Bosch \acs *{XDK}\relax }}{16}{figure.caption.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Bosch \acs *{XDK} Workbench\relax }}{17}{figure.caption.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Bosch \acs *{XDK} Extension Board\relax }}{18}{figure.caption.45}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Zeitplan\relax }}{25}{figure.caption.53}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architektur allgemein\relax }}{26}{figure.caption.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architektur Sensorik\relax }}{28}{figure.caption.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Layout Extension-Board\relax }}{29}{figure.caption.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Layout Multiplexer\relax }}{30}{figure.caption.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Layout Pegelwandler\relax }}{32}{figure.caption.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Invertierender Verst\IeC {\"a}rker\relax }}{33}{figure.caption.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Layout Operationsverst\IeC {\"a}rker\relax }}{33}{figure.caption.63}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Layout Feinstaub-Sensor\relax }}{34}{figure.caption.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Layout analoger Sensor\relax }}{34}{figure.caption.65}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

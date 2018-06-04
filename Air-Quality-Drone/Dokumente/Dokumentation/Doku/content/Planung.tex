@@ -1,9 +1,9 @@
 %!TEX root = ../dokumentation.tex
 
 %TODO: Einleitungen überarbeiten
-\chapter{Planung}\label{cha:Planung}
+\chapter{Projekt-Planung}\label{cha:Planung}
 \section{Anforderungsanalyse}\label{sec:Anforderungsanalyse}
-Basierend auf der grundlegenden Idee, eine Drohne mit Sensoren auszustatten, um damit die Luftqualität messen zu können, ist eine Anforderungsanalyse entstanden, welche die Funktionalitäten der ausgestatteten Drone eindeutig spezifiziert. Die vollständige Anforderungsanalyse findet sich im Anhang.
+Basierend auf der grundlegenden Idee, eine Drohne mit Sensoren auszustatten, um damit die Luftqualität messen zu können, ist eine Anforderungsanalyse entstanden, welche die Funktionalitäten der ausgestatteten Drohne eindeutig spezifiziert. Die vollständige Anforderungsanalyse findet sich im Anhang.
 \subsection{Muss-Kriterien}\label{subsec:MussKrit}
 Im Folgenden werden zunächst die Kernanforderungen näher erläutert und warum diese absolute Priorität genießen.
 \newline
@@ -23,9 +23,9 @@ Im Folgenden werden zunächst die Kernanforderungen näher erläutert und warum 
 	\item Die Drohne muss Temperatur messen können
 	\item Die Drohne muss Stickoxide (NO\textsubscript{x}) messen können	
 \end{enumerate}
-Wie aus den obigen Anforderungen ersichtlich ist, liegt das Hauptaugenmerk darauf, die Drohne mittels einer App ansprechen und steuern zu können, während die Sensoren die gemessenen Umgebungsdaten an die App senden, damit diese dort angezeigt werden. Das Senden sowie das Verarbeiten der Sensordaten geschieht mittels des Bosch \acf{XDK}, welches als Schnittstelle zwischen den zum Teil analogen Sensoren und der App dient.
+Wie aus den obigen Anforderungen ersichtlich ist, liegt das Hauptaugenmerk darauf, die Drohne mittels einer App ansprechen und steuern zu können, während die Sensoren die gemessenen Umgebungsdaten an die App senden, damit diese dort angezeigt werden. Das Senden sowie das Verarbeiten der Sensordaten geschieht mittels des Bosch \acf{XDK}, welches als Schnittstelle zwischen den Sensoren und der App dient.
 \subsection{Soll-Kriterien}\label{subsec:SollKrit}
-In Ergänzung zu diesen kritischen Anforderungen, beschreiben die folgenden Anforderungen Funktionalitäten die ebenfalls für sinnvoll erachtet wurden, die jedoch nicht besonders kritisch sind.
+In Ergänzung zu diesen kritischen Anforderungen, werden nachfolgend weitere Funktionalitäten beschrieben, welche ebenfalls für sinnvoll erachtet wurden, die jedoch nicht besonders kritisch sind. Die ergänzten Funktionalitäten umschließen weitere zu messende Größen sowie einige graphischen Verbesserungen, die eine übersichtlichere Rückmeldung zur laufenden Messung bieten sollen.
 \newline
 \begin{enumerate}[label=\roman*.]
 	\item Die Messwerte sollen in der App visualisiert werden 	
@@ -38,9 +38,7 @@ In Ergänzung zu diesen kritischen Anforderungen, beschreiben die folgenden Anfo
 	\item Die Drohne soll Kohlenstoffdioxid (CO\textsubscript{2}) messen können
 	\item Die Drohne soll Ozon (O\textsubscript{3}) messen können	
 \end{enumerate}
-Wie man erkennen kann, werden hier einige zu messende Größen ergänzt, sowie einige graphischen Verbesserungen, die eine bessere Rückmeldung zur laufenden Messung bieten sollen.
 \subsection{Kann-Kriterien}\label{subsec:KannKrit}
-\subsection{}
 Sollten die oben genannten Funktionalitäten noch immer nicht den Rahmen des Projektes sprengen, sind mit den folgenden Anforderungen noch einige optionale Funktionalitäten erfasst, die potentiell einen weiteren Mehrwert liefern.
 \newline
 \begin{enumerate}[label=\roman*.]
@@ -60,12 +58,12 @@ Um eine klare Trennung und Zuordnung der Aufgaben zu erreichen, ist das Projekt 
 \newline
 Die erste Komponente ist die iOS-App, welche für die Ansteuerung der Drohne, sowie die Visualisierung der Messdaten zuständig ist.
 \newline
-Die zweite Komponente ist der Entwurf des Messsystems mit allen Sensoren, deren Verschaltung und der Verarbeitung deren Daten mittels des Bosch \acs{XDK}.
+Die zweite Komponente ist der Entwurf des Messsystems mit allen Sensoren, deren Verschaltung und die Verarbeitung deren Daten mittels des Bosch \acs{XDK}.
 \newline
 \newline
 Alle Aufgaben hinsichtlich der App werden von Julian Riegger bearbeitet, während alle Aufgaben zum Messsystem von Sebastian Breit bearbeitet werden.
 \section{Zeitplan}\label{sec:Zeitplan}
-In Ergänzung zur bereits erwähnten Aufgabenteilung, wird zur besseren Planung und Nachverfolgung des Projektes ein Zeitplan verwendet, der auf einer hohen Abstraktionsebene die Aufgaben zeitlich einplant. Der Zeitplan ist mittels des frei verfügbaren Online-Tools Agantty erstellt, mit dessen Hilfe man einfach und unkompliziert Projekt-Pläne erstellen kann und dabei spezifischen Aufgaben bestimmten Personen zuordnen kann. 
+In Ergänzung zu der bereits erwähnten Aufgabenteilung, wird zur besseren Planung und Nachverfolgung des Projektes ein Zeitplan verwendet, der auf einer hohen Abstraktionsebene die Aufgaben zeitlich einplant. Der Zeitplan ist mittels des frei verfügbaren Online-Tools Agantty erstellt, mit dessen Hilfe man einfach und unkompliziert Projekt-Pläne erstellen kann und dabei spezifische Aufgaben bestimmten Personen zuordnen kann. 
 \newline 
 \newline
 Abbildung ~\ref{fig:Zeitplan} zeigt den erstellten Zeitplan.

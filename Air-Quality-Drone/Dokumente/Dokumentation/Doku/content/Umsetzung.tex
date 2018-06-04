@@ -1,12 +1,11 @@
 %!TEX root = ../dokumentation.tex
 
-\chapter{Umsetzung}\label{cha:Umsetzung}
-\section{XDK Code}\label{sec:XDK Code}
-Zur Steuerung und zum Erfassen der Messwerte der Sensoren wird C Code verwendet der auf das Bosch \acs{XDK} aufgespielt wird. Wie in Kapitel ~\ref{sec:Bosch XDK} erwähnt, läuft auf dem \acs{XDK} das Echtzeitbetriebssystem FreeRTOS, das Programme in verschiedene Tasks unterteilt. Auch der Code zum Verwalten der Sensoren ist in diverse Tasks unterteilt, welche alle quasi-parallel ablaufen.
+\chapter{XDK Code}\label{cha:XDK Code}
+Zur Steuerung und zum Erfassen der Messwerte der Sensoren wird C Code verwendet, der compiliert auf das Bosch \acs{XDK} aufgespielt wird. Wie in Kapitel ~\ref{sec:Bosch XDK} erwähnt, läuft auf dem \acs{XDK} das Echtzeitbetriebssystem FreeRTOS, das Programme in verschiedene Tasks unterteilt. Auch der Code zum Verwalten der Sensoren ist in diverse Tasks unterteilt, welche alle quasi-parallel ablaufen.
 \newline
 In den folgenden Abschnitten wird näher auf den Aufbau des Programmes eingegangen, sowie ein kurzer Überblick über die wichtigsten Funktionalitäten geboten.
-\subsection{Programm Aufbau}\label{subsec:ProgrammAufbau}
-Ein Programm für das Bosch \acs{XDK} ist Grundsätzlich immer gleich aufgebaut. Es besteht aus einer Funktion zur Initialisierung des Prozessors, sowie einem oder mehreren Tasks, welche zur Prozessor-Initialisierung angelegt und gestartet werden. Zusätzlich gibt es wie in gewöhnlichem C Code auch normale Funktionen, Subroutinen und Variablen, welche von den unterschiedlichen Tasks aufgerufen und verändert werden können. Im entwickelten Programm gibt es genau 2 Variablen, auf die alle Tasks zugreifen können und somit diese lesen und schreiben können. 
+\section{Programm Aufbau}\label{sec:ProgrammAufbau}
+Ein Programm für das Bosch \acs{XDK} ist grundsätzlich immer gleich aufgebaut. Es besteht aus einer Funktion zur Initialisierung des Prozessors, sowie einem oder mehreren Tasks, welche zur Prozessor-Initialisierung angelegt und gestartet werden. Zusätzlich gibt es wie in gewöhnlichem C Code auch normale Funktionen, Subroutinen und Variablen, welche von den unterschiedlichen Tasks aufgerufen und verändert werden können. Im entwickelten Programm gibt es genau 2 Variablen, auf die alle Tasks zugreifen können und somit diese lesen und schreiben können. 
 \newline
 \begin{lstlisting}[language=C, caption={Geteilte Variablen}, label=lis:GlobalIdentifiers]
 int sensorNo=0;
@@ -27,9 +26,9 @@ struct messagePayload
 \end{lstlisting}
 Beide Variablen sind in Listing ~\ref{lis:GlobalIdentifiers} zu erkennen. 
 \newline
-Zum einen ist dies die Variable 'SensorNo', in welcher immer der aktuelle Sensor angegeben ist, dessen Ausgang am \acs{ADC} anliegt. 
+Zum einen ist dies die Variable 'SensorNo', in welcher immer der aktuelle Sensor angegeben ist, dessen Ausgang gerade am \acs{ADC} anliegt. 
 \newline
-Zum anderen ist die Struktur 'messagePayload' von allen Tasks aus zugreifbar, da hierin die letzten gemessenen Daten zwischengespeichert werden, bevor sie an die App versendet werden oder von neuen Daten überschrieben werden.
+Zum anderen ist die Struktur 'messagePayload' von allen Tasks aus zugreifbar. In dieser werden die letzten gemessenen Daten zwischengespeichert, bevor sie an die App versendet werden oder von neuen Daten überschrieben werden.
 \newline
 \newline
 Code-Listing ~\ref{lis:CmdProcessor} zeigt die Initialisierung des Prozessors für die entwickelte Applikation.
@@ -55,7 +54,7 @@ initUDP();
 createNewUARTTask();
 }
 \end{lstlisting}
-Nach der Prüfung auf einen erfolgreichen Zugriff auf den Prozessor und nach der Zuweisung eines Prozessor-Handles, welcher für die Ausführung des Programms erforderlich ist, wird zunächst die 3,3V Spannungsversorgung des Extension-Boards aktiviert. Anschließend wird eine gewöhnliche Funktion aufgerufen, welche Pins des Extension-Boards für eine \acs{UART} Kommunikation konfiguriert. 
+Nach der Prüfung auf einen erfolgreichen Zugriff auf den Prozessor und nach der Zuweisung eines Prozessor-Handles, welcher für die Ausführung des Programms erforderlich ist, wird zunächst die 3,3V Spannungsversorgung des Extension-Boards aktiviert. Anschließend wird eine gewöhnliche Funktion aufgerufen, welche Pins des Extension-Boards für eine \acs{UART}-Kommunikation konfiguriert. 
 \newline
 Die nächsten 5 Funktionsaufrufe sind nun verschieden vom Vorhergehenden. In jeder dieser Funktionen wird ein neuer Task angelegt und gestartet. Anhand deren Namen lässt sich leicht die weitere Gliederung des Programmes erkennen. 
 \newline
@@ -123,9 +122,9 @@ static void initEnvironmental(void)
 	xTimerStart(environmentalHandle,TIMERBLOCKTIME);
 }
 \end{lstlisting}
-Listing ~\ref{lis:EnvironmentalInit} zeigt die Erstellung eines neuen Tasks und das starten des selben am Beispiel der internen Sensoren. Zunächst werden hier die internen Sensoren konfiguriert, um nach dem erfolgreichen Abschluss den zuvor beschriebenen Task zu starten, welcher die Messdaten liest. \newline 
+Listing ~\ref{lis:EnvironmentalInit} zeigt die Erstellung eines neuen Tasks und das Starten dessen am Beispiel der internen Sensoren. Zunächst werden die Sensoren konfiguriert, um nach dem erfolgreichen Abschluss den zuvor beschriebenen Task zu starten, welcher die Messdaten liest. \newline 
 In diesem Fall geschieht dies mittels eines Timers, welcher die in Listing ~\ref{lis:EnvironmentalRead} beschriebene Callback-Funktion immer wieder aufruft, sobald der Timer abgelaufen ist. Genau genommen ist also nicht die aufgerufene Funktion der Task, sondern der Timer läuft in einem Task und ruft lediglich bei seinem Ablauf die Callback-Funktion auf. \newline
-Der Zeitpunkt an dem dies geschieht ist durch die Zeit 'ONESECONDDELAY' und den Parameter 'TIMER\_AUTORELOAD\_ON' fest definiert. In diesem falle würde es bedeuten, dass der Timer nach einer Sekunde abläuft, die Callback-Funktion aufruft und wieder von vorne beginnt, womit die Callback-Funktion periodisch im Sekundentakt aufgerufen wird.
+Der Zeitpunkt an dem dies geschieht ist durch die Zeit 'ONESECONDDELAY' und den Parameter 'TIMER\_AUTORELOAD\_ON' fest definiert. In diesem Fall würde es bedeuten, dass der Timer nach einer Sekunde abläuft, die Callback-Funktion aufruft und wieder von vorne beginnt, womit die Callback-Funktion periodisch im Sekundentakt aufgerufen wird.
 
 
 \subsection{Ansteuerung des Multiplexers}\label{subsec:Ansteuerung des Multiplexers}
@@ -181,7 +180,7 @@ static void gpioTask(xTimerHandle pxTimer2)
 	}
 }
 \end{lstlisting}
-Listing ~\ref{lis:GPIOTask} zeigt nun die tatsächliche Ansteuerung des Multiplexers über die \acs{GPIO}-Pins des \acs{XDK} in der Callback-Funktion. Hierzu wird einfach mit den logischen Werten der Pins ein Zähler implementiert, der hochzählt und somit die entsprechenden Kanäle des Multiplexers anspricht. Die selbe Logik wurde bereits in Tabelle ~\ref{tab:MultiplexerLogic} gezeigt. Sobald die Sensornummer 10 überschreitet, wird diese wieder auf 0 gesetzt, womit genau zu beginn eines neuen Zyklus der erste Kanal des Multiplexers wieder angesprochen wird.
+Listing ~\ref{lis:GPIOTask} zeigt nun die tatsächliche Ansteuerung des Multiplexers über die \acs{GPIO}-Pins des \acs{XDK} in der Callback-Funktion. Hierzu wird einfach mit den logischen Werten der Pins ein Zähler implementiert, der hochzählt und somit die entsprechenden Kanäle des Multiplexers anspricht. Die selbe Logik wurde bereits in Tabelle ~\ref{tab:MultiplexerLogic} gezeigt. Sobald die Sensornummer 10 überschreitet, wird diese wieder auf 0 gesetzt, womit genau zu Beginn eines neuen Zyklus der erste Kanal des Multiplexers wieder angesprochen wird.
 
 \subsection{Auslesen der Spannung am \acs{ADC}}\label{subsec:Auslesen der Spannung am ADC}
 \begin{lstlisting}[language=C, caption={\acs{ADC} Scan Task}, label=lis:ADC Scan]
@@ -213,7 +212,9 @@ static void scanAdc(xTimerHandle pxTimer)
 	}
 }
 \end{lstlisting}
-Listing ~\ref{lis:ADC Scan} zeigt das Lesen der digitalisierten, quantisierten Spannungswerte am Analog-Digital-Wandler. Es wird immer die Spannung am Eingang des \acs{ADC} gemessen, jedoch wird abhängig von der globalen Variable 'sensorNo', welche den letzten aktiven Sensor angibt, das Ergebnis in der Struktur 'payload' der passenden Variable zugeordnet. Die Struktur dient lediglich als temporärer Zwischenspeicher der Daten vor dem Versenden an die App.
+Listing ~\ref{lis:ADC Scan} zeigt das Lesen der digitalisierten, quantisierten Spannungswerte am Analog-Digital-Wandler. Es wird immer die Spannung am Eingang des \acs{ADC} gemessen, jedoch wird abhängig von der globalen Variable 'sensorNo', welche den letzten aktiven Sensor angibt, das Ergebnis in der Struktur 'payload' der passenden Variablen zugeordnet. Die Struktur dient lediglich als temporärer Zwischenspeicher der Daten vor dem Versenden an die App. \newline
+\newline
+Wie aus dem Code ersichtlich wird, werden die Messwerte umgerechnet in einen relativen Wert zwischen 0 und 1, welcher so abgespeichert wird.
 \subsection{Senden der Messdaten}\label{subsec:Senden der Messdaten}
 
 \begin{lstlisting}[language=C, caption={Daten senden über \acs{UDP}}, label=lis:Daten senden ueber UDP]
@@ -239,10 +240,10 @@ static void wifiUdpSend(void * param1, uint32_t port)
 Wie in Code-Listing ~\ref{lis:Daten senden ueber UDP} zu sehen ist, wird im Task jedes Mal ein neues Socket geöffnet und geprüft ob das Socket korrekt initialisiert wurde. Anschließend werden die aktuellsten Messdaten in einen Char-Array gepackt, in dem sie im Format einer \acf{CSV}-Datei zwischengespeichert werden. Erst danach wird das Array mit den so formatierten Daten über UDP an die App geschickt. 
 \newline
 \newline
-Aufgrund der Nutzung von UDP bekommt der Nutzer hier keinerlei direkte Rückmeldung, ob das Paket tatsächlich bei der App ankam oder nicht, jedoch lässt sich in der App recht schnell feststellen, dass Verbindungsprobleme auftreten, sollten keine Messwerte über mehrere Sekunden hinweg empfangen werden, da das Senden der Daten üblicherweise im Sekundentakt erfolgen sollte. \newline
-Damit das Paket überhaupt versendet werden kann muss zunächst allerdings eine stabile Verbindung zum Wifi der Drohne aufgebaut sein. Auf die Umsetzung einer Wifi-Verbindung wird in Abschnitt ~\ref{subsec:Wifi Verbindung} näher eingegangen.\newline
+Aufgrund der Nutzung von UDP bekommt der Nutzer hier keinerlei direkte Rückmeldung, ob das Paket tatsächlich bei der App ankam oder nicht. Jedoch lässt sich in der App recht schnell feststellen, dass Verbindungsprobleme auftreten. Dies ist auffällig, da das Senden der Daten üblicherweise im Sekundentakt erfolgen sollte und ein Fehlen von Messwerten über mehrere Sekunden hinweg schnell zu erkennen ist. \newline
+Damit das Paket überhaupt versendet werden kann, muss zunächst eine stabile Verbindung zum \acs{WLAN} der Drohne aufgebaut sein. Auf die Umsetzung einer \acs{WLAN}-Verbindung wird in Abschnitt ~\ref{subsec:WLAN Verbindung} näher eingegangen.\newline
 \newline
-An dieser Stelle ist darauf hinzuweisen, dass bei der Implementierung bewusst die Entscheidung gegen das \acf{TCP}-Protokoll gefällt wurde, welches aufgrund der hierbei offenen Verbindung Rückmeldung über verlorene Pakete geben könnte. Diese Entscheidung basiert auf der Feststellung, dass das XDK keinerlei Verbindung über \acs{TCP} zur App aufbauen konnte, wenn es mit dem Wifi der Drohne verbunden war.
+An dieser Stelle ist darauf hinzuweisen, dass bei der Implementierung bewusst die Entscheidung gegen das \acf{TCP}-Protokoll gefällt wird, welches aufgrund der dort offenen Verbindung Rückmeldung über verlorene Pakete geben könnte. Diese Entscheidung basiert auf der Feststellung, dass das XDK keinerlei Verbindung über \acs{TCP} zur App aufbauen konnte, wenn es mit dem \acs{WLAN} der Drohne verbunden war.
 \subsection{Auslesen des Feinstaub-Sensors}\label{subsec:Auslesen des Feinstaub-Sensors}
 \begin{lstlisting}[language=C, caption={\acs{UART} Task}, label=lis:UART Task]
 static void uartTask(){
@@ -273,10 +274,10 @@ static void uartTask(){
 	}
 }
 \end{lstlisting}
-Die in Listing ~\ref{lis:UART Task} gezeigte Funktion ist der erste wirkliche Task der nicht nur eine Callback-Funktion eines Timers ist. Dieser Task wird zu Programmbeginn initialisiert und gestartet. Aufgrund der Endlosschleife bleibt dieser Task dann solange das Programm läuft und der Prozess nicht von außen beendet wird aktiv. In diesem konkreten Fall ruft der Task immer wieder die Daten am Empfangss-\acs{UART}-Pin des Extension-Boards ab, rechnet die erhaltenen Bytes um in Feinstaub-Werte und schreibt diese in den temporären Speicher als aktuellste Messwerte. \newline
-Die Verzögerung 'vTaskDelay (1000);' sorgt dafür, dass das Lesen der UART-Daten nicht permanent geschieht, sondern lediglich ein mal jede Sekunde. Eine höhere Abtast-Rate hätte zur Folge, dass der Task deutlich öfter aktiv sein muss. Dies ist allerdings nicht sinnvoll, da der Sensor ohnehin nur einmal jede Sekunde neue Daten übermittelt und durch die vermehrten Abfragen nur der Resourcenverbrauch des Tasks steigt, ohne zusätzliche Daten zu generieren.
-\subsection{Wifi Verbindung}\label{subsec:Wifi Verbindung}
-\begin{lstlisting}[language=C, caption={Wifi Verbindung}, label=lis:Wifi Verbindung]
+Die in Listing ~\ref{lis:UART Task} gezeigte Funktion ist der erste wirkliche Task, welcher nicht nur eine Callback-Funktion eines Timers ist. Dieser Task wird zu Programmbeginn initialisiert und gestartet. Aufgrund der Endlosschleife bleibt dieser Task dann aktiv, solange das Programm läuft und der Prozess nicht von außen beendet wird. In diesem konkreten Fall ruft der Task immer wieder die Daten am Empfangs-\acs{UART}-Pin des Extension Boards ab, rechnet die erhaltenen Bytes um in Feinstaub-Werte und schreibt diese in den temporären Speicher als die aktuellsten Messwerte. \newline
+Die Verzögerung 'vTaskDelay (1000);' sorgt dafür, dass das Lesen der UART-Daten nicht permanent geschieht, sondern lediglich einmal jede Sekunde. Eine höhere Abtast-Rate hätte zur Folge, dass der Task deutlich öfter aktiv sein muss. Dies ist allerdings nicht sinnvoll, da der Sensor ohnehin nur einmal jede Sekunde neue Daten übermittelt und durch die vermehrten Abfragen nur der Ressourcenverbrauch des Tasks steigt, ohne zusätzliche Daten zu generieren.
+\subsection{\acs{WLAN} Verbindung}\label{subsec:WLAN Verbindung}
+\begin{lstlisting}[language=C, caption={WLAN Verbindung}, label=lis:WLAN Verbindung]
 Retcode_T wifiConnect(void)
 {
 	WlanConnect_SSID_T connectSSID;
@@ -308,10 +309,10 @@ Retcode_T wifiConnect(void)
 	return ReturnValue;
 }
 \end{lstlisting}
-Listing ~\ref{lis:Wifi Verbindung} zeigt die Funktion, die zum Aufbau einer Wifi-Verbindung verwendet wird. Hierbei werden die \acf{SSID} des Netzwerks und das Passwort aus der Header-Datei benutzt, um die Verbindung aufzubauen. Diese Art der Implementierung hat gleich mehrere Nachteile. Zum einen muss jedes Mal der Quellcode geändert werden, das Projekt neu gebuildet werden und die dabei erzeugten Binärdateien auf das \acs{XDK} geflasht werden. Darüber hinaus ist es aus Sicht der Security nicht ideal, das Passwort im Klartext abspeichern zu müssen und dieses auch so über das Netzwerk zu versenden.\newline
-Trotz dieser beiden Aspekte wurde die Funktionalität auf diese Weise implementiert, da keine funktionierende Alternative dazu gefunden werden kann.
-\subsection{Scheduling}\label{subsec:Scheduling}
+Listing ~\ref{lis:WLAN Verbindung} zeigt die Funktion, die zum Aufbau einer \acs{WLAN}-Verbindung verwendet wird. Hierbei werden die \acf{SSID} des Netzwerks und das Passwort aus der Header-Datei benutzt, um die Verbindung aufzubauen. Diese Art der Implementierung hat gleich mehrere Nachteile. Zum einen muss jedes Mal der Quellcode geändert werden, das Projekt neu gebuildet werden und die dabei erzeugten Binärdateien auf das \acs{XDK} geflasht werden. Darüber hinaus ist es aus Sicht der Security nicht ideal, das Passwort im Klartext abspeichern zu müssen und dieses auch so über das Netzwerk zu versenden.\newline
+Trotz dieser beiden Aspekte ist die Funktionalität auf diese Weise implementiert, da keine funktionierende Alternative dazu gefunden werden kann. ~\cite{XDK.Wifi}
+\section{Scheduling}\label{sec:Scheduling}
 Da es sich bei dem Betriebssystem des \acs{XDK} um ein Echtzeitbetriebssystem handelt und in dem entwickelten Programm mehrere Tasks parallel ablaufen sollen, muss zwangsläufig das Scheduling dieser Tasks betrachtet werden. Im entwickelten Programm werden spezifische Programmtechniken wie die Implementierung von Semaphoren zur Sicherstellung von bestimmten Reihenfolgen der Tasks komplett vernachlässigt. Dies geschieht begründet auf der Tatsache, dass die Tasks weitestgehend unabhängig voneinander laufen und nur an 2 Stellen eine Überschneidung bei der Nutzung gemeinsamer Variablen auftreten kann.\newline
 \newline
 Im ersten Fall könnte es passieren, dass die Daten des Zwischenspeichers gesendet werden, bevor von jedem Sensor die neuesten Messwerte darin abgespeichert sind. Dies ist allerdings nicht als kritisch einzustufen, da die Änderungen der Messwerte innerhalb eines Sende-Zyklus meist nur minimal ausfallen.\newline
-Der zweite Fall würde eintreten, wenn der \acs{ADC}-Task bereits ein weiteres Mal liest, bevor der \acs{GPIO}-Task den Sensor weitergeschaltet hat. In diesem Fall würde einfach der selbe Wert zwei Mal gelesen und die Messwerte eines anderen Sensors würden nicht erfasst werden. Auch dieses Szenario ist als unkritisch anzusehen, da in diesem Fall für den Sensor, dessen Daten nicht erfasst werden einfach die letzten gemessenen Daten übertragen werden, welche keine allzu großen Abweichungen aufweisen sollten.
+Der zweite Fall würde eintreten, wenn der \acs{ADC}-Task bereits ein weiteres Mal liest, bevor der \acs{GPIO}-Task den Sensor weitergeschaltet hat. In diesem Fall würde einfach der selbe Wert zwei Mal gelesen und die Messwerte eines anderen Sensors würden nicht erfasst werden. Auch dieses Szenario ist als unkritisch anzusehen, da in dem Fall für den Sensor, dessen Daten nicht erfasst werden, einfach die letzten gemessenen Daten übertragen werden. Diese sollten keine allzu großen Abweichungen vom tatsächlichen Wert aufweisen.

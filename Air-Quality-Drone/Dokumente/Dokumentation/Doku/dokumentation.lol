@@ -44,6 +44,13 @@
 \contentsline {lstlisting}{\numberline {6.3}Erstellen einer Waypoint Mission}{54}{lstlisting.6.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {6.4}Umrechnung Meter in L\IeC {\"a}ngengrad und Breitengrad}{55}{lstlisting.6.4}
+\contentsline {lstlisting}{\numberline {5.10}WLAN Verbindung}{44}{lstlisting.5.10}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {6.1}Statusleiste}{47}{lstlisting.6.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
