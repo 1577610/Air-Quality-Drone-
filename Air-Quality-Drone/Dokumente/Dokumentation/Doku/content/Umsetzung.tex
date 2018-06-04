@@ -310,7 +310,7 @@ Retcode_T wifiConnect(void)
 }
 \end{lstlisting}
 Listing ~\ref{lis:WLAN Verbindung} zeigt die Funktion, die zum Aufbau einer \acs{WLAN}-Verbindung verwendet wird. Hierbei werden die \acf{SSID} des Netzwerks und das Passwort aus der Header-Datei benutzt, um die Verbindung aufzubauen. Diese Art der Implementierung hat gleich mehrere Nachteile. Zum einen muss jedes Mal der Quellcode geändert werden, das Projekt neu gebuildet werden und die dabei erzeugten Binärdateien auf das \acs{XDK} geflasht werden. Darüber hinaus ist es aus Sicht der Security nicht ideal, das Passwort im Klartext abspeichern zu müssen und dieses auch so über das Netzwerk zu versenden.\newline
-Trotz dieser beiden Aspekte ist die Funktionalität auf diese Weise implementiert, da keine funktionierende Alternative dazu gefunden werden kann.
+Trotz dieser beiden Aspekte ist die Funktionalität auf diese Weise implementiert, da keine funktionierende Alternative dazu gefunden werden kann. ~\cite{XDK.Wifi}
 \section{Scheduling}\label{sec:Scheduling}
 Da es sich bei dem Betriebssystem des \acs{XDK} um ein Echtzeitbetriebssystem handelt und in dem entwickelten Programm mehrere Tasks parallel ablaufen sollen, muss zwangsläufig das Scheduling dieser Tasks betrachtet werden. Im entwickelten Programm werden spezifische Programmtechniken wie die Implementierung von Semaphoren zur Sicherstellung von bestimmten Reihenfolgen der Tasks komplett vernachlässigt. Dies geschieht begründet auf der Tatsache, dass die Tasks weitestgehend unabhängig voneinander laufen und nur an 2 Stellen eine Überschneidung bei der Nutzung gemeinsamer Variablen auftreten kann.\newline
 \newline

@@ -1,7 +1,6 @@
 %!TEX root = ../dokumentation.tex
 
 \chapter{Architektur}\label{cha:Architektur}
-~\cite{mvc1}
 \section{Architektur Konzept}\label{sec:Architektur Konzept}
 Wie in Abbildung ~\ref{fig:Architektur_grob} zu sehen ist, besteht das System im Kern aus 3 Komponenten. Die Drohne, das \acs{XDK} sowie das Tablet sind alle mit dem \acs{WLAN} der Drohne verbunden. Über dieses läuft dann die komplette Kommunikation zwischen den einzelnen Komponenten ab. Die App kommuniziert über das \acs{DJI}-\acs{SDK} mit der Drohne, das \acs{XDK} baut eine UDP-Verbindung zur App auf, über die es die gemessenen Sensordaten schicken kann.
 \begin{figure}[H]
@@ -35,7 +34,7 @@ Neben den 5 analogen Sensoren muss auch das Signal des Feinstaub-Sensors angepas
 \section{Schaltungsdesign}\label{sec:Schaltungsdesign}
 Da die Sensoren aus Tabelle ~\ref{tab:Sensoren} Ausgangs-Spannungen zwischen 0V und 5V liefern, müssen diese Spannungen noch umgewandelt werden, bevor sie mit dem Extension Board und somit dem XDK verbunden werden dürfen. Aus diesem Grund werden mehrere Pegel-Wandler und Operationsverstärker eingesetzt, damit die einzelnen Komponenten kompatibel werden.
 \newline
-In diesem Abschnitt wird nun näher auf das konkrete Schaltungs-Design eingegangen, wie die Bauteile elektrisch miteinander verbunden sind und wie die Spannungen umgewandelt werden, sodass die einzelnen Komponenten miteinander kommunizieren können. Ein Überblick über das gesamte Schaltungslayout lässt sich im Anhang in Abschnit ~\ref{label} finden.
+In diesem Abschnitt wird nun näher auf das konkrete Schaltungs-Design eingegangen, wie die Bauteile elektrisch miteinander verbunden sind und wie die Spannungen umgewandelt werden, sodass die einzelnen Komponenten miteinander kommunizieren können. Ein Überblick über das gesamte Schaltungslayout lässt sich im Anhang in Abschnit ~\ref{sec:Schaltungs-Layout_komplett} finden.
 \newline
 Die gezeigten Schaltungs-Layouts und die dabei verwendeten Komponenten sind mit Hilfe der gratis \acf{CAD}-Software PCBWeb entworfen worden, die sowohl zum Entwurf schematischer Schaltpläne, als auch zur Erstellung von \acf{PCB}-Layouts verwendet werden kann.
 \subsection{Extension-Board}\label{subsec:Extension-Board}
@@ -76,7 +75,7 @@ Wenn somit die Steuerung des Multiplexers funktioniert, wird abhängig von der B
 				1 & 1 & 1 & 7 \\ \hline 							
 			\end{tabular}
 	\end{center}
-	\caption{Logische Ansteuerung Multiplexer}
+	\caption{Logische Ansteuerung Multiplexer ~\cite{DataSheet.CD4051B}}
 	\label{tab:MultiplexerLogic}
 \end{table}
 Ist nun ein bestimmter Eingangskanal auf den Ausgang durchgeschaltet, so kann das Signal trotzdem noch nicht mit dem \acs{ADC} verbunden werden, da die Spannungswerte des Signals zwischen 0V und 5V liegen können. Da das XDK nur Spannungen bis zu 2,5V verträgt, muss die Spannung auf diesen Bereich umgewandelt werden. Wie dies zu erreichen ist, wird in Abschnitt ~\ref{subsec:Operationsverstärker} näher erläutert.
@@ -88,7 +87,7 @@ Ist nun ein bestimmter Eingangskanal auf den Ausgang durchgeschaltet, so kann da
 \end{figure}
 Wie bereits zuvor erwähnt werden die beiden Pegelwandler benutzt, um die Spannung der von den \acs{GPIO}-Pins eingehenden Signale auf 3,3V anzuheben, damit der Multiplexer diese verarbeiten kann.
 \subsection{Operationsverstärker}\label{subsec:Operationsverstärker}
-Wie im Abschnitt ~\ref{subsec:Multiplexer} erwähnt, muss das Ausgangssignal des Multiplexers aus dem Intervall von 0V bis 5V in das Intervall von 0V bis 2,5V konvertiert werden. Dies geschieht mittels eines Operationsverstärkers und der dazugehörigen Grundschaltung des invertierenden Verstärkers, welche in Abbildung ~\ref{fig:InvertierenderVerstärker} zu sehen ist.
+Wie im Abschnitt ~\ref{subsec:Multiplexer} erwähnt, muss das Ausgangssignal des Multiplexers aus dem Intervall von 0V bis 5V in das Intervall von 0V bis 2,5V konvertiert werden. Dies geschieht mittels eines Operationsverstärkers und der dazugehörigen Grundschaltung des invertierenden Verstärkers, welche in Abbildung ~\ref{fig:InvertierenderVerstärker} zu sehen ist. ~\cite{DataSheet.LM158N}
 \begin{figure}[H]
 	\includegraphics{images/InvertierenderVerstaerker.png}	
 	\caption{Invertierender Verstärker}
@@ -112,7 +111,7 @@ Abbildung ~\ref{fig:Layout_SDS011} zeigt die Beschaltung des Feinstaub-Sensors. 
 	\label{fig:Layout_SDS011}
 \end{figure}
 \subsection{Layout analoger Sensor}\label{subsec:Layout analoger Sensor}
-Zum Abschluss der Schaltungs-Layouts zeigt Abbildung ~\ref{fig:Layout_Sensor_Example} eine beispielhafte Beschaltung eines der analogen Sensoren. Da diese bei allen anderen Sensoren praktisch gleich aussieht, wird hier nur die Abbildung des MQ7-Sensors zur Veranschaulichung dargestellt. Die vollständigen Layouts der Sensoren finden sich im Anhang in Abschnitt ~\ref{label}.
+Zum Abschluss der Schaltungs-Layouts zeigt Abbildung ~\ref{fig:Layout_Sensor_Example} eine beispielhafte Beschaltung eines der analogen Sensoren. Da diese bei allen anderen Sensoren praktisch gleich aussieht, wird hier nur die Abbildung des MQ7-Sensors zur Veranschaulichung dargestellt. Die vollständigen Layouts der Sensoren finden sich im kompletten Schaltungs-Layout im Anhang in Abschnitt ~\ref{sec:Schaltungs-Layout_komplett}.
 \begin{figure}[H]
 	\includegraphics[width=8cm]{images/Layout_Sensor_Example.png}	
 	\caption{Layout analoger Sensor}

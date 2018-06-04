@@ -288,7 +288,8 @@ Für die Entwicklung von \acs{GUI} stellt DJI eine UXLibrary zur Verfügung, wel
 	\label{fig:XDK}
 \end{figure}
 Das Bosch \acf{XDK} ist ein kabelloses Sensor-Kit, welches Rapid Prototyping von Produkten im Rahmen des \acf{IOT} ermöglicht. Es ist ausgelegt für die Entwicklung von Prototypen vor der tatsächlichen Serienentwicklung. 
-Hierfür wird die eigens dafür entwickelte Entwicklungsumgebung, die sogenannte XDK-Workbench verwendet. Zur Implementierung der eigenen Software kann zwischen den beiden Programmiersprachen C sowie Eclipse Mita gewählt werden, wobei letztere im Kontext des XDK oft auch als XDK Live bezeichnet wird. Im Rahmen der Studienarbeit haben wir uns für die Programmiersprache C entschieden, da hierfür die Dokumentation zur Zeit noch ausführlicher ausfällt als bei XDK Live.
+Hierfür wird die eigens dafür entwickelte Entwicklungsumgebung, die sogenannte XDK-Workbench verwendet. Zur Implementierung der eigenen Software kann zwischen den beiden Programmiersprachen C sowie Eclipse Mita gewählt werden, wobei letztere im Kontext des XDK oft auch als XDK Live bezeichnet wird. Im Rahmen der Studienarbeit haben wir uns für die Programmiersprache C entschieden, da hierfür die Dokumentation zur Zeit noch ausführlicher ausfällt als bei XDK Live.\newline
+~\cite{XDK.General}
 \subsection{\acs{XDK} Workbench}\label{subsec:XDK Workbench}
 \begin{figure}[H]
 	\centering
@@ -319,16 +320,16 @@ Im Rahmen dieser Arbeit werden die letzten drei genannten Sensoren verwendet, um
 			\hline
 			Messgröße & Messbereich & Einheit & Absolute Genauigkeit & Relative Genauigkeit  \\ \hline \hline
 			
-			Temperatur & 0 - 65 & $^\circ$C & $^\pm$1 & - \\ \hline 
+			Temperatur & -20 - 60 & $^\circ$C & $^\pm$1 & - \\ \hline 
 			
-			Luftfeuchtigkeit & 0 - 100 & \% (relativ) & $^\pm$3 & - \\ \hline 
+			Luftfeuchtigkeit & 10 - 90 & \% (relativ) & $^\pm$3 & - \\ \hline 
 			
 			Luftdruck & 300 - 1100 & hPa & $^\pm$1 & $^\pm$0,12 \\ \hline 
 			
 		\end{tabular}
 		
 	\end{center}
-	\caption{Übersicht Umgebungssensoren \acs{XDK}}
+	\caption{Übersicht Umgebungssensoren \acs{XDK} ~\cite{XDK.DataSheet}}
 	\label{tab:XDK Sensoren}
 \end{table}
 
@@ -342,7 +343,8 @@ Im Rahmen dieser Arbeit werden die letzten drei genannten Sensoren verwendet, um
 Zusätzlich zu den eingebauten Sensoren bietet das \acs*{XDK} die Möglichkeit das zugehörige Extension Board über eine serielle Schnittstelle anszuschließen. Das Extension Board bietet so die Möglichkeit externe Komponenten mit dem \acs{XDK} zu verbinden, wie beispielsweise weitere Sensoren. Das Board ist bedingt durch die interne \acf{MCU} des \acs{XDK} auf Spannungen zwischen 0V und 2,5V beschränkt, weshalb eingehende Signale mit größeren Spannungen immer zuerst umgewandelt werden müssen, um den Prozessor nicht zu schädigen. Das Board verfügt über 28 Pins, von denen 23 als \acf{GPIO}-Pins per Software konfiguriert werden können. Neben dieser Standard-Funktionalität der Pins, können einige Pins besondere Funktionalitäten umsetzen, wenn sie entsprechend konfiguriert werden. Das Board verfügt beispielsweise über zwei Pins, die als \acf{ADC} genutzt werden können, um mit deren Hilfe analoge Spannungspegel zu lesen. Neben der Möglichkeit analoge Signale zu erkennen, können auch einige Pins serielle Daten auslesen, indem sie beispielsweise als \acf{UART} konfiguriert wurden.
 
 \section{Sensoren Luftqualität}\label{sec:Sensoren Luftqualität}
-Aufgrund der Tatsache, dass das \acs{XDK} lediglich Aussagen zu Temperatur, Luftfeuchtigkeit und Luftdruck der Umgebung tätigen kann, werden für die tatsächliche Auswertung der Luftqualität weitere Sensoren benötigt. Die folgende Tabelle listet alle für diese Arbeit verwendeten zusätzlichen Sensoren mit deren wichtigsten Eigenschaften auf:
+Aufgrund der Tatsache, dass das \acs{XDK} lediglich Aussagen zu Temperatur, Luftfeuchtigkeit und Luftdruck der Umgebung tätigen kann, werden für die tatsächliche Auswertung der Luftqualität weitere Sensoren benötigt. Die folgende Tabelle listet alle für diese Arbeit verwendeten zusätzlichen Sensoren mit deren wichtigsten Eigenschaften auf: \newline
+~\cite{DataSheet.MQ7}, ~\cite{DataSheet.MG811}, ~\cite{DataSheet.MQ131}, ~\cite{DataSheet.MQ135}, ~\cite{DataSheet.SDS011}
 \begin{table}[H]
 	\begin{center}
 		\resizebox{\columnwidth}{!}{%
@@ -370,7 +372,13 @@ Aufgrund der Tatsache, dass das \acs{XDK} lediglich Aussagen zu Temperatur, Luft
 \end{table}
 
 Neben dem Feinstaub-Sensor SDS011, welcher die Messdaten digital über \acs{UART} an das \acs{XDK} übermittelt, liefern alle anderen Sensoren lediglich ein analoges Ausgangssignal. Die Umsetzung der Spannung an den Ausgängen in Messwerte erfolgt auf Basis der Datenblätter logarithmisch zu den gemessenen Werten. \newline
-Abbildung ~\ref{label} zeigt einen Ausschnitt aus dem Datenblatt des MG811-Sensors und zeigt, wie genau die Impedanz des Sensors mit steigenden Messwerten logarithmisch ansteigt. Für alle weiteren analogen Sensoren sind diese Kennlinien ähnlich und lassen sich im Anhang in Abschnitt ~\ref{label} finden.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=8cm]{images/MG811_Skalierung.png}	
+	\caption{Skalierung Messwerte MG811}
+	\label{fig:MG811_Skalierung}
+\end{figure}
+Abbildung ~\ref{fig:MG811_Skalierung} zeigt einen Ausschnitt aus dem Datenblatt des MG811-Sensors und zeigt, wie genau die Impedanz des Sensors mit steigenden Messwerten logarithmisch ansteigt. Für alle weiteren analogen Sensoren sind diese Kennlinien ähnlich und können in den Datenblättern nachgelesen werden.
 \newline \newline 
 Das Kriterium, das den größten Einfluss auf die Wahl der Sensoren hat, ist in diesem Projekt deren Kostengünstigkeit.
 \newline
@@ -379,7 +387,7 @@ Da der Fokus dieser Arbeit jedoch auf der Entwicklung der Drohne als Messstation
 \section{FreeRTOS}\label{sec:FreeRTOS}
 Das Betriebssystem des \acs*{XDK} ist FreeRTOS, ein Echtzeitbetriebssystem für eingebettete Systeme. FreeRTOS stellt de facto den Standard für Mikrocontroller und kleine Mikroprozessoren dar, nicht zuletzt aufgrund dessen sehr freizügiger Open-Source-Lizenz. Das Betriebssystem ist veröffentlicht unter der MIT Lizenz, welche die kostenlose Nutzung der Software selbst zu kommerziellen Zwecken erlaubt. FreeRTOS ist zum größten Teil in der Programmiersprache C entwickelt, wobei es einzelne Funktionalitäten gibt, die auf Assembler-Ebene umgesetzt sind. Im Folgenden werden die beiden Begriffe Tasks und Timers näher betrachtet, da diese bei der Entwicklung von Software für das \acs*{XDK} eine große Rolle spielen.
 \subsection{Tasks}\label{subsec:Tasks}
-Eine auf einem Echtzeitbetriebssystem laufende Applikation kann in mehrere Tasks unterteilt werden. Die Tasks sind unabhängig voneinander und haben jeweils einen eigenen Task-Kontext. Es kann immer nur genau ein Task innerhalb des System aktiv sein, sodass im Falle mehrerer parallel laufender Tasks ein Scheduler diesen zur Laufzeit Rechenleistung zuweist und entscheidet, welcher Task gerade aktiv ist. 
+Eine auf einem Echtzeitbetriebssystem laufende Applikation kann in mehrere Tasks unterteilt werden. Die Tasks sind unabhängig voneinander und haben jeweils einen eigenen Task-Kontext. Es kann immer nur genau ein Task innerhalb des System aktiv sein, sodass im Falle mehrerer parallel laufender Tasks ein Scheduler diesen zur Laufzeit Rechenleistung zuweist und entscheidet, welcher Task gerade aktiv ist. ~\cite{FreeRTOS.Tasks}
 \subsection{Timers}\label{subsec:Timers}
-Ein Timer wird verwendet, wenn eine Funktion zu einem festen Zeitpunkt ausgeführt werden soll. Die Funktion, die nach Ablauf des Timers ausgeführt wird, bezeichnet man als Callback-Funktion. Neben Timern, die ein einmaliges Ereignis zu einem festen Zeitpunkt triggern, ist es möglich den Timer jedes mal nach dessen Ablauf neu zu starten, sodass die Callback-Funktion periodisch aufgerufen wird.
+Ein Timer wird verwendet, wenn eine Funktion zu einem festen Zeitpunkt ausgeführt werden soll. Die Funktion, die nach Ablauf des Timers ausgeführt wird, bezeichnet man als Callback-Funktion. Neben Timern, die ein einmaliges Ereignis zu einem festen Zeitpunkt triggern, ist es möglich den Timer jedes mal nach dessen Ablauf neu zu starten, sodass die Callback-Funktion periodisch aufgerufen wird. ~\cite{FreeRTOS.Timers}
 
