@@ -8,11 +8,12 @@
 
 % \begin{otherlanguage}{english} % auskommentieren, wenn Abstract auf Deutsch sein soll
 \begin{abstract}
-Logfiles beinhalten eine große Menge an Daten, deren Analyse bei der Suche nach Fehlern und der Überwachung einer IT Infrastruktur eine große Hilfe sind. Dabei stellen sich mehrere Herausforderungen. Die Erste ist, dass Logfiles textbasiert sind. Der Nachteil hierbei ist, dass im Vergleich zu einer Datenbank oder einer XML Datei textbasierte Dateien keine klar auslesbare oder durchsuchbare Struktur besitzen. Die Zweite ist, dass Systeme so viele Informationen wie möglich loggen und dadurch die nützlichen bzw. wichtigen Informationen erst herausgefiltert werden müssen.
-
-Für die Analyse von textbasierten Daten eignet sich sehr gut das MapReduce Modell. Außerdem lässt sich das Modell sehr einfach skalieren und auf mehrere Programmläufe verteilen (Master-Worker). Das Apache Hadoop Projekt stellt sowohl für MapReduce, als auch für die Verwaltung von mehreren Programmläufen, ein Basisframework bereit, mit welchem die Entwicklung eines Analyseprogramms durchgeführt werden soll.
-
-Ziel dieser Arbeit ist die Entwicklung einer prototypischen Anwendung zur formatunabhängigen Analyse von Logfiles unter Zuhilfenahme von Apache Hadoop MapReduce.  Die Anwendung soll die bisher vorhandenen Monitoring Systeme innerhalb der Infrastruktur ergänzen, wodurch Informationen über den Zustand des Systems schneller erhoben werden können. Des Weiteren sollen aufkommende Fehler besser erkannt werden, um die Reaktionszeit auf diese zu optimieren.
+Zur Luftqualitätsmessung wird derzeit von vielen Organisationen sowie vom deutschen Umweltbundesamt auf feste Messstationen gesetzt, welche kritische Kennwerte wie Feinstaub, Ozon und weitere messen sowie dokumentieren. Dabei stellt sich die Frage, ob es sinnvoll ist, die Luftqualität nur mittels einzelner Stichproben an immer den gleichen Orten zu bestimmen. \newline
+Um dieses Problem zu umgehen, beschäftigt sich diese Arbeit mit der Entwicklung einer Drohne, an welcher Sensoren zur Messung der Luftqualität angebracht sind. Mithilfe dieser Drohne ist es nun möglich die Luftqualität nicht nur an verschiedenen Standorten flexibel zu messen, sondern auch die Einflüsse unterschiedlicher Höhen auf die Messwerte zu ermitteln.\newline
+\newline
+Für die Anbindung der Sensoren an die Drohne wird das Bosch \acf{XDK} verwendet, ein mit Sensoren ausgestatteter Mikrocontroller. Dieser sendet die erfassten Messdaten über ein \acf{WLAN} an die zur Drohnensteuerung angefertigte iOS-App.\newline
+\newline
+Ziel dieser Arbeit ist der Entwurf und die Umsetzung eines Messsystems, mittels dessen sich die Luftqualität mobil erfassen lässt. Dazu sollen neben den internen Sensoren des \acs{XDK} mehrere externe Sensoren mit diesem verbunden werden, sodass ein möglichst umfangreiches Abbild der Umgebung entsteht. Neben dem Entwurf der Schaltungen und deren Umsetzung wird im Rahmen dieser Arbeit auch ein Programmcode für das \acs{XDK} entwickelt, welcher dafür sorgt, dass die Sensoren korrekt ausgelesen und deren Daten an die App übermittelt werden.
 \end{abstract}
 % \end{otherlanguage} % auskommentieren, wenn Abstract auf Deutsch sein soll
 }

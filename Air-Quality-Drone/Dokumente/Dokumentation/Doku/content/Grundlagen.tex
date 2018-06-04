@@ -159,6 +159,7 @@ Die Bedienfläche ist ein 9,7" großer Multi-Touch Display. Das iPad ist \acl{WL
 \end{figure}
 
 
+
 \section{iOS-Appentwicklung}\label{sec:ioS-Appentwicklung}
 Bei der Appentwicklung für iOS Geräte bietet sich die Apple eigene Programmiersprache Swift an, welche für die in dieser Arbeit erstellten App auch verwendet wurde. 
 \newline
@@ -262,58 +263,6 @@ Swift vereint unterschiedliche Konzepte verschiedener Programmiersprachen, wie z
 Für die Appentwicklung wurde die Programmiersprache Swift unter der Version 4.1 verwendet. 
 
 \subsection{DJI-\acf{SDK}}\label{subsec:DJI-SDK}
-<<<<<<< HEAD
-
-\section{Bosch \acf{XDK}}\label{sec:Bosch XDK}
-\subsection{Allgemeines}\label{subsec:Allgemeines}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=5cm]{images/xdk.jpg}	
-	\caption{Bosch \acs*{XDK}}
-	\label{fig:XDK}
-\end{figure}
-Das Bosch \acf{XDK} ist ein kabelloses Sensor-Kit, welches Rapid Prototyping von Produkten im Rahmen des \acf{IOT} ermöglicht. Es ist ausgelegt für die Entwicklung von Prototypen vor der tatsächlichen Serienentwicklung. 
-Hierfür wird die eigens dafür entwickelte Entwicklungsumgebung, die sogenannte XDK-Workbench verwendet. Zur Implementierung der eigenen Software kann zwischen den beiden Programmiersprachen C sowie Eclipse Mita verwendet werden, wobei letztere im Kontext des XDK oft auch als XDK Live bezeichnet wird. Im Rahmen der Studienarbeit haben wir uns für die Programmiersprache C entschieden, da hierfür die Dokumentation noch ausführlicher ausfällt.
-\subsection{\acs{XDK} Workbench}\label{subsec:XDK Workbench}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=12cm]{images/XDK_Workbench.png}	
-	\caption{Bosch \acs*{XDK} Workbench}
-	\label{fig:XDK_Workbench}
-\end{figure}
-Die \acs{XDK} Workbench ist eine auf Eclipse basierende Entwicklungs-Umgebung, um Programmcode für das XDK zu entwickeln, zu debuggen und den Code auf das Gerät zu flashen.
-Um ein lauffähiges Programm aus dem Programmcode zu generieren muss das Projekt nach jeder kleinen Änderung zunächst gebuildet werden, bevor man es anschließend über den Flash-Button auf das Gerät laden kann. Um die beim Built erzeugten Binärdateien erfolgreich auf das Gerät zu übertragen, muss sich dieses zunächst im Bootloader-Modus befinden. Diesen kann man herstellen, indem das Gerät ausgeschaltet wird und es anschließend unter Drücken von Button 1 des Gerätes wieder eingeschaltet wird.\newline
-Einen wirklichen Debug-Mechanismus bietet die Workbench alleine bis dato nicht. Um dennoch zu debuggen muss ein externes Debug Gerät angeschlossen werden wie beispielsweise die J-Link Debug Probe. \newline
-Falls nicht auf dieses externe Debug-Gerät zurückgegriffen werden kann bleibt nichts anderes übrig als über Kommandozeilen-Ausgaben das Programm zu debuggen. Dies ist im Falle des XDK besonders mühsam, da nach jeder kleinen Änderung das Programm wieder gebuildet werden muss, das XDK in den Bootloader-Modus versetzt werden muss und das Programm abschließend geflasht werden muss. Für diesen Prozess können mitunter mehrere Mintuen vergehen, falls beispielsweise noch ein Clean erforderlich ist.
-\subsection{Sensoren}\label{subsec:Sensoren}
-Das \acs*{XDK} ist mit Sensoren zur Messung folgender Größen ausgestattet:
-\begin{itemize} 
-	\item Beschleunigung (BMA280)
-	\item Gyroskop (BMG160)
-	\item Magnetische Feldstärke (BMM150)
-	\item Licht (MAX44009)
-	\item Sound (AKU340)
-	\item Temperatur (BME280)
-	\item Relative Luftfeuchtigkeit (BME280)
-	\item Luftdruck (BME280)
-\end{itemize}
-Im Rahmen dieser Arbeit werden die letzten drei genannten Sensoren verwendet, um Informationen über unsere Umwelt zu erlangen.
-\subsection{Extension Board}\label{subsec:Extension Board}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=4cm]{images/ExtensionBoard.png}	
-	\caption{Bosch \acs*{XDK} Extension Board}
-	\label{fig:Extension_Board}
-\end{figure}
-Zusätzlich zu den eingebauten Sensoren bietet das \acs*{XDK} die Möglichkeit das zugehörige Extensionboard über eine serielle Schnittstelle anszuschließen. Das Extension Board bietet so die Möglichkeit externe Komponenten an den \acs{XDK} anzuschließen, wie beispielsweise weitere Sensoren. Das Board ist bedingt durch die interne \acf{MCU} des \acs{XDK} auf Spannungen zwischen 0V und 2,5V beschränkt, weshalb eingehende Signale mit größeren Spannungen, wie den bei Microcontrollern üblichen 3,3V immer zuerst umgerechnet werden müssen, um den Prozessor nicht zu schädigen. Das Board verfügt über 28 Pins, von denen 23 als \acf{GPIO}-Pins per Software konfiguriert werden können. Neben dieser Standard-Funktionalität der Pins, können einige Pins besondere Funktionalitäten umsetzen, wenn sie entsprechend konfiguriert werden. Das Board verfügt beispielsweise über zwei Pins, die als \acf{ADC} genutzt werden können, mittels deren analoge Spannungspegel gelesen werden. Neben der Möglichkeit analoge Signale zu erkennen, können auch einige Pins serielle Daten auslesen, indem sie beispielsweise als \acf{UART} konfiguriert wurden.
-
-\section{FreeRTOS}\label{sec:FreeRTOS}
-Das Betriebssystem des \acs*{XDK} ist FreeRTOS, ein Echtzeitbetriebssystem für eingebettete Systeme. FreeRTOS stellt de facto den Standard für Mikrocontroller und kleine Mikroprozessoren dar nicht zuletzt aufgrund dessen sehr freizügiger Open-Source-Lizenz. Es ist veröffentlicht unter der MIT Lizenz, welche die kostenlose Nutzung der Software selbst zu kommerziellen Zwecken erlaubt. FreeRTOS ist zum größten Teil in der Programmiersprache C entwickelt mit einzelnen Funktionalitäten, die auf Assembler-Ebene umgesetzt sind. Im folgenden betrachten wir die beiden Begriffe Tasks und Timers näher, da diese bei der Entwicklung von Software für den \acs*{XDK} eine große Rolle spielen.
-\subsection{Tasks}\label{subsec:Tasks}
-Eine auf einem Echtzeitbetriebssystem laufende Applikation kann in mehrere Tasks unterteilt werden. Die Tasks sind unabhängig voneinander und haben jeweils einen eigenen Task-Kontext. Es kann immer nur genau ein Task innerhalb des System aktiv sein, sodass im Falle mehrerer parallel laufender Task ein Scheduler den Tasks zur Laufzeit Rechenleistung zuweist und entscheidet, welcher Task gerade aktiv ist. 
-\subsection{Timers}\label{subsec:Timers}
-Ein Timer wird verwendet, wenn eine Funktion zu einem festen Zeitpunkt ausgeführt werden soll. Die Funktion, die nach Ablauf des Timers ausgeführt wird, bezeichnet man als Callback-Funktion. Neben Timern, die ein einmaliges Ereignis zu einem festen Zeitpunkt triggern, ist es möglich den Timer zu resetten, sodass die Callback-Funktion periodisch aufgerufen wird.
-=======
 DJI bietet neben dem Verkauf von Drohnen auch noch andere Leistungen an. Hierzu gehören diverse \acs{SDK}, die die Entwicklung von Apps und Programmen für die Drohnen von DJI erleichtern. 
 \acs{SDK} die angeboten werden sind:
 \begin{itemize}
@@ -330,4 +279,107 @@ Das SDK bietet verschiedene Kernfunktionalitäten an. Zu diesen wichtigen und n�
 \newline
 Für die Entwicklung von \acs{GUI} stellt DJI eine UXLibrary zur Verfügung, welche graphische Elemente für die wichtigsten Funktionen des mobile \acs{SDK} bereitstellt.
 
->>>>>>> 7ddb84756ee9ca9703000a9627a78569d24b8fbb
+\section{Bosch \acf{XDK}}\label{sec:Bosch XDK}
+\subsection{Allgemeines}\label{subsec:Allgemeines}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{images/xdk.jpg}	
+	\caption{Bosch \acs*{XDK}}
+	\label{fig:XDK}
+\end{figure}
+Das Bosch \acf{XDK} ist ein kabelloses Sensor-Kit, welches Rapid Prototyping von Produkten im Rahmen des \acf{IOT} ermöglicht. Es ist ausgelegt für die Entwicklung von Prototypen vor der tatsächlichen Serienentwicklung. 
+Hierfür wird die eigens dafür entwickelte Entwicklungsumgebung, die sogenannte XDK-Workbench verwendet. Zur Implementierung der eigenen Software kann zwischen den beiden Programmiersprachen C sowie Eclipse Mita gewählt werden, wobei letztere im Kontext des XDK oft auch als XDK Live bezeichnet wird. Im Rahmen der Studienarbeit haben wir uns für die Programmiersprache C entschieden, da hierfür die Dokumentation zur Zeit noch ausführlicher ausfällt als bei XDK Live.
+\subsection{\acs{XDK} Workbench}\label{subsec:XDK Workbench}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{images/XDK_Workbench.png}	
+	\caption{Bosch \acs*{XDK} Workbench}
+	\label{fig:XDK_Workbench}
+\end{figure}
+Die \acs{XDK} Workbench ist eine auf Eclipse basierende Entwicklungs-Umgebung, um Programmcode für das XDK zu entwickeln, zu debuggen und den Code auf das Gerät zu flashen.
+Um ein lauffähiges Programm aus dem Code zu generieren muss das Projekt nach jeder Änderung zunächst gebuildet werden, bevor es anschließend über den Flash-Button auf das Gerät geladen werden kann. Um die beim Built erzeugten Binärdateien erfolgreich auf das Gerät zu übertragen, muss sich dieses zunächst im Bootloader-Modus befinden. Diesen kann man herstellen, indem das Gerät ausgeschaltet wird und es anschließend unter Drücken von Button 1 des Gerätes wieder eingeschaltet wird.\newline
+Einen wirklichen Debug-Mechanismus bietet die Workbench alleine bis dato nicht. Um dennoch zu debuggen muss ein externes Gerät angeschlossen werden wie beispielsweise die J-Link Debug Probe. \newline
+Falls nicht auf dieses externe Debug-Gerät zurückgegriffen werden kann bleibt nichts anderes übrig als über Kommandozeilen-Ausgaben das Programm zu debuggen. Dies ist im Falle des XDK besonders mühsam, da der Prozess des Buildens, Bootens und Flashens relativ langwierig sein kann. Für diesen Prozess können mitunter mehrere Mintuen vergehen, falls beispielsweise noch ein Clean erforderlich ist.
+\subsection{Sensoren}\label{subsec:Sensoren}
+Das \acs*{XDK} ist mit Sensoren zur Messung folgender Größen ausgestattet:
+\begin{itemize} 
+	\item Beschleunigung (BMA280)
+	\item Gyroskop (BMG160)
+	\item Magnetische Feldstärke (BMM150)
+	\item Licht (MAX44009)
+	\item Sound (AKU340)
+	\item Temperatur (BME280)
+	\item Relative Luftfeuchtigkeit (BME280)
+	\item Luftdruck (BME280)
+\end{itemize}
+Im Rahmen dieser Arbeit werden die letzten drei genannten Sensoren verwendet, um Informationen über die Umwelt zu erlangen. Tabelle ~\ref{tab:XDK Sensoren} zeigt die Messbereiche und Toleranzen des Sensors BME280.
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			Messgröße & Messbereich & Einheit & Absolute Genauigkeit & Relative Genauigkeit  \\ \hline \hline
+			
+			Temperatur & 0 - 65 & $^\circ$C & $^\pm$1 & - \\ \hline 
+			
+			Luftfeuchtigkeit & 0 - 100 & \% (relativ) & $^\pm$3 & - \\ \hline 
+			
+			Luftdruck & 300 - 1100 & hPa & $^\pm$1 & $^\pm$0,12 \\ \hline 
+			
+		\end{tabular}
+		
+	\end{center}
+	\caption{Übersicht Umgebungssensoren \acs{XDK}}
+	\label{tab:XDK Sensoren}
+\end{table}
+
+\subsection{Extension Board}\label{subsec:Extension Board}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4cm]{images/ExtensionBoard.png}	
+	\caption{Bosch \acs*{XDK} Extension Board}
+	\label{fig:Extension_Board}
+\end{figure}
+Zusätzlich zu den eingebauten Sensoren bietet das \acs*{XDK} die Möglichkeit das zugehörige Extension Board über eine serielle Schnittstelle anszuschließen. Das Extension Board bietet so die Möglichkeit externe Komponenten mit dem \acs{XDK} zu verbinden, wie beispielsweise weitere Sensoren. Das Board ist bedingt durch die interne \acf{MCU} des \acs{XDK} auf Spannungen zwischen 0V und 2,5V beschränkt, weshalb eingehende Signale mit größeren Spannungen immer zuerst umgewandelt werden müssen, um den Prozessor nicht zu schädigen. Das Board verfügt über 28 Pins, von denen 23 als \acf{GPIO}-Pins per Software konfiguriert werden können. Neben dieser Standard-Funktionalität der Pins, können einige Pins besondere Funktionalitäten umsetzen, wenn sie entsprechend konfiguriert werden. Das Board verfügt beispielsweise über zwei Pins, die als \acf{ADC} genutzt werden können, um mit deren Hilfe analoge Spannungspegel zu lesen. Neben der Möglichkeit analoge Signale zu erkennen, können auch einige Pins serielle Daten auslesen, indem sie beispielsweise als \acf{UART} konfiguriert wurden.
+
+\section{Sensoren Luftqualität}\label{sec:Sensoren Luftqualität}
+Aufgrund der Tatsache, dass das \acs{XDK} lediglich Aussagen zu Temperatur, Luftfeuchtigkeit und Luftdruck der Umgebung tätigen kann, werden für die tatsächliche Auswertung der Luftqualität weitere Sensoren benötigt. Die folgende Tabelle listet alle für diese Arbeit verwendeten zusätzlichen Sensoren mit deren wichtigsten Eigenschaften auf:
+\begin{table}[H]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{%
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				Sensor Name & Messgröße & Messbereich & Versorgungsspannung & Spannung Ausgang & Signalart \\ \hline \hline
+				
+				MQ7 & \acf{CO} & 20ppm-2000ppm & 5V & 5V & Analog \\ \hline 
+				
+				MG811 & \acf{CO2} & 350 - 10000 ppm & 5V & 5V & Analog \\ \hline
+				
+				MQ131 & \acf{O3} & 10PPB-2PPM & 5V & 5V & Analog \\ \hline
+				
+				MQ131 & \acf{O3} & 1000ppm-10ppm & 5V & 5V & Analog \\ \hline
+				
+				MQ135 &  Schädliche Gase (NO\textsubscript{x}) & Abhängig vom Gas & 5V & 5V & Analog \\ \hline
+				
+				SDS011 & \acf{PM} & 0.0-999.9 ug/m\textsuperscript{3} & 5V & 3,3V & \acs{UART} \\ \hline			
+				
+			\end{tabular}
+		}
+	\end{center}
+	\caption{Übersicht Sensoren}
+	\label{tab:Sensoren}
+\end{table}
+
+Neben dem Feinstaub-Sensor SDS011, welcher die Messdaten digital über \acs{UART} an das \acs{XDK} übermittelt, liefern alle anderen Sensoren lediglich ein analoges Ausgangssignal. Die Umsetzung der Spannung an den Ausgängen in Messwerte erfolgt auf Basis der Datenblätter logarithmisch zu den gemessenen Werten. \newline
+Abbildung ~\ref{label} zeigt einen Ausschnitt aus dem Datenblatt des MG811-Sensors und zeigt, wie genau die Impedanz des Sensors mit steigenden Messwerten logarithmisch ansteigt. Für alle weiteren analogen Sensoren sind diese Kennlinien ähnlich und lassen sich im Anhang in Abschnitt ~\ref{label} finden.
+\newline \newline 
+Das Kriterium, das den größten Einfluss auf die Wahl der Sensoren hat, ist in diesem Projekt deren Kostengünstigkeit.
+\newline
+Dies hat zur Folge, dass die Toleranzen der Sensoren aus Tabelle ~\ref{tab:Sensoren} nicht optimal sind und die logarithmische Umsetzung der Messwerte in Spannungen einige Ungenauigkeiten mit sich bringt. \newline
+Da der Fokus dieser Arbeit jedoch auf der Entwicklung der Drohne als Messstation liegt und die Auswertung eher vernachlässigt wird, hat dies keine zu großen Auswirkungen.
+\section{FreeRTOS}\label{sec:FreeRTOS}
+Das Betriebssystem des \acs*{XDK} ist FreeRTOS, ein Echtzeitbetriebssystem für eingebettete Systeme. FreeRTOS stellt de facto den Standard für Mikrocontroller und kleine Mikroprozessoren dar, nicht zuletzt aufgrund dessen sehr freizügiger Open-Source-Lizenz. Das Betriebssystem ist veröffentlicht unter der MIT Lizenz, welche die kostenlose Nutzung der Software selbst zu kommerziellen Zwecken erlaubt. FreeRTOS ist zum größten Teil in der Programmiersprache C entwickelt, wobei es einzelne Funktionalitäten gibt, die auf Assembler-Ebene umgesetzt sind. Im Folgenden werden die beiden Begriffe Tasks und Timers näher betrachtet, da diese bei der Entwicklung von Software für das \acs*{XDK} eine große Rolle spielen.
+\subsection{Tasks}\label{subsec:Tasks}
+Eine auf einem Echtzeitbetriebssystem laufende Applikation kann in mehrere Tasks unterteilt werden. Die Tasks sind unabhängig voneinander und haben jeweils einen eigenen Task-Kontext. Es kann immer nur genau ein Task innerhalb des System aktiv sein, sodass im Falle mehrerer parallel laufender Tasks ein Scheduler diesen zur Laufzeit Rechenleistung zuweist und entscheidet, welcher Task gerade aktiv ist. 
+\subsection{Timers}\label{subsec:Timers}
+Ein Timer wird verwendet, wenn eine Funktion zu einem festen Zeitpunkt ausgeführt werden soll. Die Funktion, die nach Ablauf des Timers ausgeführt wird, bezeichnet man als Callback-Funktion. Neben Timern, die ein einmaliges Ereignis zu einem festen Zeitpunkt triggern, ist es möglich den Timer jedes mal nach dessen Ablauf neu zu starten, sodass die Callback-Funktion periodisch aufgerufen wird.
+

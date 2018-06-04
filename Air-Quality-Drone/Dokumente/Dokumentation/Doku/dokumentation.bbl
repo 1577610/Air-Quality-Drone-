@@ -1,0 +1,76 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nyt/global/}
+  \entry{Karloff.2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KH}{%
+         family={Karloff},
+         familyi={K\bibinitperiod},
+         given={Howard},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Suri},
+         familyi={S\bibinitperiod},
+         given={Siddharth},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=VS}{%
+         family={Vassilvitskii},
+         familyi={V\bibinitperiod},
+         given={Sergei},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KHSSVS1}
+    \strng{fullhash}{KHSSVS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{isbn}{9780898716986}
+    \field{pages}{938 \bibrangedash  948}
+    \field{title}{A Model of Computation for MapReduce}
+    \field{journaltitle}{SODA '10 Proceedings of the twenty-first annual
+  ACM-SIAM symposium on Discrete Algorithms}
+    \field{year}{2010}
+  \endentry
+
+  \entry{mvc1}{online}{}
+    \name{author}{1}{}{%
+      {{hash=PR}{%
+         family={Peres},
+         familyi={P\bibinitperiod},
+         given={Rui},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{PR1}
+    \strng{fullhash}{PR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Model-View-Controller (MVC) in iOS: A Modern Approach}
+    \field{year}{2016}
+  \endentry
+\endsortlist
+\endinput
