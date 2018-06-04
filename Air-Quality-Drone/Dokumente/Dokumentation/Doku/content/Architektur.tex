@@ -1,6 +1,6 @@
 %!TEX root = ../dokumentation.tex
 
-\chapter{Architektur}\label{cha:Architektur}
+\chapter{Architektur [SB]}\label{cha:Architektur}
 \section{Architektur Konzept}\label{sec:Architektur Konzept}
 Wie in Abbildung ~\ref{fig:Architektur_grob} zu sehen ist, besteht das System im Kern aus 3 Komponenten. Die Drohne, das \acs{XDK} sowie das Tablet sind alle mit dem \acs{WLAN} der Drohne verbunden. Über dieses läuft dann die komplette Kommunikation zwischen den einzelnen Komponenten ab. Die App kommuniziert über das \acs{DJI}-\acs{SDK} mit der Drohne, das \acs{XDK} baut eine UDP-Verbindung zur App auf, über die es die gemessenen Sensordaten schicken kann.
 \begin{figure}[H]

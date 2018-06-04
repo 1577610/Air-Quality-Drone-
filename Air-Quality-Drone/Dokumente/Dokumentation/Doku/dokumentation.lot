@@ -1,8 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {ngerman}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -10,26 +7,25 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.1}{\ignorespaces \acs {AQI} \IeC {\"U}bersicht\relax }}{4}{table.caption.19}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.2}{\ignorespaces DJI Phantom 3 Standard - technische Daten\relax }}{9}{table.caption.32}
+\contentsline {table}{\numberline {2.1}{\ignorespaces \acs {AQI} \IeC {\"U}bersicht \cite {AQI.Basics}\relax }}{4}{table.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.3}{\ignorespaces \IeC {\"U}bersicht Umgebungssensoren \acs {XDK}\relax }}{18}{table.caption.44}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Wirkung der CO2-Konzentration auf den Menschen \cite {CAQI.Indices}\relax }}{5}{table.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.4}{\ignorespaces \IeC {\"U}bersicht Sensoren\relax }}{19}{table.caption.50}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Wirkung der CO2-Konzentration auf den Menschen \cite {CO2.Auswirkung}\relax }}{8}{table.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.3}{\ignorespaces \IeC {\"U}bersicht Umgebungssensoren \acs {XDK}\relax }}{18}{table.caption.43}
+\contentsline {table}{\numberline {2.4}{\ignorespaces DJI Phantom 3 Standard - technische Daten\relax }}{11}{table.caption.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.4}{\ignorespaces \IeC {\"U}bersicht Sensoren\relax }}{19}{table.caption.49}
+\contentsline {table}{\numberline {2.5}{\ignorespaces \IeC {\"U}bersicht Umgebungssensoren \acs {XDK} ~\cite {XDK.DataSheet}\relax }}{20}{table.caption.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {2.6}{\ignorespaces \IeC {\"U}bersicht Sensoren\relax }}{21}{table.caption.53}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces \IeC {\"U}bersicht Sensoren\relax }}{26}{table.caption.53}
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Logische Ansteuerung Multiplexer\relax }}{31}{table.caption.60}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Logische Ansteuerung Multiplexer\relax }}{31}{table.caption.60}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Logische Ansteuerung Multiplexer ~\cite {DataSheet.CD4051B}\relax }}{33}{table.caption.64}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

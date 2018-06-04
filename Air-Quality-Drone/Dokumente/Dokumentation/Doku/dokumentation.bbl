@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.8 $
+% $ biblatex bbl format version 2.9 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,44 +16,235 @@
   {}
 \endgroup
 
-\sortlist[entry]{nyt/global/}
-  \entry{Karloff.2010}{article}{}
-    \name{author}{3}{}{%
-      {{hash=KH}{%
-         family={Karloff},
-         familyi={K\bibinitperiod},
-         given={Howard},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=SS}{%
-         family={Suri},
-         familyi={S\bibinitperiod},
-         given={Siddharth},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=VS}{%
-         family={Vassilvitskii},
-         familyi={V\bibinitperiod},
-         given={Sergei},
-         giveni={S\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{KHSSVS1}
-    \strng{fullhash}{KHSSVS1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2010}
-    \field{sortinit}{K}
-    \field{sortinithash}{K}
-    \field{isbn}{9780898716986}
-    \field{pages}{938 \bibrangedash  948}
-    \field{title}{A Model of Computation for MapReduce}
-    \field{journaltitle}{SODA '10 Proceedings of the twenty-first annual
-  ACM-SIAM symposium on Discrete Algorithms}
-    \field{year}{2010}
+\datalist[entry]{nty/global//global/global}
+  \entry{Cocoa.Bild}{online}{}
+    \verb{url}
+    \verb https://finalize.com/2017/04/30/swift-framework-development-for-binar
+    \verb y-distribution-with-cocoapods/
+    \endverb
   \endentry
 
-  \entry{mvc1}{online}{}
+  \entry{CAQI.Indices}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Air Quality in Europe - Definition der Indizes}
+    \verb{url}
+    \verb https://www.airqualitynow.eu/de/about_indices_definition.php
+    \endverb
+    \field{year}{2007}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{AQI.Basics}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Air Quality Index (AQI) Basics}
+    \verb{url}
+    \verb https://www.airnow.gov/index.cfm?action=aqibasics.aqi
+    \endverb
+    \field{month}{08}
+    \field{year}{2016}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{iPad.Bild}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Apple iPad3}
+    \verb{url}
+    \verb https://www.igebrauchtstore.de/apple-ipad-3-16gb-wi-fi-cellular-3g-4g
+    \verb -schwarz.html
+    \endverb
+    \field{year}{kein Datum}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.CD4051B}{online}{}
+    \list{organization}{1}{%
+      {Texas Instruments}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{CD405xB CMOS Single 8-Channel Analog
+  Multiplexer/Demultiplexer With Logic-Level Conversion}
+    \verb{url}
+    \verb http://www.ti.com/lit/ds/symlink/cd4051b.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{XDK.DataSheet}{online}{}
+    \list{organization}{2}{%
+      {Bosch Connected Devices}%
+      {Solutions}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{Cross Domain Development Kit, Datasheet}
+    \verb{url}
+    \verb https://xdk.bosch-connectivity.com/documents/37728/87798/XDK_Node_110
+    \verb _combined_Datasheet.pdf/9e8a29c9-08bc-4232-a7c7-1d42cd55239e
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{CocoaPods}{online}{}
+    \name{author}{1}{}{%
+      {{hash=ER}{%
+         family={Ebert},
+         familyi={E\bibinitperiod},
+         given={Ralf},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ER1}
+    \strng{fullhash}{ER1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{19. Bibliotheken über CocoaPods einbinden}
+    \verb{url}
+    \verb https://www.ralfebert.de/ios/cocoapods/
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{Xcode.Ebert}{online}{}
+    \name{author}{1}{}{%
+      {{hash=ER}{%
+         family={Ebert},
+         familyi={E\bibinitperiod},
+         given={Ralf},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ER1}
+    \strng{fullhash}{ER1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{3. Aufbau und Projektstruktur von Xcode}
+    \verb{url}
+    \verb https://www.ralfebert.de/ios/xcode-aufbau-build/
+    \endverb
+    \field{year}{2009}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{CAQI.AktuelleDaten}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{Europäischer Luftqualitätsindex: Jederzeit aktuelle Daten
+  zur Luftqualität}
+    \verb{url}
+    \verb https://www.eea.europa.eu/de/highlights/europaeischer-luftqualitaetsi
+    \verb ndex-jederzeit-aktuelle-daten
+    \endverb
+    \field{month}{11}
+    \field{year}{2017}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{iPad.Daten}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{iPad (3. Generation) - Technische Daten}
+    \verb{url}
+    \verb https://support.apple.com/kb/sp647?locale=de_CH
+    \endverb
+    \field{year}{2013}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.SDS011}{online}{}
+    \list{organization}{1}{%
+      {Nova Fitness Co., Ltd.}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Laser PM2.5 Sensor specification}
+    \verb{url}
+    \verb http://ecksteinimg.de/Datasheet/SDS011\%20laser\%20PM2.5\%20sensor\%2
+    \verb 0specification-V1.3.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.LM158N}{online}{}
+    \list{organization}{1}{%
+      {Texas Instruments}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{LMx58-N Low-Power, Dual-Operational Amplifiers}
+    \verb{url}
+    \verb http://www.ti.com/lit/ds/symlink/lm158-n.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.MG811}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{MG811 CO2 Sensor}
+    \verb{url}
+    \verb https://sandboxelectronics.com/files/SEN-000007/MG811.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.MQ131}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{MQ131 Semiconductor Sensor for Ozone}
+    \verb{url}
+    \verb http://www.sensorsportal.com/DOWNLOADS/MQ131.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{MVC}{online}{}
     \name{author}{1}{}{%
       {{hash=PR}{%
          family={Peres},
@@ -62,15 +253,254 @@
          giveni={R\bibinitperiod},
       }}%
     }
+    \keyw{Standard}
     \strng{namehash}{PR1}
     \strng{fullhash}{PR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2016}
     \field{sortinit}{P}
     \field{sortinithash}{P}
     \field{title}{Model-View-Controller (MVC) in iOS: A Modern Approach}
+    \verb{url}
+    \verb https://www.raywenderlich.com/132662/mvc-in-ios-a-modern-approach
+    \endverb
     \field{year}{2016}
+    \field{urlday}{30}
+    \field{urlmonth}{05}
+    \field{urlyear}{2018}
   \endentry
-\endsortlist
+
+  \entry{DJI.SDK}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Phantom 3 Standard}
+    \verb{url}
+    \verb https://developer.dji.com/mobile-sdk/
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DJI.Phantom3}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Phantom 3 Standard}
+    \verb{url}
+    \verb https://www.dji.com/de/search?cache=no&q=Phantom\%203\%20Standard\&si
+    \verb te=brandsite\&from=hotwords
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{Cocoa.Wikibooks}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{Programming Mac OS X with Cocoa for Beginners/What is Cocoa?}
+    \verb{url}
+    \verb https://en.wikibooks.org/wiki/Programming_Mac_OS_X_with_Cocoa_for_Beg
+    \verb inners/What_is_Cocoa%3F
+    \endverb
+    \field{year}{2017}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{FreeRTOS.Timers}{online}{}
+    \list{organization}{1}{%
+      {FreeRTOS}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Software Timers}
+    \verb{url}
+    \verb https://www.freertos.org/RTOS-software-timer.html
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{Swift}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Swift 4}
+    \verb{url}
+    \verb https://developer.apple.com/swift/
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{FreeRTOS.Tasks}{online}{}
+    \list{organization}{1}{%
+      {FreeRTOS}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Tasks and Co-routines}
+    \verb{url}
+    \verb https://www.freertos.org/taskandcr.html
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.MQ135}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{Technical Data MQ-135 Gas Sensor}
+    \verb{url}
+    \verb https://www.olimex.com/Products/Components/Sensors/SNS-MQ135/resource
+    \verb s/SNS-MQ135.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{DataSheet.MQ7}{online}{}
+    \list{organization}{1}{%
+      {HANWEI ELECTRONICS CO., LTD}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{TECHNICAL DATA MQ-7 GAS SENSOR}
+    \verb{url}
+    \verb https://www.sparkfun.com/datasheets/Sensors/Biometric/MQ-7.pdf
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{UBA.Luft}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{U}
+    \field{sortinithash}{U}
+    \field{title}{Umweldbundesamt - Themen - Luft}
+    \verb{url}
+    \verb https://www.umweltbundesamt.de/themen/luft/luftschadstoffe
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{CO2.Definition}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Was ist eigentlich CO2? Definition, Entstehung und der
+  Einfluss auf das Klima}
+    \verb{url}
+    \verb https://www.co2online.de/klima-schuetzen/klimawandel/was-ist-co2/
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{Xcode.Apple}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{What’s New in Xcode 9}
+    \verb{url}
+    \verb https://developer.apple.com/xcode/
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{CO2.Auswirkung}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Wirkung der CO2-Konzentration auf den Menschen}
+    \verb{url}
+    \verb http://www.co2-emissionen-vergleichen.de/Klimabilanz/Treibhausgase/CO
+    \verb 2/Wirkung/CO2-Konzentration-Wirkung.html
+    \endverb
+    \field{month}{03}
+    \field{year}{2012}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{Xcode.Wiki}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{title}{Xcode}
+    \verb{url}
+    \verb https://de.wikipedia.org/wiki/Xcode
+    \endverb
+    \field{year}{2018}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{XDK.General}{online}{}
+    \list{organization}{2}{%
+      {Bosch Connected Devices}%
+      {Solutions}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{edition}{2}
+    \field{title}{XDK110: General Information Guide}
+    \verb{url}
+    \verb https://xdk.bosch-connectivity.com/documents/37728/286250/XDK_Guide_G
+    \verb eneral_Information.pdf/bd1a92e1-f9ec-4368-a7b3-58cd72af9c27
+    \endverb
+    \field{month}{08}
+    \field{year}{2017}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{XDK.Wifi}{online}{}
+    \list{organization}{2}{%
+      {Bosch Connected Devices}%
+      {Solutions}%
+    }
+    \field{labeltitlesource}{title}
+    \field{sortinit}{X}
+    \field{sortinithash}{X}
+    \field{edition}{2}
+    \field{title}{XDK110: Guide Wi-Fi}
+    \verb{url}
+    \verb https://xdk.bosch-connectivity.com/documents/37728/286250/XDK_Guide_W
+    \verb i-Fi.pdf/aed854da-83e2-414e-8ad9-c3cd9043a30d
+    \endverb
+    \field{month}{08}
+    \field{year}{2017}
+    \field{urlday}{04}
+    \field{urlmonth}{06}
+    \field{urlyear}{2018}
+  \endentry
+\enddatalist
 \endinput

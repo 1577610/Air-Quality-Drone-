@@ -41,7 +41,7 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="0">
+  <internal package="biblatex" priority="9" active="1">
     <generic>latex</generic>
     <provides type="dynamic">
       <file>dokumentation.aux</file>
@@ -55,12 +55,13 @@
       <file>blx-compat.def</file>
       <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
-      <file>authoryear.bbx</file>
       <file>standard.bbx</file>
-      <file>authoryear.cbx</file>
+      <file>numeric.bbx</file>
+      <file>numeric-verb.bbx</file>
+      <file>numeric-verb.cbx</file>
       <file>biblatex.cfg</file>
-      <file>ngerman.lbx</file>
       <file>german.lbx</file>
+      <file>ngerman.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>

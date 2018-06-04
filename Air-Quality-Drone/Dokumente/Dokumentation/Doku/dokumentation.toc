@@ -1,6 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {ngerman}
+\babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Abk\IeC {\"u}rzungsverzeichnis}{I}{chapter*.8}
 \defcounter {refsection}{0}\relax 
@@ -10,7 +9,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Listings}{V}{chapter*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {chapter}{\numberline {1}Einleitung [JR]}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Problemstellung}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
@@ -18,7 +17,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Theoretische Grundlagen}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Luftqualit\IeC {\"a}t}{3}{section.2.1}
+\contentsline {section}{\numberline {2.1}Luftqualit\IeC {\"a}t [JR]}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.1}Indices}{3}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
@@ -26,207 +25,140 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline \acf {CAQI}}{4}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Schadstoffe}{4}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}Schadstoffe}{5}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Feinstaub}{5}{section*.23}
+\contentsline {subsubsection}{\nonumberline Feinstaub}{6}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acs {NOx}}{5}{section*.24}
+\contentsline {subsubsection}{\nonumberline \acs {NOx}}{6}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acs {SO2}}{5}{section*.25}
+\contentsline {subsubsection}{\nonumberline \acs {SO2}}{6}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acs {O3}}{6}{section*.26}
+\contentsline {subsubsection}{\nonumberline \acs {O3}}{7}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acs {CO}}{6}{section*.27}
+\contentsline {subsubsection}{\nonumberline \acs {CO}}{7}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acl {CO2}}{6}{section*.28}
+\contentsline {subsubsection}{\nonumberline \acl {CO2}}{7}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Hardware}{7}{section.2.2}
+\contentsline {section}{\numberline {2.2}Hardware [JR]}{8}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}DJI Phantom 3 Standard}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}DJI Phantom 3 Standard}{8}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}iPad 3}{9}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}iPad 3}{11}{subsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}iOS-Appentwicklung}{10}{section.2.3}
+\contentsline {section}{\numberline {2.3}iOS-Appentwicklung [JR]}{12}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}\acf {MVC}}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}\acf {MVC}}{12}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Cocoa}{11}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Cocoa}{13}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline \acf {API}}{11}{section*.35}
+\contentsline {subsubsection}{\nonumberline \acf {API}}{13}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Pods}{12}{section*.38}
+\contentsline {subsubsection}{\nonumberline Pods}{14}{section*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Xcode}{14}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}Xcode}{16}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}SWIFT}{15}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}SWIFT}{17}{subsection.2.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.5}DJI-\acf {SDK}}{15}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.5}DJI-\acf {SDK}}{17}{subsection.2.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Bosch \acf {XDK}}{16}{section.2.4}
+\contentsline {section}{\numberline {2.4}Bosch \acf {XDK} [SB]}{18}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Allgemeines}{16}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Allgemeines}{18}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}\acs {XDK} Workbench}{17}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.2}\acs {XDK} Workbench}{19}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Sensoren}{17}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.3}Sensoren}{19}{subsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}Extension Board}{18}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.4}Extension Board}{20}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Sensoren Luftqualit\IeC {\"a}t}{19}{section.2.5}
+\contentsline {section}{\numberline {2.5}Sensoren Luftqualit\IeC {\"a}t [SB]}{21}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}FreeRTOS}{20}{section.2.6}
+\contentsline {section}{\numberline {2.6}FreeRTOS[SB]}{22}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Tasks}{20}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}Tasks}{23}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.2}Timers}{20}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.2}Timers}{23}{subsection.2.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Planung}{22}{chapter.3}
-\contentsline {chapter}{\numberline {3}Projekt-Planung}{22}{chapter.3}
+\contentsline {chapter}{\numberline {3}Projekt-Planung [SB]}{24}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Anforderungsanalyse}{22}{section.3.1}
+\contentsline {section}{\numberline {3.1}Anforderungsanalyse}{24}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Muss-Kriterien}{22}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.1}Muss-Kriterien}{24}{subsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Soll-Kriterien}{23}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.2}Soll-Kriterien}{25}{subsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.3}Kann-Kriterien}{24}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.3}Kann-Kriterien}{26}{subsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Aufgabenteilung}{25}{section.3.2}
-\contentsline {section}{\numberline {3.2}Aufgabenteilung}{24}{section.3.2}
+\contentsline {section}{\numberline {3.2}Aufgabenteilung}{26}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Zeitplan}{25}{section.3.3}
+\contentsline {section}{\numberline {3.3}Zeitplan}{27}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Architektur}{26}{chapter.4}
+\contentsline {chapter}{\numberline {4}Architektur [SB]}{28}{chapter.4}
 \defcounter {refsection}{0}\relax 
-<<<<<<< HEAD
-\contentsline {section}{\numberline {4.1}Hardware}{26}{section.4.1}
+\contentsline {section}{\numberline {4.1}Architektur Konzept}{28}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Architektur Konzept}{26}{section.4.2}
+\contentsline {section}{\numberline {4.2}Lesen der Sensordaten}{28}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Lesen der Sensordaten}{27}{section.4.3}
+\contentsline {section}{\numberline {4.3}Schaltungsdesign}{30}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Schaltungsdesign}{29}{section.4.4}
+\contentsline {subsection}{\numberline {4.3.1}Extension-Board}{31}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}Extension-Board}{29}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.3.2}Multiplexer}{32}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Multiplexer}{30}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.3.3}Pegelwandler}{34}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.3}Pegelwandler}{32}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.3.4}Operationsverst\IeC {\"a}rker}{34}{subsection.4.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.4}Operationsverst\IeC {\"a}rker}{32}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.3.5}Feinstaub-Sensor}{36}{subsection.4.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.5}Feinstaub-Sensor}{34}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.3.6}Layout analoger Sensor}{36}{subsection.4.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.6}Layout analoger Sensor}{34}{subsection.4.4.6}
+\contentsline {chapter}{\numberline {5}XDK Code [SB]}{37}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Umsetzung}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Programm Aufbau}{37}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}XDK Code}{35}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Auslesen interner Sensoren}{39}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Programm Aufbau}{35}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Ansteuerung des Multiplexers}{41}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Auslesen interner Sensoren}{37}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Auslesen der Spannung am \acs {ADC}}{42}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Ansteuerung des Multiplexers}{39}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Senden der Messdaten}{43}{subsection.5.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.4}Auslesen der Spannung am \acs {ADC}}{40}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Auslesen des Feinstaub-Sensors}{44}{subsection.5.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.5}Senden der Messdaten}{41}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}\acs {WLAN} Verbindung}{45}{subsection.5.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.6}Auslesen des Feinstaub-Sensors}{42}{subsection.5.1.6}
+\contentsline {section}{\numberline {5.2}Scheduling}{47}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.7}Wifi Verbindung}{43}{subsection.5.1.7}
+\contentsline {chapter}{\numberline {6}Die iOS App [JR]}{48}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.8}Scheduling}{45}{subsection.5.1.8}
+\contentsline {section}{\numberline {6.1}Aufbau}{48}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Die iOS App}{46}{chapter.6}
+\contentsline {section}{\numberline {6.2}\acf {GUI}}{48}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Aufbau}{46}{section.6.1}
+\contentsline {subsection}{\numberline {6.2.1}MainView}{49}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}\acf {GUI}}{46}{section.6.2}
+\contentsline {subsubsection}{\nonumberline Statusleiste}{49}{section*.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}MainView}{47}{subsection.6.2.1}
+\contentsline {subsubsection}{\nonumberline ContainerView}{51}{section*.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Statusleiste}{47}{section*.71}
+\contentsline {subsection}{\numberline {6.2.2}PageView}{51}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline ContainerView}{49}{section*.73}
+\contentsline {subsubsection}{\nonumberline FlightView}{51}{section*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}PageView}{49}{subsection.6.2.2}
+\contentsline {subsubsection}{\nonumberline MeassurementView}{52}{section*.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline FlightView}{49}{section*.74}
+\contentsline {section}{\numberline {6.3}Das autonome Fliegen}{53}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline MeassurementView}{50}{section*.76}
+\contentsline {subsection}{\numberline {6.3.1}Hochladen der Waypoint Mission}{53}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Das autonome Fliegen}{51}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.2}Erstellen der Waypoint Mission}{55}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}Hochladen der Waypoint Mission}{51}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.3}Berechnen der Waypoints}{56}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Erstellen der Waypoint Mission}{53}{subsection.6.3.2}
+\contentsline {chapter}{\numberline {7}Abschlussbetrachtung und Reflexion [gemeinsam]}{59}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Berechnen der Waypoints}{54}{subsection.6.3.3}
+\contentsline {chapter}{\nonumberline Literatur}{i}{chapter*.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{i}{chapter*.79}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Anhang}{ii}{chapter*.80}
-=======
-\contentsline {section}{\numberline {4.1}Architektur Konzept}{26}{section.4.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Lesen der Sensordaten}{27}{section.4.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Schaltungsdesign}{29}{section.4.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Extension-Board}{29}{subsection.4.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Multiplexer}{30}{subsection.4.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Pegelwandler}{32}{subsection.4.3.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Operationsverst\IeC {\"a}rker}{32}{subsection.4.3.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Feinstaub-Sensor}{34}{subsection.4.3.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.6}Layout analoger Sensor}{34}{subsection.4.3.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}XDK Code}{35}{chapter.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Programm Aufbau}{35}{section.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.1}Auslesen interner Sensoren}{37}{subsection.5.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Ansteuerung des Multiplexers}{39}{subsection.5.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}Auslesen der Spannung am \acs {ADC}}{40}{subsection.5.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.4}Senden der Messdaten}{41}{subsection.5.1.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.5}Auslesen des Feinstaub-Sensors}{42}{subsection.5.1.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.6}\acs {WLAN} Verbindung}{43}{subsection.5.1.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Scheduling}{45}{section.5.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Die iOS App}{46}{chapter.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Aufbau}{46}{section.6.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}\acf {GUI}}{46}{section.6.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}MainView}{46}{subsection.6.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Statusleiste}{47}{section*.70}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline ContainerView}{47}{section*.71}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}PageView}{48}{subsection.6.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Abschlussbetrachtung und Reflexion}{49}{chapter.7}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literatur}{i}{chapter*.72}
-\defcounter {refsection}{0}\relax 
-<<<<<<< HEAD
-\contentsline {chapter}{\nonumberline Anhang}{ii}{chapter*.75}
-=======
-\contentsline {chapter}{\nonumberline Anhang}{ii}{chapter*.71}
->>>>>>> e966e838c21c441496a7a3eae5e25a49c5ed80fd
->>>>>>> f35f3233a90dab38971e23f067441491baf4447c
->>>>>>> ce10ecaaf37453b550694715fa3297abc2b1b121
+\contentsline {chapter}{\nonumberline Anhang}{v}{chapter*.86}

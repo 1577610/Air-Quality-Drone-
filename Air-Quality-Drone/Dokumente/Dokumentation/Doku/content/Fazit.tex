@@ -1,16 +1,18 @@
 %!TEX root = ../dokumentation.tex
 
-\chapter{Abschlussbetrachtung und Reflexion}\label{cha:Fazit}
+\chapter{Abschlussbetrachtung und Reflexion [gemeinsam]}\label{cha:Fazit}
 Zusammenfassend lässt sich sagen, dass die in Abschnitt ~\ref{subsec:MussKrit} beschriebenen Anforderungen zu einem großen Teil umgesetzt wurden.\newline
 Lediglich die Veranschaulichung der Messdaten in der App, sowie deren Export konnte nicht fertig gestellt werden. Die Anforderung, Stickoxide zu messen, wurde nicht direkt erfüllt, jedoch werden diese vom Sensor MQ135, der eine Vielzahl gefährlicher Gase misst, auch abgedeckt. Neben den Muss-Anforderungen sind noch einige weitere Soll-Anforderungen umgesetzt, wie die Messung der Ozon- und \acl{CO}-Werte.\newline
 \newline
 Allgemein lässt sich festhalten, dass der Zeitaufwand des Projektes die Kapazitäten zweier Personen zu übersteigen scheint. Aus diesem Grund wurden bei den Anforderungen wie zuvor beschrieben einige Abstriche gemacht. Neben des allgemeinen Umfangs und der Komplexität des Projektes sind im Verlauf der Umsetzung einige weitere Herausforderungen angefallen, die den Zeitaufwand enorm in die Höhe trieben. \newline
 \newline
 Da wären beispielsweise bei der Implementierung der Funktionalitäten für das \acs{XDK} die vielen unverständlich dokumentierten und unübersichtlichen Interfaces sowie das Fehlen der Möglichkeit zum Debugging des Programmes. In vielen Fällen konnte entweder gar keine Nachricht auf der Konsole ausgeben werden, oder es wurde nur ein Error-Code zurückgeliefert, wobei die Suche nach dessen Bedeutung weitere Zeit beanspruchte.\newline
-Neben diesen Schwierigkeiten mit dem \acs{XDK} sorgte auch das \acs{DJI}-SDK für einige Probleme. \newline
-... \newline
+Neben diesen Schwierigkeiten mit dem \acs{XDK} sorgte auch das \acs{DJI}-\acs{SDK} für einige Probleme. \newline
+Das \acs{SDK} ist schlecht Dokumetiert und man bekommt nur schlecht einen Überblick über die einzelnen Funktionen. Für die Entwicklung mit der Sprache Swift exitiert überhaupt keine Dokumentation und man muss die vorhandene Dokumentation in Objective-C adaptieren. \newline
 \newline 
 Eine letzte Herausforderung bei der Implementierung der Software stellte die Verfügbarkeit der Drohne dar. Neben einem längeren Ausfall durch einen Schaden hat auch das Teilen der Drohne mit einer weiteren Gruppe Studierender für einige Zeitverluste gesorgt. Zuletzt ist es auch aus diesem Grund nicht gelungen eine vollständige Integration der Komponenten App und \acs{XDK} tatsächlich zu testen, da in den finalen Abschnitten des Projektes die Drohne im Besitz der anderen Gruppe war.
 \newline \newline
 Trotz all dieser Herausforderungen bei der Software-Entwicklung ist das Projekt mit dem entstandenen Prototypen einer Drohne zur Messung der Luftqualität als ein interessanter Ansatz zu bewerten, mit dem Nutzer ihre Umgebungsluft mobil messen können. Dieses System ist auch in Zukunft nicht als Ersatz für die vielen offiziellen Messstationen zu sehen, da diese über viel genauere Messvorrichtungen verfügen, die aufgrund ihres Gewichts nicht an einer Drohne befestigt werden können. \newline
-Der entwickelte Prototyp soll lediglich dem Zweck dienen, den Nutzern die Möglichkeit zu bieten die Luftqualität in ihrer Umgebung mobil zu messen, insbesondere wenn gerade keine offizielle Messstation in der Nähe ist. Die dabei ermittelten Messwerte können dabei bestenfalls als Richtwerte dienen, an denen sich die tatsächlichen Messwerte orientieren.
+Der entwickelte Prototyp soll lediglich dem Zweck dienen, den Nutzern die Möglichkeit zu bieten die Luftqualität in ihrer Umgebung mobil zu messen, insbesondere wenn gerade keine offizielle Messstation in der Nähe ist. Die dabei ermittelten Messwerte können dabei bestenfalls als Richtwerte dienen, an denen sich die tatsächlichen Messwerte orientieren.\newline
+\newline
+Als weiterführende Arbeit kann man die noch nicht umgesetzten Anforderungen korrekt implementieren und das Produkt vollständig integrieren. Bei erfolgreicher Integration kann das Produkt getestet werden und die ersten Messungen ausgewertet werden. Man kann sich überlegen eine Datenbank mit verschiedenen Messungen anzulegen.  

@@ -1,6 +1,6 @@
 %!TEX root = ../dokumentation.tex
 
-\chapter{XDK Code}\label{cha:XDK Code}
+\chapter{XDK Code [SB]}\label{cha:XDK Code}
 Zur Steuerung und zum Erfassen der Messwerte der Sensoren wird C Code verwendet, der compiliert auf das Bosch \acs{XDK} aufgespielt wird. Wie in Kapitel ~\ref{sec:Bosch XDK} erwähnt, läuft auf dem \acs{XDK} das Echtzeitbetriebssystem FreeRTOS, das Programme in verschiedene Tasks unterteilt. Auch der Code zum Verwalten der Sensoren ist in diverse Tasks unterteilt, welche alle quasi-parallel ablaufen.
 \newline
 In den folgenden Abschnitten wird näher auf den Aufbau des Programmes eingegangen, sowie ein kurzer Überblick über die wichtigsten Funktionalitäten geboten.
