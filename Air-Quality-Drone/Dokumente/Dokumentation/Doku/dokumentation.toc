@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
@@ -150,4 +152,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Literatur}{i}{chapter*.72}
 \defcounter {refsection}{0}\relax 
+<<<<<<< HEAD
 \contentsline {chapter}{\nonumberline Anhang}{ii}{chapter*.75}
+=======
+\contentsline {chapter}{\nonumberline Anhang}{ii}{chapter*.71}
+>>>>>>> e966e838c21c441496a7a3eae5e25a49c5ed80fd
+>>>>>>> f35f3233a90dab38971e23f067441491baf4447c

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -44,3 +46,4 @@
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+>>>>>>> e966e838c21c441496a7a3eae5e25a49c5ed80fd
