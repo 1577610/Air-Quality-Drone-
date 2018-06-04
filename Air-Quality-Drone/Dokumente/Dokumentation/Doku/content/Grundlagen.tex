@@ -36,8 +36,31 @@ Der sogenannte \acf{AQI} bildet für die Vereinigten Staaten eine Skala von 0 bi
 Europäische Länder haben eine eigene, angepasste Skala zur Bewertung der Luftqualität: den \acf{CAQI}. Man unterscheidet hierbei kurzfristige (stündlich oder täglich) von langfristigen (jährlich) Luftqualitätsindices. 
 Die stündlich und täglich aktualisierte Luftverschmutzung wird als relatives Maß aus den für Europa bedeutendsten Schadstoffen. Dazu gehören der Feinstaub (PM2,5 und PM10), \acs{NO2} und \acs{O3}. Bei entsprechend verfügbaren Daten können ebenfalls \acf{CO} sowie \acs{SO2} einbezogen werden. Zur Berechnung der Index-Klasse unterscheidet man zwischen dem Verkehrs- sowie dem Hintergrundindex. Ersteres soll die Verkehrsbelastung anhand Messsensoren in direkter Nähe von vielbefahrenen Straßen und letzteres die allgemeine Belastung einer Stadt darstellen. 
 \newline
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/CAQI.png}	
+	\caption{Berechnungsraster des allgemeinen Luftqualitätsindex}
+	\label{fig:Raster_CAQI}
+\end{figure}
 Über den für ein ganzes Jahr hinweg berechneten Index lässt sich der Abstand zu den EU-Grenzwerten darstellen. Der Schwellwert ist dabei 1. Ein höherer Wert des Luftqualitätsindex zeugt von einer Überschreitung eines oder mehrerer Schadstoffwerte. Die Vergleichswerte entsprechen einer Empfehlung durch die Welt Gesundheitsorganisation und dienen dem Schutz der Gesundheit. 
 \newline
+
+\begin{table}[H]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{%
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+				\hline
+				  & \acs{NO2} & PM10 Jahresmittel & PM10 Überschreitungen des Tagesmittels & Ozon # Tage mit 8-stündlichem Mittel > 120 $^\mu g$/m\textsuperscript{3} & \acs{SO2} & Benzol & Gesamtindex\\ \hline \hline
+				
+				Zielwert ($^\mu g$/m\textsuperscript{3}) & 40 & 40 & 31 & 25 & 20 & 5 &  \\ \hline
+				Zielindex & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 & 1.0 &  \\ \hline
+				
+			\end{tabular}
+		}
+	\end{center}
+	\caption{Wirkung der CO2-Konzentration auf den Menschen}
+\end{table}
+
 Die aktuellen Luftqualitätswerte der Messstationen Europas werden von der EUA und der Europäischen Kommission online unter 
 \subsection{Schadstoffe}
 Im Folgenden soll auf messbare und für die Luftqualität bzw. die menschliche Gesundheit entscheidende Schadstoffe eingegangen werden. Neben der Erläuterung der luftverunreinigenden Teilchen wird auch auf deren Konsequenzen für den Menschen eingegangen. 
@@ -74,7 +97,25 @@ Des Weiteren ist \acs{CO} ein Bestandteil bei der Bildung von bodennahem \acs{O3
 \acs{CO2} ist ein farb- und geruchsloses Gas. Es ist als Treibhausgas für das auf der Erde entstehende Klima verantwortlich, indem es einen Teil der Wärme, die ins Weltall ausgestrahlt wird zurück auf die Erde emittiert. Neben den großen Vorkommnissen im Weltall wird es ebenfalls bei der Zellatmung von Menschen und vielen Tieren ausgeschieden. Ein weiterer Entstehungsort ist der Verbrennungsvorgang von Öl, Holz oder Kohle. Ein Problem von \acs{CO2}, ist dass sich dieser Schadstoff nicht selbstständig wieder abbauen kann. Die einzige Möglichkeit zur Reduzierung des \acs{CO2}-Gehaltes ist die Photosynthese oder die physikalische Speicherung in Gewässern. Dabei entsteht Glucose und Sauerstoff. 
 \newline
 Die folgende Tabelle zeigt die Auswirkungen von diversen \acs{CO2}-Konzentration auf den Menschen.
-
+\begin{table}[H]
+	\begin{center}
+		\resizebox{\columnwidth}{!}{%
+			\begin{tabular}{|c|c|}
+				\hline
+				CO2-Konzentration in der Luft (\%) & Wirkung der CO2-Konzentration auf den Menschen\\ \hline \hline
+				
+				0.0387 & Normale CO2-Konzentration im Freien \\ \hline
+				0.5 & Maximal erlaubte Arbeitsplatzkonzentration \\ \hline
+				1.5 & Atemzeitvolumen nimmt um mindestens 40 Prozent zu \\ \hline
+				4 & CO2-Konzentration beim Ausatmen \\ \hline
+				5 & Schwindel, Kopfschmerz \\ \hline
+				8 - 10 & Atemnot, Schwächegefühl bis Bewusstlosigkeit, Tod nach 30 bis 60 Minuten \\ \hline
+				20 & Schnelle Bewußtlosigkeit, Tod nach 5 bis 10 Minuten \\ \hline
+			\end{tabular}
+		}
+	\end{center}
+	\caption{Wirkung der CO2-Konzentration auf den Menschen}
+\end{table}
 
 \section{Hardware}\label{sec:Hardware}
 Um die Luftqualität in verschiedenen Luftschichten messen zu können ist diverse Hardware notwendig. 
@@ -362,7 +403,7 @@ Aufgrund der Tatsache, dass das \acs{XDK} lediglich Aussagen zu Temperatur, Luft
 				
 				MQ135 &  Schädliche Gase (NO\textsubscript{x}) & Abhängig vom Gas & 5V & 5V & Analog \\ \hline
 				
-				SDS011 & \acf{PM} & 0.0-999.9 ug/m\textsuperscript{3} & 5V & 3,3V & \acs{UART} \\ \hline			
+				SDS011 & \acf{PM} & 0.0-999.9 $^\mu$g/m\textsuperscript{3} & 5V & 3,3V & \acs{UART} \\ \hline			
 				
 			\end{tabular}
 		}
