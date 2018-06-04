@@ -425,7 +425,7 @@ Das Kriterium, das den größten Einfluss auf die Wahl der Sensoren hat, ist in 
 \newline
 Dies hat zur Folge, dass die Toleranzen der Sensoren aus Tabelle ~\ref{tab:Sensoren} nicht optimal sind und die logarithmische Umsetzung der Messwerte in Spannungen einige Ungenauigkeiten mit sich bringt. \newline
 Da der Fokus dieser Arbeit jedoch auf der Entwicklung der Drohne als Messstation liegt und die Auswertung eher vernachlässigt wird, hat dies keine zu großen Auswirkungen.
-\section{FreeRTOS[SB]}\label{sec:FreeRTOS}
+\section{FreeRTOS [SB]}\label{sec:FreeRTOS}
 Das Betriebssystem des \acs*{XDK} ist FreeRTOS, ein Echtzeitbetriebssystem für eingebettete Systeme. FreeRTOS stellt de facto den Standard für Mikrocontroller und kleine Mikroprozessoren dar, nicht zuletzt aufgrund dessen sehr freizügiger Open-Source-Lizenz. Das Betriebssystem ist veröffentlicht unter der MIT Lizenz, welche die kostenlose Nutzung der Software selbst zu kommerziellen Zwecken erlaubt. FreeRTOS ist zum größten Teil in der Programmiersprache C entwickelt, wobei es einzelne Funktionalitäten gibt, die auf Assembler-Ebene umgesetzt sind. Im Folgenden werden die beiden Begriffe Tasks und Timers näher betrachtet, da diese bei der Entwicklung von Software für das \acs*{XDK} eine große Rolle spielen.
 \subsection{Tasks}\label{subsec:Tasks}
 Eine auf einem Echtzeitbetriebssystem laufende Applikation kann in mehrere Tasks unterteilt werden. Die Tasks sind unabhängig voneinander und haben jeweils einen eigenen Task-Kontext. Es kann immer nur genau ein Task innerhalb des System aktiv sein, sodass im Falle mehrerer parallel laufender Tasks ein Scheduler diesen zur Laufzeit Rechenleistung zuweist und entscheidet, welcher Task gerade aktiv ist. ~\cite{FreeRTOS.Tasks}

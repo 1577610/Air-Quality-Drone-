@@ -73,7 +73,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Sensoren Luftqualit\IeC {\"a}t [SB]}{21}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}FreeRTOS[SB]}{22}{section.2.6}
+\contentsline {section}{\numberline {2.6}FreeRTOS [SB]}{22}{section.2.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6.1}Tasks}{23}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
